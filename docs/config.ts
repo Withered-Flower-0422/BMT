@@ -239,7 +239,11 @@ export default defineAdditionalConfig({
     skipToContentLabel: "跳转到内容",
 
     footer: {
-      copyright: `版权所有 © ${year === 2025 ? "" : "2025-"}${year} 枯萎の花`,
+      message:
+        "基于 <a href='https://github.com/Withered-Flower-0422/BMT/blob/main/LICENSE' target='_blank'>MIT</a> 许可发布",
+      copyright: `版权所有 © ${
+        year === 2025 ? "" : "2025-"
+      }${year} 枯萎の花 <br> 教程内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">CC BY-NC-SA 4.0</a> 许可协议`,
     },
 
     search: {

@@ -211,9 +211,11 @@ export default defineAdditionalConfig({
     },
 
     footer: {
+      message:
+        "Released under the <a href='https://github.com/Withered-Flower-0422/BMT/blob/main/LICENSE' target='_blank'>MIT</a> License.",
       copyright: `Copyright © ${
         year === 2025 ? "" : "2025-"
-      }${year} Withered Flower`,
+      }${year} Withered Flower <br> Content is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> License.`,
     },
 
     docFooter: {

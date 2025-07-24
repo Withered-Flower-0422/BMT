@@ -46,6 +46,6 @@ features:
 
 <span class="text-gray">
 
-- English Translation is provided by [Gemini](https://gemini.google.com/app).
+- English translation is provided by [Gemini](https://gemini.google.com/app).
 
 </span>
