@@ -26,7 +26,7 @@ In this Start section, only common usages and frequently used parameters will be
 
 ::: tip
 
-- The [`Custom Vertices`](../advanced/item/roadGenerator#Custom-Vertices) road generator will be detailed in the `Advance` section.
+- The [`Custom Vertices`](../advanced/item/roadGenerator#Custom-Vertices) road generator will be detailed in the `Advanced` section.
 - The [`Custom Script`](../script/roadGenerator) road generator will be detailed in the `Script` section.
 
 :::

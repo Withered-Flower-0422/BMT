@@ -16,7 +16,7 @@ Reading Suggestions:
 
 ## Advanced
 
-The Advance section will cover some of the advanced features and operations in BME Pro, including the use of systems for meshes, textures, and materials.
+The Advanced section will cover some of the advanced features and operations in BME Pro, including the use of systems for meshes, textures, and materials.
 
 Reading Suggestions:
 
