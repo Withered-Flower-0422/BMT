@@ -36,7 +36,7 @@
 
 ## Contribution
 
-- If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/) or the [Ballex² official QQ group `797934847`](https://qm.qq.com/q/2mIPnK8JIk), you can directly `@Withered Flower`.
+- If you are in the [Ballex² official discord server `5NygdBmksE`](https://discord.gg/5NygdBmksE/) or the [Ballex² official QQ group `797934847`](https://qm.qq.com/q/2mIPnK8JIk), you can directly `@枯萎の花`.
 - If you are familiar with the routines, you can create issues or pull requests here.
 
 ## License
