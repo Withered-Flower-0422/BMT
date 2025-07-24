@@ -36,6 +36,6 @@
 
 ## 简介
 
-- ~~你可以在 [BME Pro](https://store.steampowered.com/app/1809190/) 中找到本教程，也可直接访问[教程网站](https://tutorial.mushreb.com/)~~
+- ~~你可以在 [BME Pro](https://store.steampowered.com/app/1809190/) 中找到本教程，~~也可直接访问[教程网站](https://withered-flower-0422.github.io/BMT/)
 - 这是一份由我个人维护的**非官方**教程
 - 网站由 [VitePress](https://vitepress.dev/zh/) 驱动

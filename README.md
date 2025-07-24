@@ -36,6 +36,6 @@
 
 ## Introduction
 
-- ~~You can find this tutorial in [BME Pro](https://store.steampowered.com/app/1809190/) or go directly to [its website](https://tutorial.mushreb.com/en/).~~
+- ~~You can find this tutorial in [BME Pro](https://store.steampowered.com/app/1809190/)~~ or go directly to [its website](https://withered-flower-0422.github.io/BMT/en/).
 - This is an **unofficial** tutorial maintained by me myself.
 - The website is powered by [VitePress](https://vitepress.dev/).
