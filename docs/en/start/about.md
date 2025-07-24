@@ -1,6 +1,6 @@
 # Welcome to the Ballex² Mapping Tutorial
 
-This tutorial is divided into three sections: [`Start`](preparation), [`Advance`](../advanced/about), and [`Script`](../script/about).
+This tutorial is divided into three sections: [`Start`](preparation), [`Advanced`](../advanced/about), and [`Script`](../script/about).
 
 ## Start
 
@@ -14,7 +14,7 @@ Reading Suggestions:
 
 - After mastering all the content in this section, you will be able to replicate most of the layouts found in the official levels.
 
-## Advance
+## Advanced
 
 The Advance section will cover some of the advanced features and operations in BME Pro, including the use of systems for meshes, textures, and materials.
 

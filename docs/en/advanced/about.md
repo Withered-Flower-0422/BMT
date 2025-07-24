@@ -1,10 +1,10 @@
 # From Beginner to Expert
 
-The Advance section will introduce some advanced functions and operations in BME Pro.
+The Advanced section will introduce some advanced functions and operations in BME Pro.
 
-## Advance
+## Advanced
 
-In this Advance section, we will introduce:
+In this Advanced section, we will introduce:
 
 - The functions and usage of each tool in the editor's [`Tools`](tools) tab.
 
