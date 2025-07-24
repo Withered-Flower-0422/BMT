@@ -1,162 +1,162 @@
-# 粒子发射器
+# Particle Emitter
 
-## [变换偏移](item#变换偏移)
+## [Transform Offset](item#Transform-Offset)
 
-## `自动运行`
+## `Auto Play`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-## `循环`
+## `Loop`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-## `本地坐标模拟`
+## `Simulation In Local`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-## `周期时长`
+## `Duration`
 
-- 类型：`float`
-- 默认值：`5`
+- Type: `float`
+- Default: `5`
 
-## `生成速率`
+## `Spawn Rate`
 
-- 类型：`Float2`
-- 默认值：`(10, 20)`
+- Type: `Float2`
+- Default: `(10, 20)`
 
-下一粒子的发射时间将由在该区间内均匀取得的随机值决定，负数将视为 `0`。两数不分顺序，相同表示固定，下同。
+The spawn time of the next particle will be determined by a random value uniformly distributed within this range. Negative numbers are treated as `0`. The order of the two numbers does not matter; if they are the same, the rate is fixed. The same applies below.
 
-## `爆发数量`
+## `Burst Count`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-每一周期开始时，将有爆发粒子射出。每个爆发粒子的强度将在该区间内均匀取随机值，负数将视为 `0`。
+At the beginning of each cycle, burst particles will be emitted. The number of particles in each burst will be a random value uniformly distributed within this range. Negative numbers are treated as `0`.
 
-## `发射器尺寸`
+## `Emitter Size`
 
-- 类型：`Float3`
-- 默认值：`(1, 1, 1)`
+- Type: `Float3`
+- Default: `(1, 1, 1)`
 
-粒子将在该区域内随机均匀生成，`0` 表示该轴上位置固定，负数表示反向。
+Particles will be generated randomly and uniformly within this area. `0` means the position on that axis is fixed, and a negative number indicates the opposite direction.
 
-## `初始速度`
+## `Initial Velocity`
 
-- 类型：`Float2`
-- 默认值：`(0, 5)`
+- Type: `Float2`
+- Default: `(0, 5)`
 
-每个粒子将在该区间内均匀取随机值，负数表示反向。
+Each particle will get a random value uniformly distributed within this range. A negative number indicates the opposite direction.
 
-## `初始旋转`
+## `Start Rotation`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-每个粒子将在该区间内均匀取随机值，单位为弧度，正数表示顺时针。
+Each particle will get a random value uniformly distributed within this range. The unit is radians, and a positive number indicates clockwise.
 
-## `角速度`
+## `Angular Velocity`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-每个粒子将在该区间内均匀取随机值，正数表示顺时针。
+Each particle will get a random value uniformly distributed within this range. A positive number indicates clockwise.
 
-## `跟随摄像机`
+## `Follow Camera`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-粒子发射器将跟随摄像机移动和旋转。
+The particle emitter will move and rotate with the camera.
 
-## `贴图`
+## `Texture`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-## `混合模式`
+## `Blend Mode`
 
-- 类型：`透明度 | 添加 | 预乘`
-- 默认值：`透明度`
+- Type: `Alpha | Additive | Premultiply`
+- Default: `Alpha`
 
-## `生命长度`
+## `Lifetime`
 
-- 类型：`Float2`
-- 默认值：`(1, 2)`
+- Type: `Float2`
+- Default: `(1, 2)`
 
-每个粒子将在该区间内均匀取随机值，负数将视为 `0`。
+Each particle will get a random value uniformly distributed within this range. Negative numbers are treated as `0`.
 
-## `初始尺寸`
+## `Initial Size`
 
-- 类型：`Float2`
-- 默认值：`(0.5, 1)`
+- Type: `Float2`
+- Default: `(0.5, 1)`
 
-每个粒子将在该区间内均匀取随机值，负数将视为 `0`。
+Each particle will get a random value uniformly distributed within this range. Negative numbers are treated as `0`.
 
-## 时间节点
+## Time Nodes
 
-- 每个粒子将在生命周期内按照时间节点关键帧变换自身参数
-- 粒子生命起点为 `0`，终点为 `1`
-- 当存在多个时刻相同的关键帧时（包含上述超界的关键帧），只有第一个声明的关键帧有效
-- 若起点处没有关键帧，取时间最早的关键帧参数值
-- 若终点处没有关键帧，取时间最晚的关键帧参数值
-- 相邻的两个关键帧之间，各参数线性变换
+- Each particle will transform its own parameters during its lifetime according to keyframes of time nodes.
+- The particle's lifetime starts at `0` and ends at `1`.
+- When multiple keyframes exist at the same time, only the first declared keyframe is effective.
+- If there is no keyframe at the start, the parameter values from the earliest keyframe are used.
+- If there is no keyframe at the end, the parameter values from the latest keyframe are used.
+- Between two adjacent keyframes, each parameter transforms linearly.
 
-### `时间`
+### `Time`
 
-- 类型：`float`
-- 默认值：`0`
-- 范围：`0` ~ `1`
+- Type: `float`
+- Default: `0`
+- Range: `0` ~ `1`
 
-### `颜色`
+### `Color`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-### `尺寸`
+### `Size`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-## `重力因数`
+## `Gravity Factor`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-## `紊流强度`
+## `Turbulence Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-## `紊流频率`
+## `Turbulence Frequency`
 
-- 类型：`float`
-- 默认值：`0.2`
+- Type: `float`
+- Default: `0.2`
 
-## `横向动画格数` `纵向动画格数`
+## `Animation Tiles X` & `Animation Tiles Y`
 
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `32`
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `32`
 
-按给定的格数切分材质图片，每格视为一帧，形成粒子动画。动画周期由粒子 `周期时长` 决定。
+Splits the material texture by the given number of tiles. Each tile is treated as a frame, creating a particle animation. The animation period is determined by the particle's `Duration`.
 
-## 按钮
+## Buttons
 
-### `刷新`
+### `Refresh`
 
-刷新编辑器中的粒子动画。
+Refreshes the particle animation in the editor.
 
-### `播放`
+### `Play`
 
-播放编辑器中的粒子动画。
+Plays the particle animation in the editor.
 
-### `暂停`
+### `Pause`
 
-暂停编辑器中的粒子动画。
+Pauses the particle animation in the editor.
 
-### `停止`
+### `Stop`
 
-停止编辑器中的粒子动画。
+Stops the particle animation in the editor.

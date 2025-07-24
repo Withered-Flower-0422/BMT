@@ -1,5 +1,5 @@
-# 其他
+# Other
 
-本版块将介绍一些游戏内的其他功能，与制图无关。
+This section will introduce some other in-game features that are not related to mapping.
 
-在左栏查看各章节。
+See the chapters in the left column.

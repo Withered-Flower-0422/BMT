@@ -49,7 +49,7 @@ export default defineAdditionalConfig({
                 base: "/en/advanced/sceneSettings/",
                 items: [
                   {
-                    text: "Map Info",
+                    text: "Map Information",
                     link: "mapInfo",
                   },
                   {
@@ -77,7 +77,7 @@ export default defineAdditionalConfig({
                     link: "lens",
                   },
                   {
-                    text: "Background Music",
+                    text: "BGM",
                     link: "backgroundMusic",
                   },
                   {

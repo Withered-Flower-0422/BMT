@@ -1,193 +1,193 @@
-# 雾
+# Fog
 
-雾分为 `物理雾` 和 `艺术雾` 。
+Fog is divided into `Physics Fog` and `Artistic Fog`.
 
-::: tip 提示
+::: tip
 
-- 雾的各项属性较为复杂，难以用文字准确描述每个属性的作用
-- 建议实际上手操作，自己调节每个属性，领悟每个属性的作用和效果
-- 这里只列出各项属性、其类型及默认值，不做过多说明
+- The various properties of fog are quite complex, and it is difficult to accurately describe the function of each property in words.
+- It is recommended to experiment hands-on, adjusting each property yourself to understand its function and effect.
+- Here, only the properties, their types, and default values are listed, without extensive explanation.
 
 :::
 
-## `雾类型`
+## `Fog Type`
 
-- 类型：`禁用 | 物理雾 | 艺术雾`
-- 默认值：`物理雾`
+- Type: `Disabled | Physics Fog | Artistic Fog`
+- Default: `Physics Fog`
 
-## 物理物
+## Physics Fog
 
-### `衰减距离`
+### `Falloff Distance`
 
-- 类型：`float`
-- 默认值：`500.0`
+- Type: `float`
+- Default: `500.0`
 
-### `高度`
+### `Height`
 
-- 类型：`Float2`
-- 默认值：`(0, 200)`
+- Type: `Float2`
+- Default: `(0, 200)`
 
-### `最大距离`
+### `Max Distance`
 
-- 类型：`float`
-- 默认值：`5000.0`
+- Type: `float`
+- Default: `5000.0`
 
-### `色调`
+### `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-## 艺术雾
+## Artistic Fog
 
-### 物体雾
+### Object Fog
 
-#### `强度`
+#### `Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `1.0`
 
-#### `混合模式`
+#### `Fog Blend Mode`
 
-- 类型：`相乘 | 相加`
-- 默认值：`相乘`
+- Type: `Multiply | Additive`
+- Default: `Multiply`
 
-#### `开始颜色`
+#### `Color Start`
 
-- 类型：`ColorRGBA`
-- 默认值：`(128 / 255, 191 / 255, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(128 / 255, 191 / 255, 1, 1)`
 
-#### `结束颜色`
+#### `Color End`
 
-- 类型：`ColorRGBA`
-- 默认值：`(128 / 255, 191 / 255, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(128 / 255, 191 / 255, 1, 1)`
 
-#### `颜色混合`
+#### `Color End Blend`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` - `1.0`
 
-#### `距离`
+#### `Fog Distance`
 
-- 类型：`Float2`
-- 默认值：`(0, 100)`
+- Type: `Float2`
+- Default: `(0, 100)`
 
-#### `距离衰减`
+#### `Distance Falloff`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`1.0` - `8.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `1.0` - `8.0`
 
-#### `高度`
+#### `Height`
 
-- 类型：`Float2`
-- 默认值：`(0, 100)`
+- Type: `Float2`
+- Default: `(0, 100)`
 
-#### `高度衰减`
+#### `Height Falloff`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`1.0` - `8.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `1.0` - `8.0`
 
-#### `远雾高度偏移`
+#### `Far Fog Height`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-#### `远雾距离`
+#### `Far Fog Distance`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### 天空盒雾
+### Skybox Fog
 
-#### `强度`
+#### `Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `1.0`
 
-#### `高度`
+#### `Height`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `8.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `8.0`
 
-#### `衰减`
+#### `Falloff`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`1.0` - `8.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `1.0` - `8.0`
 
-#### `偏移`
+#### `Offset`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-1.0` - `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-1.0` - `1.0`
 
-#### `底部`
+#### `Bottom`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` - `1.0`
 
-#### `填充`
+#### `Fill`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` - `1.0`
 
-### 平行光影响
+### Directional Light Influence
 
-#### `强度`
+#### `Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `1.0`
 
-#### `衰减`
+#### `Falloff`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`1.0` - `8.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `1.0` - `8.0`
 
-#### `颜色`
+#### `Color`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 191 / 255, 128 / 255, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 191 / 255, 128 / 255, 1)`
 
-### 噪波
+### Noise
 
-#### `强度`
+#### `Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `1.0`
 
-#### `最低值`
+#### `Min`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` - `1.0`
 
-#### `最高值`
+#### `Max`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` - `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` - `1.0`
 
-#### `缩放`
+#### `Scale`
 
-- 类型：`float`
-- 默认值：`30.0`
+- Type: `float`
+- Default: `30.0`
 
-#### `速度`
+#### `Speed`
 
-- 类型：`Float3`
-- 默认值：`(0.5, 0, 0.5)`
+- Type: `Float3`
+- Default: `(0.5, 0, 0.5)`
 
-#### `影响范围`
+#### `Range`
 
-- 类型：`float`
-- 默认值：`200.0`
+- Type: `float`
+- Default: `200.0`

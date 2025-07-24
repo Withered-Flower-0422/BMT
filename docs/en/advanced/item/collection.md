@@ -1,26 +1,26 @@
-# 收集品
+# Collection
 
-- 收集品组件需要配合 [`收集品原型`](../sceneSettings/collectionPrototype) 使用
-- 收集品组件需要配合 [`渲染器`](renderer) 组件及 [`触发器`](trigger) 组件使用
-  - `渲染器` 组件负责图形渲染
-  - `触发器` 组件负责触发收集品的收集
-  - 建议直接通过 `创建 → 收集品` 来创建收集品
+- The Collection component needs to be used in conjunction with a [`Collection Prototype`](../sceneSettings/collectionPrototype).
+- The Collection component needs to be used in conjunction with the [`Renderer`](renderer) and [`Trigger`](trigger) components.
+  - The `Renderer` component is responsible for graphics rendering.
+  - The `Trigger` component is responsible for triggering the collection.
+  - It is recommended to create a collection directly via `Create → Collection`.
 
-## `收集品名称`
+## `Collection Name`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-## `旋转速度`
+## `Rotation Velocity`
 
-- 类型：`Float3`
-- 默认值：`(0, 1, 0)`
+- Type: `Float3`
+- Default: `(0, 1, 0)`
 
-收集品在场景中旋转的速度。
+The speed at which the collection rotates in the scene.
 
-## `音效`
+## `Sfx`
 
-- 类型：`Audio`’
-- 默认值：空
+- Type: `Audio`
+- Default: Empty
 
-收集品被收集时播放的音效。
+The sound effect that plays when the collection is collected.

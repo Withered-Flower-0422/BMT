@@ -1,215 +1,215 @@
-# 自定义玩家球
+# Custom Ball
 
-自定义玩家球允许你创建除官方 9 种球以外的其他球种。
+Custom Ball allows you to create ball types other than the 9 official ones.
 
-建议先选择一个预设的球种，点击 `创建选定的预设`，了解该如何创建自定义玩家球。
+It is recommended to first select a preset ball type and click `Create Selected Preset` to understand how to create a custom player ball.
 
-具体使用方法：
+Specific Usage:
 
-1. 在场景中创建好一个球元件，设置好其 [`渲染器`](../item/renderer) 和 [`物理物体`](../item/physicsObject) 组件的各项参数
-2. 在其 [`元件设置`](../item/settings) 组件中勾选 `作为模板`，并在 `模板名` 中输入一个自定义名称
-3. 在 `场景设置 → 自定义玩家球` 中增加一个自定义玩家球，填写好所有需要的属性参数
-4. 对应的变球器在 `素材 → 元件 → 变球器 → 自定义变球器` 处，拖入场景后，在其 `检视器 → 元件链接` 中填写对应的 [`自定义玩家球名`](#玩家球名)
+1. Create a ball item in the scene and set up the parameters for its [`Renderer`](../item/renderer) and [`Physics Object`](../item/physicsObject) components.
+2. In its [`Item Settings`](../item/settings) component, check `As Template` and enter a custom name in `Template Name`.
+3. In `Scene Settings → Custom Ball`, add a new custom ball and fill in all the required properties.
+4. The corresponding ball switcher is located at `Assets → Items → Switcher → Switcher_Custom`. After dragging it into the scene, fill in the corresponding [`Custom Ball Name`](#Ball-Name) in its `Inspector → Item Link`.
 
-## `元件模板`
+## `Item Template`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-填写场景中 `作为模板` 的球元件的 `模板名` 。
+Fill in the `Template Name` of the ball item in the scene that is marked as `As Template`.
 
-## `玩家球名`
+## `Ball Name`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的名称。这个名称是真正意义上的自定义玩家球名称，将作为脚本中 [`player.ballType`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/player.d.ts) 的值。
+The name of the custom ball. This is the true name of the custom ball and will be used as the value for [`player.ballType`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/player.d.ts) in scripts.
 
-## `英文`
+## `English`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的英文名称。当游戏中语言设置为英文时，这个名称将显示在 UI 上。
+The English name of the custom ball. When the in-game language is set to English, this name will be displayed on the UI.
 
-## `简体中文`
+## `Simplified Chinese`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的简体中文名称。当游戏中语言设置为简体中文时，这个名称将显示在 UI 上。
+The Simplified Chinese name of the custom ball. When the in-game language is set to Simplified Chinese, this name will be displayed on the UI.
 
-## `繁体中文`
+## `Traditional Chinese`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的繁体中文名称。当游戏中语言设置为繁体中文时，这个名称将显示在 UI 上。
+The Traditional Chinese name of the custom ball. When the in-game language is set to Traditional Chinese, this name will be displayed on the UI.
 
-## `日文`
+## `Japanese`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的日文名称。当游戏中语言设置为日文时，这个名称将显示在 UI 上。
+The Japanese name of the custom ball. When the in-game language is set to Japanese, this name will be displayed on the UI.
 
-## `西班牙文`
+## `Spanish`
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-自定义玩家球的西班牙文名称。当游戏中语言设置为西班牙文时，这个名称将显示在 UI 上。
+The Spanish name of the custom ball. When the in-game language is set to Spanish, this name will be displayed on the UI.
 
-## `湿度 UI`
+## `Wetness UI`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当玩家球种是该自定义球时，是否显示湿度 UI。
+Whether to display the Wetness UI when the player's ball type is this custom ball.
 
-## `温度 UI`
+## `Temperature UI`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当玩家球种是该自定义球时，是否显示温度 UI。
+Whether to display the Temperature UI when the player's ball type is this custom ball.
 
-## `缩放 UI`
+## `Scale UI`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当玩家球种是该自定义球时，是否显示缩放 UI。
+Whether to display the Scale UI when the player's ball type is this custom ball.
 
-## `电量 UI`
+## `Power UI`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当玩家球种是该自定义球时，是否显示电量 UI。
+Whether to display the Power UI when the player's ball type is this custom ball.
 
-## `移动力度`
+## `Move Force`
 
-- 类型：`float`
-- 默认值：`10.0`
+- Type: `float`
+- Default: `10.0`
 
-玩家操纵该自定义球时施加的移动力度。
+The movement force applied when the player controls this custom ball.
 
-## `旋转力度`
+## `Torque Force`
 
-- 类型：`float`
-- 默认值：`10.0`
+- Type: `float`
+- Default: `10.0`
 
-玩家操纵该自定义球时施加的旋转力度。
+The rotational force (torque) applied when the player controls this custom ball.
 
-## `防御`
+## `Defence`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-该球受到伤害时（钉板、流星锤等），玩家球的防御力度。防御力越高，受到的伤害越小。
+The player ball's defense force when this ball takes damage (from spike plates, swinging hammers, etc.). The higher the defense, the less damage is taken.
 
-## `湿度影响质量乘数`
+## `Wet Mass Multiplier`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-该球质量随着湿度的变化而变化的乘数。
+The multiplier by which this ball's mass changes with wetness.
 
-## `可燃性`
+## `Flammability`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-该球的可燃性。0 为不可燃，1 为可燃。
+The flammability of this ball. 0 is non-flammable, 1 is flammable.
 
-## `潮湿伤害`
+## `Wet Damage`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-该球因湿度影响而受到的伤害乘数。
+The damage multiplier this ball receives due to the effects of wetness.
 
-## `温度影响缩放乘数`
+## `Temp Scale Multiplier`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-该球缩放随着温度的变化而变化的乘数。
+The multiplier by which this ball's scale changes with temperature.
 
-## `低能量时施力乘数`
+## `Low Power Force Multiplier`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-当玩家球电量为 0 时，该球施加的力度乘数。0 为零电量时不影响施力大小。
+The force multiplier for this ball when its power is 0. A value of 0 means zero power does not affect the applied force.
 
-## `电力吸收`
+## `Absorb Electric Multiplier`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-当玩家球触碰 `电力补给` 时，吸收反弹力度的乘数。0 为完全不吸收，1 为完全吸收，即 `电力补给` 不再能够弹开玩家球。
+The multiplier for absorbing the repulsive force when the player ball touches a `Electric` Supply. 0 means no absorption, 1 means full absorption (i.e., the `Electric` Supply can no longer repel the player ball).
 
-## `无敌`
+## `Invincible`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-该球是否免疫任何伤害。0 为不无敌，1 为无敌。
+Whether this ball is immune to any damage. 0 is not invincible, 1 is invincible.
 
-## `在木质路面滚动`
+## `Roll on Wood`
 
-- 类型：`Audio`
-- 默认值：空
+- Type: `Audio`
+- Default: Empty
 
-该球在木质路面滚动时播放的音效。
+The sound effect that plays when this ball rolls on a wood surface.
 
-## `在石质路面滚动`
+## `Roll on Stone`
 
-- 类型：`Audio`
-- 默认值：空
+- Type: `Audio`
+- Default: Empty
 
-该球在石质路面滚动时播放的音效。
+The sound effect that plays when this ball rolls on a stone surface.
 
-## `在钢质路面滚动`
+## `Roll on Steel`
 
-- 类型：`Audio`
-- 默认值：空
+- Type- Type: `Audio`
+- Default: Empty
 
-该球在钢质路面滚动时播放的音效。
+The sound effect that plays when this ball rolls on a steel surface.
 
-## `变球器材质`
+## `Switcher Material`
 
-- 类型：`Material`
-- 默认值：空
+- Type: `Material`
+- Default: Empty
 
-该球对应的变球器的材质。
+The material for this ball's corresponding switcher.
 
-## `变球器发光颜色`
+## `Switcher Glow Color`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-该球变球器四角及其内圈的光源颜色。（会受到 `变球器灯光颜色` 影响）
+The light source color for the four corners and inner ring of this ball's switcher. (Is affected by `Switcher Light Color`)
 
-## `变球器发光强度`
+## `Switcher Glow Intensity`
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-该球变球器四角及其内圈的光源亮度。
+The light source brightness for the four corners and inner ring of this ball's switcher.
 
-## `变球器灯光颜色`
+## `Switcher Light Color`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-该球变球器的 [矩形区域光](../item/light#光源类型) 的发光颜色。
+The emission color of this ball's switcher's [Rect Area Light](../item/light#Light-Type).
 
-## `变球器灯光亮度`
+## `Switcher Light Intensity`
 
-- 类型：`float`
-- 默认值：`30000.0`
+- Type: `float`
+- Default: `30000.0`
 
-该球变球器的 [矩形区域光](../item/light#光源类型) 的发光强度。
+The emission intensity of this ball's switcher's [Rect Area Light](../item/light#Light-Type).

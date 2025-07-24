@@ -41,3 +41,11 @@ features:
     details: Learn the scripting system of BME Pro, master the skills of script coding, and add more mechanisms to your maps.
     link: /en/
 ---
+
+---
+
+<span class="text-gray">
+
+- English Translation is provided by [Gemini](https://gemini.google.com/app).
+
+</span>

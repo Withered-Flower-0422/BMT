@@ -1,128 +1,128 @@
-# 发布地图
+# Release
 
-发布地图前确保已连接至 Steam 。
+Ensure you are connected to Steam before releasing a map.
 
-## 准备封面
+## Prepare Cover Image
 
-### 截图
+### Screenshot
 
-- 进入测图模式：`文件 → 测试地图` / `F9`
-- 进入截图功能：`F5`，使用 `W` `A` `S` `D` `Q` `E` 键配合鼠标移动视角，按住 `Shift` 键可加速移动，按 `Enter` 键截图。
-- 截图为 1920×1080 及 3840×2160 分辨率的 2 张 `.png` 文件，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP\Screenshots`。
+- Enter test mode: `File → Test The Map` / `F9`
+- Access the screenshot function: `F5`. Use `W`, `A`, `S`, `D`, `Q`, `E` along with the mouse to move the camera. Hold `Shift` to move faster. Press `Enter` to take the screenshot.
+- Two `.png` files of 1920×1080 and 3840×2160 resolution will be saved in `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP\Screenshots`.
 
-### 自己制作
+### Create Your Own
 
-你也可以自己制作封面，要求为：
+You can also create your own cover image. The requirements are:
 
-- `.png` 或 `.jpg` 格式
-- 画面比例为 16:9，推荐分辨率为 1920×1080
-- 契合地图主题
+- `.png` or `.jpg` format
+- 16:9 aspect ratio, recommended resolution is 1920×1080
+- Fits the theme of the map
 
-## 导入封面
+## Import Cover Image
 
-在 `素材 → 纹理` 面板，点击底部右测加号导入封面。
+In the `Assets → Textures` panel, click the plus sign at the bottom right to import the cover image.
 
-## 设置地图信息
+## Set Map Information
 
-选中 `层级 → 场景设置`，`检视器` 中选择 `地图信息` 组件进行地图信息的设置。
+Select `Hierarchy → Scene Settings`, then in the `Inspector`, select the `Map Info` component to set the map information.
 
-### `作者名` <badge text="必填" />
+### `Author Name` <badge text="Required" />
 
-- 默认值：Steam 昵称
+- Default: Steam Nickname
 
-### `地图名` <badge text="必填" />
+### `Map Name` <badge text="Required" />
 
-- 默认值：空
+- Default: Empty
 
-请在此处只填写**源语言**。例如中文为源语言、英文为翻译时，只填写中文。
+Please only fill in the **source language** here. For example, if English is the source language and Chinese is the translation, only fill in English.
 
-### `地图描述` <badge text="必填" />
+### `Map Description` <badge text="Required" />
 
-- 默认值：空
+- Default: Empty
 
-请在此处只填写**源语言**。例如中文为源语言、英文为翻译时，只填写中文。
+Please only fill in the **source language** here. For example, if English is the source language and Chinese is the translation, only fill in English.
 
-::: tip 提示
+::: tip
 
-- 关卡描述为**必填**项。如果实在不想显示任何内容，请填入一个空白字符（不能是空格，可在网上搜索空白字符复制粘贴至此处）
-- 如果关卡描述为空，会导致后续的导出地图失败
-
-:::
-
-### `版本` <badge text="必填" />
-
-- 默认值：`0`
-
-~~基本没啥作用~~
-
-### `难度`
-
-- 默认值：`简单`
-
-### `地图类型`
-
-- 默认值：`竞速`
-
-### `封面` <badge text="必填" />
-
-- 默认值：空
-
-点击框中右上角的 `+` 号，选择导入的封面。（也可以将 `素材 → 纹理` 面板中的图片拖入此处。）
-
-::: tip 提示
-
-- 封面为**必填**项。
-- 如果封面为空，会导致后续的导出地图失败。
+- The level description is a **required** field. If you really don't want to display anything, please enter a blank character (not a space; you can search for a blank character online and copy-paste it here).
+- If the level description is empty, it will cause the subsequent map export to fail.
 
 :::
 
-### `初始球类型`
+### `Version` <badge text="Required" />
 
-- 默认值：`木球`
+- Default: `0`
 
-### `使用自定义玩家球`
+~~Basically useless~~
 
-- 默认值：`false`
+### `Difficulty`
 
-### `自定义玩家球名`
+- Default: `Easy`
 
-- 默认值：空
+### `Map Type`
 
-::: tip 提示
+- Default: `Racing`
 
-- 自定义玩家球功能参见 [`进阶 → 场景设置 → 自定义玩家球`](../advanced/sceneSettings/customBall)
+### `Cover Image` <badge text="Required" />
+
+- Default: Empty
+
+Click the `+` sign in the top right of the box and select the imported cover. (You can also drag an image from the `Assets → Textures` panel here.)
+
+::: tip
+
+- The cover image is a **required** field.
+- If the cover is empty, it will cause the subsequent map export to fail.
 
 :::
 
-### `视角模式`
+### `Initial Ball Type`
 
-- 默认值：`四向视角`
+- Default: `Wooden`
 
-### `视距`
+### `Use Custom Ball`
 
-- 默认值：`200`
+- Default: `false`
 
-地图中距离相机超过此值的元件将不再渲染。
+### `Custom Ball Name`
 
-### `摄像机偏移`
+- Default: Empty
 
-- 默认值：`(0, 4, -3.5)`
+::: tip
 
-### `重力`
+- For the custom ball function, see [`Advanced → Scene Settings → Custom Ball`](../advanced/sceneSettings/customBall).
 
-- 默认值：`(0, -18, 0)`
+:::
 
-## 导出地图
+### `Camera Mode`
 
-`文件 → 导出地图`
+- Default: `Four Dir`
 
-将导出 3 个文件，后缀分别为 `.bms`, `.bms.assets`, `.bms.xml` 。
+### `View Distance`
 
-## 上传至 Steam 创意工坊
+- Default: `200`
 
-`文件 → 上传至创意工坊`
+Items in the map beyond this distance from the camera will not be rendered.
 
-- 选择刚刚导出的 `.bms` 文件
-- 选择 `上传` 或 `更新` 。
-- 如果选择了 `更新`，需要填写待更新的创意工坊文件 ID。在创意工坊网页中找到你的地图，点击分享，链接中 `id=` 后面的数字即为文件 ID。
-- 如果选择了 `更新`，可以选填 `改动说明` 。
+### `Camera Offset`
+
+- Default: `(0, 4, -3.5)`
+
+### `Gravity`
+
+- Default: `(0, -18, 0)`
+
+## Export Map
+
+`File → Export BMS`
+
+This will export 3 files with the suffixes `.bms`, `.bms.assets`, and `.bms.xml`.
+
+## Upload to Steam Workshop
+
+`File → Upload to Workshop`
+
+- Select the `.bms` file you just exported.
+- Choose `Upload` or `Update`.
+- If you choose `Update`, you need to enter the Workshop File ID of the item to be updated. Find your map on the Workshop webpage, click share, and the number after `id=` in the link is the file ID.
+- If you choose `Update`, you can optionally fill in `Change Note`.

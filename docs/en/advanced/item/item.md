@@ -1,92 +1,92 @@
-# 元件
+# Item
 
-- 编辑器 `场景` / `层级` 中所有可操作的对象均为 `元件`
-- 在顶部菜单栏的 `创建` 选项中可以创建空元件及一些预设的元件
+- All operable objects in the editor's `Scene` / `Hierarchy` are `Items`.
+- You can create empty items and some preset items from the `Create` option in the top menu bar.
 
 ## Guid
 
-- 每个元件都有一个全局唯一标识符 `guid`，显示在 `检视器` 的最顶部
-- `guid` 前有一个复制按钮，点击后可以将该元件的 `guid` 复制到剪贴板
-- 编辑器中所有 `guid` 中的字母均为小写
+- Every item has a globally unique identifier `guid`, displayed at the very top of the `Inspector`.
+- There is a copy button next to the `guid`. Clicking it will copy the item's `guid` to the clipboard.
+- All letters in a `guid` within the editor are lowercase.
 
-## 快捷功能
+## Quick Functions
 
-选中一个元件后，在 `检视器` 中可以看到两排按钮。
+After selecting an item, you can see two rows of buttons in the `Inspector`.
 
-第一排按钮从左到右的功能分别为：
+The functions of the first row of buttons, from left to right, are:
 
-- `重置变换数值`：将该元件的位置重置为 `(0, 0, 0)`，旋转重置为 `(0, 0, 0)`，缩放重置为 `(1, 1, 1)`
-- `顺时针旋转 90°`：将该元件旋转属性中的 `y` 值增加 90，并对 360 取模
-- `逆时针旋转 90°`：将该元件旋转属性中的 `y` 值减小 90，并对 360 取模
-- `复制变换数据`：将该元件的位置、旋转、缩放属性复制到编辑器的内置剪贴板中
-- `粘贴位置数据`：将编辑器的内置剪贴板中的位置数据粘贴到该元件的位置属性中
-- `粘贴旋转数据`：将编辑器的内置剪贴板中的旋转数据粘贴到该元件的旋转属性中
-- `粘贴缩放数据`：将编辑器的内置剪贴板中的缩放数据粘贴到该元件的缩放属性中
+- `Reset Transform Value`: Resets the item's position to `(0, 0, 0)`, rotation to `(0, 0, 0)`, and scale to `(1, 1, 1)`.
+- `Clockwise Rotate 90°`: Adds 90 to the `y` value of the item's rotation property, modulo 360.
+- `Anticlockwise Rotate 90°`: Subtracts 90 from the `y` value of the item's rotation property, modulo 360.
+- `Copy Transform Value`: Copies the item's position, rotation, and scale properties to the editor's internal clipboard.
+- `Paste Position Value`: Pastes the position value from the editor's internal clipboard to this item's position property.
+- `Paste Rotation Value`: Pastes the rotation value from the editor's internal clipboard to this item's rotation property.
+- `Paste Scale Value`: Pastes the scale value from the editor's internal clipboard to this item's scale property.
 
 ---
 
-第二排按钮从左到右的功能分别为：
+The functions of the second row of buttons, from left to right, are:
 
-- `粘贴位置 x 数值`：将编辑器的内置剪贴板中位置属性的 `x` 值粘贴到该元件的位置属性中
-- `粘贴位置 y 数值`：将编辑器的内置剪贴板中位置属性的 `y` 值粘贴到该元件的位置属性中
-- `粘贴位置 z 数值`：将编辑器的内置剪贴板中位置属性的 `z` 值粘贴到该元件的位置属性中
-- `粘贴旋转 x 数值`：将编辑器的内置剪贴板中旋转属性的 `x` 值粘贴到该元件的旋转属性中
-- `粘贴旋转 y 数值`：将编辑器的内置剪贴板中旋转属性的 `y` 值粘贴到该元件的旋转属性中
-- `粘贴旋转 z 数值`：将编辑器的内置剪贴板中旋转属性的 `z` 值粘贴到该元件的旋转属性中
-- `粘贴缩放 x 数值`：将编辑器的内置剪贴板中缩放属性的 `x` 值粘贴到该元件的缩放属性中
-- `粘贴缩放 y 数值`：将编辑器的内置剪贴板中缩放属性的 `y` 值粘贴到该元件的缩放属性中
-- `粘贴缩放 z 数值`：将编辑器的内置剪贴板中缩放属性的 `z` 值粘贴到该元件的缩放属性中
+- `Paste Position x Value`: Pastes the `x` value of the position property from the editor's internal clipboard to this item's position property.
+- `Paste Position y Value`: Pastes the `y` value of the position property from the editor's internal clipboard to this item's position property.
+- `Paste Position z Value`: Pastes the `z` value of the position property from the editor's internal clipboard to this item's position property.
+- `Paste Rotation x Value`: Pastes the `x` value of the rotation property from the editor's internal clipboard to this item's rotation property.
+- `Paste Rotation y Value`: Pastes the `y` value of the rotation property from the editor's internal clipboard to this item's rotation property.
+- `Paste Rotation z Value`: Pastes the `z` value of the rotation property from the editor's internal clipboard to this item's rotation property.
+- `Paste Scale x Value`: Pastes the `x` value of the scale property from the editor's internal clipboard to this item's scale property.
+- `Paste Scale y Value`: Pastes the `y` value of the scale property from the editor's internal clipboard to this item's scale property.
+- `Paste Scale z Value`: Pastes the `z` value of the scale property from the editor's internal clipboard to this item's scale property.
 
-## 自身属性
+## Own Properties
 
-每个元件都有 `位置` `旋转` `缩放` 这三个属性，可以在 `检视器` 中手动修改，也可以在场景中根据 [基础操作](../../start/basicOperation#元件调整) 中介绍的方法修改。
+Every item has the three properties `Position`, `Rotation`, and `Scale`. These can be modified manually in the `Inspector` or in the scene using the methods described in [Basic Operations](../../start/basicOperation#Item-Adjustment).
 
-## 组件
+## Components
 
-一个元件能拥有以下 16 种组件，但每种组件最多只能有一个：
+An item can have the following 16 types of components, but at most one of each type:
 
-- [`元件设置`](settings)
-- [`渲染器`](renderer)
-- [`路面生成器`](roadGenerator)
-- [`物理物体`](physicsObject)
-- [`元件链接`](itemLink)
-- [`触发器`](trigger)
-- [`关节`](joint)
-- [`路点`](wayPoint)
-- [`路径`](wayPath)
-- [`收集品`](collection)
-- [`光源`](light)
-- [`粒子发射器`](particleEmitter)
-- [`音频播放器`](audioPlayer)
-- [`贴花投射器`](decal)
-- [`摄像机`](camera)
-- [`执行器`](executor)
-- ~~[`地形印记`](terrainStamp)~~
+- [`Item Settings`](settings)
+- [`Renderer`](renderer)
+- [`Road Generator`](roadGenerator)
+- [`Physics Object`](physicsObject)
+- [`Item Link`](itemLink)
+- [`Trigger`](trigger)
+- [`Joint`](joint)
+- [`Way Point`](wayPoint)
+- [`Way Path`](wayPath)
+- [`Collection`](collection)
+- [`Light`](light)
+- [`Particle Emitter`](particleEmitter)
+- [`Audio Player`](audioPlayer)
+- [`Decal`](decal)
+- [`Camera`](camera)
+- [`Executor`](executor)
+- ~~[`Terrain Stamp`](terrainStamp)~~
 
-::: tip 提示
+::: tip
 
-除了 `元件设置` 组件外，其他组件的左上角均有两个功能按钮，分别为：
+With the exception of the `Item Settings` component, all other components have two function buttons in their top-left corner:
 
-- `复制组件数据`：将该元件该组件的所有数据复制到编辑器的内置剪贴板中
-- `粘贴组件数据`：将编辑器的内置剪贴板中的组件数据粘贴到该元件该组件中
+- `Copy Component Data`: Copies all data from this component on this item to the editor's internal clipboard.
+- `Paste Component Data`: Pastes component data from the editor's internal clipboard to this component on this item.
 
 :::
 
-### 变换偏移
+### Transform Offset
 
-一些组件（[`路点`](wayPoint) [`光源`](light) [`粒子发射器`](particleEmitter) [`音频播放器`](audioPlayer) [`贴花投射器`](decal)）具有 `变换偏移` 属性，用于设置该组件相对于元件本身的变换偏移。
+Some components ([`Way Point`](wayPoint), [`Light`](light), [`Particle Emitter`](particleEmitter), [`Audio Player`](audioPlayer), [`Decal`](decal)) have a `Transform Offset` property, which is used to set the component's transform offset relative to the item itself.
 
-#### `位置`
+#### `Position`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-#### `旋转`
+#### `Rotation`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-#### `缩放`
+#### `Scale`
 
-- 类型：`Float3`
-- 默认值：`(1, 1, 1)`
+- Type: `Float3`
+- Default: `(1, 1, 1)`

@@ -1,61 +1,61 @@
-# 造景
+# Landscaping
 
-该组件能帮助你种植各种植被，快速布景。
+This component helps you plant various types of vegetation to quickly dress your scene.
 
-::: warning 注意
+::: warning
 
-该组件中的所有操作都不会被储存在历史记录中，因此无法使用 [撤销](../../start/basicOperation#撤销) 功能来回滚该组件中的任何操作，使用一些破坏性功能时请务必小心。
-
-:::
-
-## 认识按钮
-
-- `左右箭头`：切换植被种类
-- `清除`：清除场景中所有当前植被种类（不包括实体元件）
-- `打包进造景组件`：将场景中所有与当前植被种类相同的实体元件打包进造景组件
-- `转换为实体元件`：将所有当前植被种类转换为实体元件
-- `显示 / 隐藏`：显示或隐藏该组件中的所有植被（不包括实体元件）
-- `启用 / 禁用`：启用或禁用造景功能
-
-::: tip 提示
-
-- 造景组件中的植被只提供渲染功能，无物理物体的碰撞效果，如果要让植被具有物理碰撞效果，请转换为实体元件
-- 在造景组件中的植被性能远高于实体元件，如果确认该植被只作为背景，不参与游戏碰撞，请尽可能使用造景组件中的植被
+None of the operations in this component will be stored in the history, so the [Undo](../../start/basicOperation#Undo) function cannot be used to roll back any actions. Please be careful when using destructive functions.
 
 :::
 
-## 种植植被
+## Understanding the Buttons
 
-- 启用 `造景功能`
-- 点击 `左右箭头` 按钮，切换到想要种植的植物种类
-- 选择 `放置模式` 为 `放置`
-- 设置 `旋转范围` 和 `缩放范围` 以控制植物的随机 y 轴旋转和等比缩放
-- 场景中，当鼠标移动到具有 [`渲染器`](../item/renderer) 组件的元件上时，会显示出<span class="text-green">绿色的圆圈</span>及其对应的表面法线。<span class="text-green">绿色圆圈</span>表示植被放置的位置，法线表示植被的朝向
-- 点击鼠标左键即可种植植被
+- `Left/Right Arrows`: Switch vegetation type.
+- `Clear`: Clears all of the current vegetation type from the scene (does not include entity items).
+- `Pack into Landscaping Component`: Packs all entity items in the scene that match the current vegetation type into the landscaping component.
+- `Convert to Entity Items`: Converts all of the current vegetation type into entity items.
+- `Show / Hide`: Shows or hides all vegetation in this component (does not include entity items).
+- `Enable / Disable`: Enables or disables the landscaping feature.
 
-## 批量种植
+::: tip
 
-- 选择 `放置模式` 为 `绘制`
-- 设置 `笔刷尺寸` `绘制密度` 参数控制批量种植的效果
-- 场景中，当鼠标移动到具有 `渲染器` 组件的元件上时会出现一个表示范围的<span class="text-blue">蓝色圆圈</span>，范围内会按照密度随机分布放置植被
-- <span class="text-blue">蓝色圆圈</span>内的<span class="text-blue">蓝色线段</span>是检测线，检测线和模型相交的地方有<span class="text-green">绿色的标记</span>，这些地方就是植被放置的位置及其法线方向
-- 如果有太多<span class="text-blue">蓝色的检测线</span>未被检测到，可以扩大 `检测深度`
+- Vegetation within the landscaping component only provides rendering and has no physical collision. If you want vegetation to have physical collision, please convert it to entity items.
+- The performance of vegetation in the landscaping component is much higher than that of entity items. If you confirm that the vegetation is only for background and does not participate in game collisions, please use the vegetation from the landscaping component as much as possible.
 
-## 擦除植被
+:::
 
-- 选择 `放置模式` 为 `擦除`
-- 设置 `笔刷尺寸` 控制擦除范围
-- 场景中，当鼠标移动到具有 `渲染器` 组件的元件上时会出现一个<span class="text-red">红色球体</span>，红色球体范围内被标记的植被都会被擦除
+## Planting Vegetation
 
-## 缩放植被
+- Enable the `Landscaping Feature`.
+- Click the `Left/Right Arrows` button to switch to the desired vegetation type.
+- Set the `Placement Mode` to `Place`.
+- Set the `Rotation Range` and `Scale Range` to control the random Y-axis rotation and uniform scaling of the plants.
+- In the scene, when the mouse moves over an item with a [`Renderer`](../item/renderer) component, a <span class="text-green">green circle</span> and its corresponding surface normal will be displayed. The <span class="text-green">green circle</span> indicates the placement position of the vegetation, and the normal indicates its orientation.
+- Click the left mouse button to plant the vegetation.
 
-- 选择 `放置模式` 为 `缩放`
-- 设置 `笔刷尺寸` `缩放乘数` 参数控制缩放的范围和效果
-- 场景中，当鼠标移动到具有 `渲染器` 组件的元件上时会出现一个<span class="text-yellow">黄色球体</span>，黄色球体范围内被检测到的植被有不同颜色的标记，离中心点越近权重越大，应用的缩放效果越明显
-- 按住 `shift` 键可以反转缩放，即放大操作会变成缩小操作
+## Mass Planting
 
-::: tip 提示
+- Set the `Placement Mode` to `Paint`.
+- Set the `Brush Size` and `Density` parameters to control the effect of mass planting.
+- In the scene, when the mouse moves over an item with a `Renderer` component, a <span class="text-blue">blue circle</span> representing the range will appear. Vegetation will be placed randomly within this range according to the density.
+- The <span class="text-blue">blue lines</span> inside the <span class="text-blue">blue circle</span> are detection lines. Where these lines intersect with the model, there will be <span class="text-green">green markers</span>; these are the placement positions and normal directions for the vegetation.
+- If too many <span class="text-blue">blue detection lines</span> are not detected, you can increase the `Raycast Depth`.
 
-上述所有操作均只对造景组件中的植被有效，实体元件不受影响。
+## Erasing Vegetation
+
+- Set the `Placement Mode` to `Erase`.
+- Set the `Brush Size` to control the erase range.
+- In the scene, when the mouse moves over an item with a `Renderer` component, a <span class="text-red">red sphere</span> will appear. All marked vegetation within the range of the red sphere will be erased.
+
+## Scaling Vegetation
+
+- Set the `Placement Mode` to `Scale`.
+- Set the `Brush Size` and `Scale Multiplier` parameters to control the range and effect of the scaling.
+- In the scene, when the mouse moves over an item with a `Renderer` component, a <span class="text-yellow">yellow sphere</span> will appear. Detected vegetation within the yellow sphere's range will have different colored markers. The closer to the center point, the greater the weight, and the more pronounced the applied scaling effect.
+- Holding the `shift` key can invert the scaling, i.e., a zoom-in operation becomes a zoom-out operation.
+
+::: tip
+
+All the operations above only affect vegetation within the landscaping component; entity items are not affected.
 
 :::

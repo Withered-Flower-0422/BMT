@@ -1,292 +1,292 @@
-# 光源
+# Light
 
-此光源为局部光源。若要设置全局平行光，参考 [`场景设置 → 光照`](../sceneSettings/lighting)。
+This is a local light source. To set the global parallel light, refer to [`Scene Settings → Lighting`](../sceneSettings/lighting).
 
-## [变换偏移](item#变换偏移)
+## [Transform Offset](item#Transform-Offset)
 
-## `光源类型`
+## `Light Type`
 
-- 类型：`点光 | 聚光 | 矩形区域光 | 圆形区域光`
-- 默认值：`点光`
+- Type: `Point | Spot | Rect Area | Circular Area`
+- Default: `Point`
 
-::: tip 注意
+::: tip
 
-圆形区域光仅提供 [体积光](#体积光) 使用，无照明效果。
+Circular area light for [volumetric light](#Volumetric-Light) only, no illumination effect.
 
 :::
 
-## `色温`
+## `Temperature (K)`
 
-- 类型：`float`
-- 默认值：`6570.0`
+- Type: `float`
+- Default: `6570.0`
 
-## `颜色`
+## `Filter`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-## `强度`
+## `Intensity (Lux)`
 
-- 类型：`float`
-- 默认值：`10000.0`
+- Type: `float`
+- Default: `10000.0`
 
-## `范围`
+## `Range`
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-## `阴影质量`
+## `Shadow Quality`
 
-- 类型：`关闭 | 低 | 中 | 高`
-- 默认值：`关闭`
+- Type: `Off | Low | Medium | High`
+- Default: `Off`
 
-物体由该光源产生的阴影的质量。
+The quality of shadows cast by objects from this light source.
 
-## `阴影近处裁切`
+## `Shadow Near Clip`
 
-- 类型：`float`
-- 默认值：`0.1`
-- 范围：`0.0` ~ `10.0`
+- Type: `float`
+- Default: `0.1`
+- Range: `0.0` ~ `10.0`
 
-## `内圈角度`<badge text="光源类型 = 聚光" />
+## `Inner Angle`<badge text="Light Type = Spot" />
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `179.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `179.0`
 
-## `外圈角度`<badge text="光源类型 = 聚光" />
+## `Outer Angle`<badge text="Light Type = Spot" />
 
-- 类型：`float`
-- 默认值：`30.0`
-- 范围：`1.0` ~ `179.0`
+- Type: `float`
+- Default: `30.0`
+- Range: `1.0` ~ `179.0`
 
-## `尺寸`<badge text="光源类型 = 矩形区域光" />
+## `Size`<badge text="Light Type = Rect Area" />
 
-- 类型：`Float2`
-- 默认值：`(1, 1)`
+- Type: `Float2`
+- Default: `(1, 1)`
 
-## `半径`<badge text="光源类型 = 圆形区域光" />
+## `Radius`<badge text="Light Type = Circular Area" />
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-## `启用体积光`
+## `Enable Volumetric Light`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-## 体积光
+## Volumetric Light
 
-体积光会根据不同的光源类型变换。
+Volumetric light will change based on the different light types.
 
-### 渲染
+### Rendering
 
-#### `仅体积光`
+#### `Only Volumetric`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-设置为 `true` 时，仅提供体积光效果，无照明效果。
+When set to `true`, it only provides the volumetric effect, with no illumination.
 
-#### `自动优化`
+#### `Auto Optimize`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-仅建议当光源不移动时启用此选项。
+It is only recommended to enable this option when the light source does not move.
 
-#### `混合模式`
+#### `Blend Mode`
 
-- 类型：`添加 | 混合 | 预乘 | 减去`
-- 默认值：`添加`
+- Type: `Additive | Blend | Pre Multiply | Subtractive`
+- Default: `Additive`
 
-混合模式用于控制光源的颜色叠加方式。
+The blend mode controls how the light's color is superimposed.
 
-#### `质量`
+#### `Quality`
 
-- 类型：`int`
-- 默认值：`8`
-- 范围：`1` ~ `256`
+- Type: `int`
+- Default: `8`
+- Range: `1` ~ `256`
 
-#### `步长`
+#### `Step Size`
 
-- 类型：`float`
-- 默认值：`0.1`
+- Type: `float`
+- Default: `0.1`
 
-#### `最大步数`
+#### `Max Step`
 
-- 类型：`int`
-- 默认值：`200`
+- Type: `int`
+- Default: `200`
 
-#### `采样抖动`
+#### `Jitter`
 
-- 类型：`float`
-- 默认值：`0.2`
+- Type: `float`
+- Default: `0.2`
 
-#### `透明度抖动`
+#### `Dither`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### 噪波
+### Noise
 
-#### `噪波强度`
+#### `Noise Strength`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `3.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `3.0`
 
-#### `噪波缩放`
+#### `Noise Scale`
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-#### `噪波乘数`
+#### `Noise Multiplier`
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-#### `风`
+#### `Wind`
 
-- 类型：`Float3`
-- 默认值：`(0.03, 0.02, 0)`
+- Type: `Float3`
+- Default: `(0.03, 0.02, 0)`
 
-### 体积
+### Volumetric
 
-#### `密度`
+#### `Density`
 
-- 类型：`float`
-- 默认值：`0.2`
+- Type: `float`
+- Default: `0.2`
 
-#### `色调`
+#### `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-#### `亮度`
+#### `Brightness`
 
-- 类型：`float`
-- 默认值：`0.5`
+- Type: `float`
+- Default: `0.5`
 
-#### `常量衰减`
+#### `Constant Falloff`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-#### `线性衰减`
+#### `Linear Falloff`
 
-- 类型：`float`
-- 默认值：`10.0`
+- Type: `float`
+- Default: `10.0`
 
-#### `平方衰减`
+#### `Quadratic Falloff`
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-#### `范围衰减`
+#### `Range Falloff`
 
-- 类型：`float`
-- 默认值：`15.0`
+- Type: `float`
+- Default: `15.0`
 
-#### `漫射强度`
+#### `Diffusion Intensity`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-#### `边缘淡出`
+#### `Edge Fade`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-#### `顶部半径`<badge text="光源类型 = 聚光" />
+#### `Top Radius`<badge text="Light Type = Spot" />
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-#### `投射贴图`<badge text="光源类型 = 聚光" />
+#### `Projector Texture`<badge text="Light Type = Spot" />
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-聚光灯提供了投影仪功能。设置 `投射贴图` 指定需要投射的图案。
+The spotlight provides a projector function. Set the `Projector Texture` to specify the pattern to be projected.
 
-#### `投射缩放`<badge text="光源类型 = 聚光" />
+#### `Projector Scale`<badge text="Light Type = Spot" />
 
-- 类型：`Float2`
-- 默认值：`(1, 1)`
+- Type: `Float2`
+- Default: `(1, 1)`
 
-投射图案的缩放比例。
+The scale of the projected pattern.
 
-#### `投射偏移`<badge text="光源类型 = 聚光" />
+#### `Projector Offset`<badge text="Light Type = Spot" />
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-投射图案的偏移量。
+The offset of the projected pattern.
 
-#### `投射滚动速度`<badge text="光源类型 = 聚光" />
+#### `Projector Scroll Speed`<badge text="Light Type = Spot" />
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-投射图案在 x 和 y 轴上滚动的速度。
+The speed at which the projected pattern scrolls on the x and y axes.
 
-#### `扩散角度`<badge text="光源类型 = 矩形区域光" /><badge text="光源类型 = 圆形区域光" />
+#### `Frustum Angle`<badge text="Light Type = Rect Area" /><badge text="Light Type = Circular Area" />
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `80.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `80.0`
 
-### 阴影
+### Shadows
 
-#### `阴影质量`
+#### `Shadow Quality`
 
-- 类型：`关闭 | 低 | 中 | 高`
-- 默认值：`关闭`
+- Type: `Off | Low | Medium | High`
+- Default: `Off`
 
-#### `阴影强度`
+#### `Shadow Intensity`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-#### `自动烘焙`
+#### `Auto Bake`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `自动烘焙` 后会在游戏开始时烘焙一次阴影，之后将不再实时计算。如果游戏中确保该光源不会照射到移动物体，请勾选此选项以提高性能。
+When `Auto Bake` is checked, the shadow will be baked once at the start of the game and will not be calculated in real-time thereafter. If you are sure that this light source will not shine on any moving objects during the game, please check this option to improve performance.
 
-#### `近处裁切`
+#### `Near Clip`
 
-- 类型：`float`
-- 默认值：`0.1`
+- Type: `float`
+- Default: `0.1`
 
-### 尘埃
+### Dust
 
-#### `启用尘埃`
+#### `Enable Dust`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-#### `尘埃亮度`
+#### `Dust Brightness`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-#### `尘埃尺寸`
+#### `Dust Size`
 
-- 类型：`Float2`
-- 默认值：`(0.01, 0.02)`
+- Type: `Float2`
+- Default: `(0.01, 0.02)`
 
-尘埃尺寸将在该值范围内随机。
+The dust size will be randomized within this range.
 
-#### `尘埃湍流`
+#### `Dust Turbulence`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-#### `尘埃淡出距离`
+#### `Dust Fadeout Distance`
 
-- 类型：`float`
-- 默认值：`10.0`
+- Type: `float`
+- Default: `10.0`

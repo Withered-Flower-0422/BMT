@@ -1,72 +1,72 @@
-# 触发器
+# Trigger
 
-## 触发层
+## Trigger Layer
 
-用来设置何种 [碰撞层](physicsObject#碰撞层) 的元件可以触发此触发器。
+Used to set which [Collision Layer](physicsObject#Collision-Layer) of items can activate this trigger.
 
-### `玩家`
+### `Player`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-### `刚体`
+### `Rigid Body`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-### `机关`
+### `Machinery`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-### `静态路面`
+### `Static Road`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `机关挡板`
+### `Stopper`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `非玩家`
+### `Without Player`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `仅玩家`
+### `Only Player`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `无`
+### `None`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-## 触发事件
+## Trigger Event
 
-### `触发进入`
+### `Trigger Enter`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当设置为 `true` 时，会在物体进入触发器范围时的那一帧调用脚本的 [onTrigger()](../../script/game#onTrigger) 函数。
+When set to `true`, it will call the script's [onTrigger()](../../script/game#onTrigger) function on the frame an object enters the trigger's volume.
 
-### `触发停留`
+### `Trigger Stay`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当设置为 `true` 时，会在物体处于触发器范围内持续时每一帧调用脚本的 [onTrigger()](../../script/game#onTrigger) 函数，**包括**进入和离开的那一帧。
+When set to `true`, it will call the script's [onTrigger()](../../script/game#onTrigger) function on every frame that an object stays within the trigger's volume, **including** the frame it enters and leaves.
 
-### `触发离开`
+### `Trigger Exit`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当设置为 `true` 时，会在物体离开触发器范围时的那一帧调用脚本的 [onTrigger()](../../script/game#onTrigger) 函数。
+When set to `true`, it will call the script's [onTrigger()](../../script/game#onTrigger) function on the frame an object leaves the trigger's volume.
 
-## 触发器形状
+## Trigger Shape
 
-参考 [`物理物体 → 碰撞箱类型`](physicsObject#碰撞箱类型) 。
+Refer to [`Physics Object → Collider Type`](physicsObject#Collider-Type).

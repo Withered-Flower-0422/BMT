@@ -1,7 +1,7 @@
-# 地图信息
+# Map Information
 
-::: tip 提示
+::: tip
 
-此组件功能在 [`起步 → 发布地图 → 设置地图信息`](../../start/release#设置地图信息) 中已详细说明。
+The function of this component has been explained in detail in [`Start → Release → Set Map Information`](../../start/release#Set-Map-Information).
 
 :::

@@ -1,254 +1,254 @@
-# 物理物体
+# Physics Object
 
-::: tip 提示
+::: tip
 
-启用此组件后，该元件将作为物理物体参与游戏中 [havok 物理引擎](https://www.havok.com) 的计算。
-
-:::
-
-## `碰撞箱类型`
-
-- 类型：`长方体 | 球体 | 网格`
-- 默认值：`网格`
-
-物理物体的碰撞箱类型。
-
-### 长方体
-
-#### `中心`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-#### `尺寸`
-
-- 类型：`Float3`
-- 默认值：`(1, 1, 1)`
-
-#### `倒角半径`
-
-- 类型：`float`
-- 默认值：`0.02`
-
-#### `自动识别`
-
-点击该按钮，可以根据 [`渲染器`](renderer) 组件中的网格自动设置最小包裹的长方体尺寸。
-
-### 球体
-
-#### `中心`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-#### `半径`
-
-- 类型：`float`
-- 默认值：`0.5`
-
-### 网格
-
-::: tip 提示
-
-网格模式的性能远低于另外两者，在效果满足期望的前提下，请优先选择长方体或球体模式。
+After enabling this component, this item will participate in the game's [Havok physics engine](https://www.havok.com) calculations as a physics object.
 
 :::
 
-#### `自动获取网格`
+## `Collider Type`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `Box | Sphere | Mesh`
+- Default: `Mesh`
 
-当设置为 `true` 时，将试图从 [`渲染器`](renderer) 组件中获取网格。
+The collider type of the physics object.
 
-#### `网格`<badge text="自动获取网格 = false" />
+### Box
 
-- 类型：`Mesh`
-- 默认值：空
+#### `Center`
 
-当 `自动获取网格` 设置为 `false` 时将使用此网格。
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-#### `凸面碰撞体`
+#### `Size`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `Float3`
+- Default: `(1, 1, 1)`
 
-当设置为 `true` 时，将使用[凸面碰撞体](https://en.wikipedia.org/wiki/Convex_hull)。
+#### `Bevel Radius`
 
-::: warning 注意
+- Type: `float`
+- Default: `0.02`
 
-由于 _havok 物理引擎_ 本身的问题，当 **非凸体网格元件** 发生 [碰撞事件](#碰撞进入) 或者 [触发器事件](trigger#触发事件) 时，其网格的每一个面都会触发一次相应的事件。因此，当元件需要响应这些事件时，请尽量使用 `长方体` 和 `球体` 碰撞箱，或者启用 `凸面碰撞体` 选项。
+#### `Auto Detect`
 
-:::
+Clicking this button automatically sets the size of the minimum bounding box based on the mesh in the [`Renderer`](renderer) component.
 
-## `物理体类型`
+### Sphere
 
-- 类型：`静态 | 运动学刚体 | 刚体`
-- 默认值：`静态`
+#### `Center`
 
-### 静态
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-完全静止的物理物体。如：地面。
+#### `Radius`
 
-该类型的物理物体进入死亡区不会被摧毁。
+- Type: `float`
+- Default: `0.5`
 
-#### `焊接碰撞箱`
+### Mesh
 
-- 类型：`bool`
-- 默认值：`false`
+::: tip
 
-启用该功能的邻近物体会自动优化碰撞箱，尝试修正细缝、错位、轻微穿模等微小问题。
-
-::: danger 警告
-
-该功能可能导致诸多违背物理的表现，包括但不限于弹跳、单轨滑落、机关穿模。除非清楚自己在做什么，请勿使用。
+The performance of the Mesh mode is much lower than the other two. If the effect meets expectations, please prioritize using the Box or Sphere mode.
 
 :::
 
-### 运动学刚体
+#### `Auto Get Mesh`
 
-静止，只能通过 [执行器脚本](executor) 或者 [路径](wayPath)[路点](wayPoint) 调整位姿。如：移动路面。
+- Type: `bool`
+- Default: `true`
 
-该类型的物理物体可以被死亡区摧毁。
+When set to `true`, it will attempt to get the mesh from the [`Renderer`](renderer) component.
 
-### 刚体
+#### `Mesh`<badge text="Auto Get Mesh = false" />
 
-参与物理模拟，将受到各种力的影响。如：箱子。
+- Type: `Mesh`
+- Default: Empty
 
-该类型的物理物体可以被死亡区摧毁。
+When `Auto Get Mesh` is set to `false`, this mesh will be used.
 
-#### `质量`
+#### `Convex`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `bool`
+- Default: `false`
 
-#### `线性阻力`
+When set to `true`, a [convex collider](https://en.wikipedia.org/wiki/Convex_hull) will be used.
 
-- 类型：`float`
-- 默认值：`0.5`
+::: warning
 
-#### `旋转阻力`
+Due to an issue with the _Havok physics engine_ itself, when a **non-convex mesh item** has a [collision event](#Collision-Enter) or a [trigger event](trigger#Trigger-Event), the corresponding event will be triggered once for each face of its mesh. Therefore, when an item needs to respond to these events, please try to use `Box` and `Sphere` colliders, or enable the `Convex` option.
 
-- 类型：`float`
-- 默认值：`0.05`
+:::
 
-#### `重力系数`
+## `Physics Body Type`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `Static | Kinematic | Rigid`
+- Default: `Static`
 
-可以设置成负数使其飞行。
+### Static
 
-#### `密度`
+A completely stationary physics object. E.g., the ground.
 
-- 类型：`float`
-- 默认值：`10.0`
+This type of physics object will not be destroyed upon entering a death area.
 
-影响在水中的受力。
+#### `Weld Collider`
 
-#### `浮力体素尺寸`
+- Type: `bool`
+- Default: `false`
 
-- 类型：`float`
-- 默认值：`0.5`
+Neighboring objects with this feature enabled will have their colliders automatically optimized, attempting to correct minor issues like small gaps, misalignments, and slight clipping.
 
-## `覆写质量分布`
+::: danger
 
-- 类型：`bool`
-- 默认值：`false`
+This feature can lead to many non-physical behaviors, including but not limited to bouncing, sliding off monorails, and mechanisms clipping through objects. Do not use this unless you know what you are doing.
 
-## `质量中心`
+:::
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+### Kinematic
 
-该属性仅在 `覆写质量分布` 设置为 `true` 时生效。
+Stationary, can only have its pose adjusted via an [Executor script](executor) or a [Way Path](wayPath)/[Way Point](wayPoint). E.g., a moving platform.
 
-## `自动获取物理材质`
+This type of physics object can be destroyed by a death area.
 
-- 类型：`bool`
-- 默认值：`true`
+### Rigid
 
-当设置为 `true` 时，将试图从 [`路面生成器`](roadGenerator) 组件中根据路面类型获取物理材质。
+Participates in the physics simulation and will be affected by various forces. E.g., a box.
 
-## `物理材质`<badge text="自动获取物理材质 = false" />
+This type of physics object can be destroyed by a death area.
 
-- 类型：`enum`
-- 默认值：`石`
+#### `Mass`
 
-当 `自动获取物理材质` 设置为 `false` 时将使用此物理材质。
+- Type: `float`
+- Default: `1.0`
 
-## `自定义物理材质`<badge text="自动获取物理材质 = false" />
+#### `Linear Drag`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `float`
+- Default: `0.5`
 
-当设置为 `true` 时，将使用自定义的物理材质。
+#### `Angular Drag`
 
-## `自定义摩擦力模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
+- Type: `float`
+- Default: `0.05`
 
-- 类型：`几何平均值 | 最小值 | 最大值 | 算数平均值`
-- 默认值：`几何平均值`
+#### `Gravity Factor`
 
-## `自定义摩擦力`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
+- Type: `float`
+- Default: `1.0`
 
-- 类型：`float`
-- 默认值：`0.2`
+Can be set to a negative number to make it fly.
 
-## `自定义弹性模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
+#### `Density`
 
-- 类型：`几何平均值 | 最小值 | 最大值 | 算数平均值`
-- 默认值：`几何平均值`
+- Type: `float`
+- Default: `10.0`
 
-## `自定义弹性`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
+Affects forces when in water.
 
-- 类型：`float`
-- 默认值：`0.2`
+#### `Buoyancy Voxel Size`
 
-## `禁用碰撞音`
+- Type: `float`
+- Default: `0.5`
 
-- 类型：`bool`
-- 默认值：`false`
+## `Override Mass Distribution`
 
-## `禁用碰撞伤害`
+- Type: `bool`
+- Default: `false`
 
-- 类型：`bool`
-- 默认值：`false`
+## `Center Of Mass`
 
-## `碰撞层`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-- 类型：`enum`
-- 默认值：`静态路面`
+This property is only effective when `Override Mass Distribution` is set to `true`.
 
-各碰撞层之间可碰撞一览表：
+## `Auto Get Physics Material`
 
-|          | 玩家 | 刚体 | 机关 | 静态路面 | 机关挡板 | 无  | 非玩家 | 仅玩家 |
-| :------: | :--: | :--: | :--: | :------: | :------: | :-: | :----: | :----: |
-|   玩家   |  √   |  √   |  √   |    √     |          |     |        |   √    |
-|   刚体   |  √   |  √   |  √   |    √     |          |     |   √    |        |
-|   机关   |  √   |  √   |      |          |    √     |     |   √    |        |
-| 静态路面 |  √   |  √   |      |          |          |     |   √    |        |
-| 机关挡板 |      |      |  √   |          |          |     |   √    |        |
-|    无    |      |      |      |          |          |     |        |        |
-|  非玩家  |      |  √   |  √   |    √     |    √     |     |   √    |        |
-|  仅玩家  |  √   |      |      |          |          |     |        |        |
+- Type: `bool`
+- Default: `true`
 
-## `碰撞进入`
+When set to `true`, it will attempt to get the physics material from the [`Road Generator`](roadGenerator) component based on the road type.
 
-- 类型：`bool`
-- 默认值：`false`
+## `Physics Material`<badge text="Auto Get Physics Material = false" />
 
-当设置为 `true` 时，该物体会在与别的物体发生碰撞时的那一帧调用脚本的 [onCollide()](../../script/game#onCollide) 函数。
+- Type: `enum`
+- Default: `Stone`
 
-## `碰撞停留`
+When `Auto Get Physics Material` is set to `false`, this physics material will be used.
 
-- 类型：`bool`
-- 默认值：`false`
+## `Custom Physics Material`<badge text="Auto Get Physics Material = false" />
 
-当设置为 `true` 时，该物体会在与别的物体碰撞持续过程中的每一帧调用脚本的 [onCollide()](../../script/game#onCollide) 函数，**包括**进入和离开的那一帧。
+- Type: `bool`
+- Default: `false`
 
-## `碰撞离开`
+When set to `true`, a custom physics material will be used.
 
-- 类型：`bool`
-- 默认值：`false`
+## `Custom Friction Mode`<badge text="Custom Physics Material = true" /><badge text="Auto Get Physics Material = false" />
 
-当设置为 `true` 时，该物体会在与别的物体碰撞离开时的那一帧调用脚本的 [onCollide()](../../script/game#onCollide) 函数。
+- Type: `Geometric Mean | Minimum | Maximum | Arithmetic Mean`
+- Default: `Geometric Mean`
+
+## `Custom Friction`<badge text="Custom Physics Material = true" /><badge text="Auto Get Physics Material = false" />
+
+- Type: `float`
+- Default: `0.2`
+
+## `Custom Restitution Mode`<badge text="Custom Physics Material = true" /><badge text="Auto Get Physics Material = false" />
+
+- Type: `Geometric Mean | Minimum | Maximum | Arithmetic Mean`
+- Default: `Geometric Mean`
+
+## `Custom Restitution`<badge text="Custom Physics Material = true" /><badge text="Auto Get Physics Material = false" />
+
+- Type: `float`
+- Default: `0.2`
+
+## `Disable Collision Audio`
+
+- Type: `bool`
+- Default: `false`
+
+## `Disable Collision Damage`
+
+- Type: `bool`
+- Default: `false`
+
+## `Collision Layer`
+
+- Type: `enum`
+- Default: `Static Road`
+
+A table showing which layers can collide with each other:
+
+|                | Player | Rigid Body | Machi-nery | Static Road | Stop-per | None | Without Player | Only Player |
+| :------------: | :----: | :--------: | :--------: | :---------: | :------: | :--: | :------------: | :---------: |
+|     Player     |   √    |     √      |     √      |      √      |          |      |                |      √      |
+|   Rigid Body   |   √    |     √      |     √      |      √      |          |      |       √        |             |
+|   Machi-nery   |   √    |     √      |            |             |    √     |      |       √        |             |
+|  Static Road   |   √    |     √      |            |             |          |      |       √        |             |
+|    Stop-per    |        |            |     √      |             |          |      |       √        |             |
+|      None      |        |            |            |             |          |      |                |             |
+| Without Player |        |     √      |     √      |      √      |    √     |      |       √        |             |
+|  Only Player   |   √    |            |            |             |          |      |                |             |
+
+## `Collision Enter`
+
+- Type: `bool`
+- Default: `false`
+
+When set to `true`, this object will call the script's [onCollide()](../../script/game#onCollide) function on the frame it collides with another object.
+
+## `Collision Stay`
+
+- Type: `bool`
+- Default: `false`
+
+When set to `true`, this object will call the script's [onCollide()](../../script/game#onCollide) function on every frame that it continues to collide with another object, **including** the frame it enters and leaves.
+
+## `Collision Exit`
+
+- Type: `bool`
+- Default: `false`
+
+When set to `true`, this object will call the script's [onCollide()](../../script/game#onCollide) function on the frame it stops colliding with another object.

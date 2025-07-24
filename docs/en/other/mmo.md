@@ -1,73 +1,73 @@
-# 联机
+# Multiplayer
 
-## 准备工作
+## Preparation
 
-- 在 [QQ 群](https://qm.qq.com/q/2mIPnK8JIk) 中下载 `MMOServer.patch` 文件
-- 在 `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` 目录下创建 `Patch` 文件夹
-- 将 `MMOServer.patch` 文件放入 `Patch` 文件夹
-- 启动游戏，点击右上角的头像，点击 `MMO 服务器` 按钮以连接至服务器
+- Download the `MMOServer.patch` file from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
+- Create a `Patch` folder in the `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` directory.
+- Place the `MMOServer.patch` file into the `Patch` folder.
+- Launch the game, click the avatar in the top-right corner, and click the `MMO Server` button to connect to the server.
 
-## 指令
+## Commands
 
-- 使用方法：
+- Usage:
 
-  - 控制台输入 `/mmo <指令> <参数 1> <参数 2> ...`
-  - 或使用缩写 `/m <指令缩写> <参数 1> <参数 2> ...`
+  - In the console, enter `/mmo <command> <param1> <param2> ...`
+  - Or use the shorthand `/m <command_shorthand> <param1> <param2> ...`
 
-- 如：
+- E.g.:
   - `/mmo create 123456`
   - `/mmo c 123456`
   - `/m create 123456`
   - `/m c 123456`
 
-::: tip 提示
+::: tip
 
-呼唤控制台的快捷键在游戏设置中设置。
-
-:::
-
-## 指令列表
-
-::: tip 提示
-
-- 指令对大小写不敏感
-- 大多数操作可通过右键玩家头像直接选择，无需手动输入指令
+The hotkey to open the console can be set in the game settings.
 
 :::
 
-### 创建与加入
+## Command List
 
-进入任意关卡后，可以使用指令创建或加入房间。
+::: tip
 
-- `c / create {0}`： 创建房间，控制台会返回分配的房间号 ID
-  - `{0}`：房间密码，可选
-- `j / join {0} {1}`：加入指定房间。
-  - `{0}`：房间号 ID
-  - `{1}`：房间密码，可选
+- Commands are case-insensitive.
+- Most operations can be selected by right-clicking a player's avatar, without needing to manually enter commands.
 
-### 房间内
+:::
 
-加入房间后可进行的操作。
+### Create and Join
 
-- `q / quit`：退出当前房间
-- `r / ready`：准备，再次输入取消准备
-- `o / observe`：标记自己进入比赛后为观战模式，再次输入取消观战
-- `e / eat {0}`：房间内所有玩家会收到自己把指定 ID 玩家吃掉的系统消息
-  - `{0}`：被吃掉的玩家 ID（ID 显示在右上角玩家列表的头像前）
-- `a / announce {0}`：<span class="text-red">**仅房主**</span> 向房间内所有玩家发送一个 Tip 形式的通知，停留时间为 10 秒
-  - `{0}`：通知内容
-- `k / kick {0}`：<span class="text-red">**仅房主**</span> 踢出指定 ID 的玩家
-  - `{0}`：被踢出玩家 ID
-- `h / host {0}`：<span class="text-red">**仅房主**</span> 将房主权限移交给指定 ID 的玩家
-  - `{0}`：被移交房主权限的玩家 ID
-- `s / start`：<span class="text-red">**仅房主**</span> 开始比赛，所有玩家会自动重开关卡并开始比赛
-- `goto {0}`：<span class="text-red">**仅房主**</span> 将房间内所有玩家转移到另一关卡中，同时保持房间不变
-  - `{0}`：目标关卡的标号，如 `5-3` `2-b` 等
+After entering any level, you can use commands to create or join a room.
 
-### 比赛中
+- `c / create {0}`: Creates a room. The console will return the assigned room ID.
+  - `{0}`: Room password, optional.
+- `j / join {0} {1}`: Joins a specified room.
+  - `{0}`: Room ID.
+  - `{1}`: Room password, optional.
 
-比赛中可进行的操作。
+### In a Room
 
-- `d / dnf`：放弃比赛
-- `q / quit`：强行退出当前比赛
-- `restart`：<span class="text-red">**仅房主**</span> 重新开始比赛
+Operations available after joining a room.
+
+- `q / quit`: Quits the current room.
+- `r / ready`: Sets your status to ready. Enter again to unready.
+- `o / observe`: Marks yourself to be in spectator mode after the match starts. Enter again to cancel.
+- `e / eat {0}`: All players in the room will receive a system message that you have eaten the specified player.
+  - `{0}`: The ID of the player to be eaten (ID is displayed before the avatar in the player list in the top-right corner).
+- `a / announce {0}`: <span class="text-red">**Host only**</span> Sends a tip-style notification to all players in the room, which stays for 10 seconds.
+  - `{0}`: The content of the notification.
+- `k / kick {0}`: <span class="text-red">**Host only**</span> Kicks the specified player.
+  - `{0}`: The ID of the player to be kicked.
+- `h / host {0}`: <span class="text-red">**Host only**</span> Transfers host privileges to the specified player.
+  - `{0}`: The ID of the player to receive host privileges.
+- `s / start`: <span class="text-red">**Host only**</span> Starts the match. All players will automatically restart the level and begin the match.
+- `goto {0}`: <span class="text-red">**Host only**</span> Transfers all players in the room to another level, while keeping the room intact.
+  - `{0}`: The number of the target level, e.g., `5-3`, `2-b`, etc.
+
+### During a Match
+
+Operations available during a match.
+
+- `d / dnf`: Did not finish (forfeits the match).
+- `q / quit`: Forcibly quits the current match.
+- `restart`: <span class="text-red">**Host only**</span> Restarts the match.

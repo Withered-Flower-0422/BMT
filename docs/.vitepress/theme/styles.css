@@ -13,6 +13,12 @@
   --vp-home-hero-image-filter: blur(75px);
 }
 
+.VPNavBarTitle .logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
 .text-red {
   color: red;
 }
@@ -29,6 +35,26 @@
   color: orange;
 }
 
+.text-gray {
+  color: gray;
+}
+
+.text-colorful {
+  color: transparent;
+
+  background: linear-gradient(
+    60deg,
+    #ff0000,
+    #ff8800,
+    #ff008c,
+    #d000ff,
+    #001eff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .dark .text-red {
   color: red;
 }
@@ -43,4 +69,24 @@
 
 .dark .text-yellow {
   color: orange;
+}
+
+.dark .text-gray {
+  color: gray;
+}
+
+.dark .text-colorful {
+  color: transparent;
+
+  background: linear-gradient(
+    60deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
 }

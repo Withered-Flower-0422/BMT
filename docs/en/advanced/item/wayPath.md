@@ -1,79 +1,79 @@
-# 路径
+# Way Path
 
-`路径` 需配合 [`路点`](wayPoint) 组件使用。
+`Way Path` needs to be used in conjunction with the [`Way Point`](wayPoint) component.
 
-[目标元件](#目标)可以根据路径中路点的位姿，自动移动、变换姿态。
+A [Target Item](#Targets) can automatically move and change its pose based on the poses of the way points in the path.
 
-## `路点`
+## `Way Points`
 
-- 类型：`Item[]`
-- 默认值：`[]`
+- Type: `Item[]`
+- Default: `[]`
 
-该路径的路点列表。路径的顺序就是路点列表的顺序。
+The list of way points for this path. The order of the path is the order of the way point list.
 
-## `自动收集`
+## `Auto Collect`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `自动收集` 后，路径会自动收集子元件里的所有路点，并按照 `层级` 中的顺序将其添加至路点列表中。
+When `Auto Collect` is checked, the path will automatically collect all way points from its child items and add them to the way point list in the order they appear in the `Hierarchy`.
 
-## `使用曲线`
+## `Use Curve`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `使用曲线` 后，两个路点之间的路径会使用贝塞尔曲线连接。
+When `Use Curve` is checked, the path between two way points will be connected using a Bezier curve.
 
-## `闭合路径`
+## `Closed Path`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `闭合路径` 后，路径会闭合，即最后一个路点会自动连接到第一个路点。
+When `Closed Path` is checked, the path will be closed, meaning the last way point will automatically connect to the first way point.
 
-## `循环`
+## `Loop`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `循环` 后，元件会按照此路径循环移动，否则，元件最终会停留在最后一个路点处。
+When `Loop` is checked, the item will move along this path in a loop; otherwise, the item will eventually stop at the last way point.
 
-## `相对位置`
+## `Relative Position`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `相对位置` 后，元件的移动路线会以自身的位置为起点，并相对于路径进行移动。否则，元件将以第一个路点位置为起点进行移动。
+When `Relative Position` is checked, the item's movement path will start from its own position and move relative to the path. Otherwise, the item will start moving from the position of the first way point.
 
-## `相对旋转`
+## `Relative Rotation`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `相对旋转` 后，元件的旋转将以自身的起始旋转姿态为起点，并相对于路径进行旋转。否则，元件将以第一个路点的旋转姿态为起点进行旋转。
+When `Relative Rotation` is checked, the item's rotation will start from its own initial rotation and rotate relative to the path. Otherwise, a an item will start rotating from the rotation of the first way point.
 
-## `对齐切线`
+## `Align Tangent`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-## `自动开始`
+## `Auto Start`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-勾选 `自动开始` 后，元件会在游戏开始时自动开始移动。~~否则需要使用 [脚本](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/itemComponents/wayPath.d.ts) 控制其开始、暂停、停止等状态。~~
+When `Auto Start` is checked, the item will automatically start moving when the game begins. ~~Otherwise, you would need to use a [script](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/itemComponents/wayPath.d.ts) to control its start, pause, stop, etc. states.~~
 
-::: danger 警告
+::: danger
 
-目前脚本中尚未提供有关控制路径的方法，如果的确需要使用路径，勾选 `自动开始` 是目前唯一的选择。
+Currently, there are no methods provided in the scripts to control the path. If you do need to use a path, checking `Auto Start` is the only option for now.
 
 :::
 
-## `目标`
+## `Targets`
 
-- 类型：`Item[]`
-- 默认值：`[]`
+- Type: `Item[]`
+- Default: `[]`
 
-需要沿着路径移动的元件列表。
+The list of items that need to move along the path.

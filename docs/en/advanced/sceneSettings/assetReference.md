@@ -1,29 +1,29 @@
-# 素材引用
+# Asset Reference
 
-用来导入目前图中还未实际使用到，但游玩过程中可能会使用到的素材。
+Used to import assets that are not yet actually used in the map but might be used during gameplay.
 
-::: tip 提示
+::: tip
 
-控制素材的使用往往需要通过脚本来实现，而在 [`执行器`](../item/executor#变量) 界面有专门保存素材引用的变量，因此该组件~~实际上没有太大的作用~~。
+Controlling the use of assets often requires implementation through scripts, and the [`Executor`](../item/executor#Variables) interface has dedicated variables for saving asset references. Therefore, this component is ~~actually not very useful~~.
 
 :::
 
-## `网格`
+## `Meshes`
 
-- 类型：`Mesh[]`
-- 默认值：`[]`
+- Type: `Mesh[]`
+- Default: `[]`
 
-## `纹理`
+## `Textures`
 
-- 类型：`Texture[]`
-- 默认值：`[]`
+- Type: `Texture[]`
+- Default: `[]`
 
-## `材质`
+## `Materials`
 
-- 类型：`Material[]`
-- 默认值：`[]`
+- Type: `Material[]`
+- Default: `[]`
 
-## `音频`
+## `Audios`
 
-- 类型：`Audio[]`
-- 默认值：`[]`
+- Type: `Audio[]`
+- Default: `[]`

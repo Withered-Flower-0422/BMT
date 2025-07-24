@@ -1,111 +1,111 @@
-# 光照
+# Lighting
 
-这里的光照提供的是全局平行光。
+The lighting here provides a global parallel light.
 
-## `启用`
+## `Enabled`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-## `旋转`
+## `Rotation`
 
-- 类型：`Float3`
-- 默认值：`(60, 0, 0)`
+- Type: `Float3`
+- Default: `(60, 0, 0)`
 
-::: tip 提示
+::: tip
 
-- `x` 值可以理解为时间，取值为 `0` ~ `180`，调整 `x` 值可以获得不同时间段的光照和天空效果
+- The `x` value can be understood as the time of day, with a range of `0` ~ `180`. Adjusting the `x` value can achieve lighting and sky effects for different times of the day.
 
-  - 0 表示清晨 6 点
-  - 90 表示正午 12 点
-  - 180 表示傍晚 6 点
-  - 如果要获得夜间效果，请调整下方的 [`光照强度`](#光照强度) [`光照色温`](#光照色温) [`光照色调`](#光照色调) 等属性
+  - 0 represents 6:00 AM (sunrise).
+  - 90 represents 12:00 PM (noon).
+  - 180 represents 6:00 PM (sunset).
+  - To achieve a nighttime effect, please adjust properties below like [`Light Intensity`](#Light-Intensity-Lux), [`Light Temperature`](#Light-Temperature-K), and [`Light Filter`](#Light-Filter).
 
-- `y` 值表示太阳的方位角
+- The `y` value represents the azimuth of the sun.
 
-  - 0 表示从北方（z+）射出
-  - 90 表示从东方（x+）射出
-  - 180 表示从南方（z-）射出
-  - 270 表示从西方（x-）射出
-  - 调整 `y` 值可以改变影子的方向
+  - 0 represents shooting from the North (z+).
+  - 90 represents shooting from the East (x+).
+  - 180 represents shooting from the South (z-).
+  - 270 represents shooting from the West (x-).
+  - Adjusting the `y` value can change the direction of shadows.
 
-- `z` 值暂无明显作用
-
-:::
-
-## `角直径`
-
-- 类型：`float`
-- 默认值：`4`
-- 范围：`0` ~ `360`
-
-角直径指光源（太阳）的直径。
-
-## `表面贴图`
-
-- 类型：`Texture`
-- 默认值：空
-
-表面贴图指光源的贴图，如果需要制作夜间场景，可以制作一个月球贴图，导入此处，此时光源的样式就变成了月球。
-
-::: details 没有效果？
-
-如果换上贴图后发现并无明显效果，请将 `耀斑尺寸` 设置为 `0` 。
+- The `z` value currently has no obvious effect.
 
 :::
 
-## `表面色调`
+## `Angular Diameter`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `float`
+- Default: `4`
+- Range: `0` ~ `360`
 
-表面色调指光源表面的颜色，与实际的全局平行光颜色无关。
+Angular diameter refers to the diameter of the light source (the sun).
 
-## `耀斑尺寸`
+## `Surface Texture`
 
-- 类型：`float`
-- 默认值：`2`
-- 范围：`0` ~ `90`
+- Type: `Texture`
+- Default: Empty
 
-## `耀斑衰减`
+Surface texture refers to the texture of the light source. If you need to create a night scene, you can make a moon texture and import it here. The style of the light source will then change to a moon.
 
-- 类型：`float`
-- 默认值：`4`
+::: details no effect?
 
-## `耀斑色调`
+If you find no obvious effect after applying the texture, please set the `Flare Size` to `0`.
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+:::
 
-## `耀斑强度`
+## `Surface Tint`
 
-- 类型：`float`
-- 默认值：`1`
-- 范围：`0` ~ `1`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-## `光照强度`
+Surface tint refers to the color of the light source's surface and is independent of the actual global parallel light color.
 
-- 类型：`float`
-- 默认值：`100000`
+## `Flare Size`
 
-光照强度指全局平行光的强度，夜间场景中请降低光照强度。
+- Type: `float`
+- Default: `2`
+- Range: `0` ~ `90`
 
-## `光照色温`
+## `Flare Falloff`
 
-- 类型：`float`
-- 默认值：`6570`
+- Type: `float`
+- Default: `4`
 
-## `光照色调`
+## `Flare Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-光照色调指全局平行光的颜色，夜间场景中请设置为较暗的夜间色。
+## `Flare Multiplier`
 
-## `阴影强度`
+- Type: `float`
+- Default: `1`
+- Range: `0` ~ `1`
 
-- 类型：`float`
-- 默认值：`1`
-- 范围：`0` ~ `1`
+## `Light Intensity (Lux)`
 
-阴影强度指物体受到全局平行光而产生的阴影的强度。
+- Type: `float`
+- Default: `100000`
+
+Light intensity refers to the intensity of the global parallel light. Please lower the light intensity for night scenes.
+
+## `Light Temperature (K)`
+
+- Type: `float`
+- Default: `6570`
+
+## `Light Filter`
+
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
+
+Light filter refers to the color of the global parallel light. Please set it to a darker, nighttime color for night scenes.
+
+## `Shadow Intensity`
+
+- Type: `float`
+- Default: `1`
+- Range: `0` ~ `1`
+
+Shadow intensity refers to the intensity of shadows cast by objects under the global parallel light.

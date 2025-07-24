@@ -23,7 +23,7 @@ outline:
 
 - `导入 / 新建素材`：导入或新建当前类别的素材
 - `删除素材`：删除当前选中的素材
-- `导入文件`夹：选择一个文件夹，将其中的属于当前类别的素材全部导入
+- `导入文件夹`：选择一个文件夹，将其中的属于当前类别的素材全部导入
 - `在资源管理器中查看`：在资源管理器中打开当前素材所在的文件夹
 
 ::: tip 提示
@@ -357,29 +357,29 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `全局坐标平铺`<badge text="启用全局坐标=true" type="warning" /><badge text="物理" /><badge text="无光照" />
+#### `全局坐标平铺`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `20.0`
 
-#### `全局坐标混合`<badge text="启用全局坐标=true" type="warning" /><badge text="物理" /><badge text="无光照" />
+#### `全局坐标混合`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `20.0`
 
-#### `顶部漫射`<badge text="启用全局坐标=true" type="warning" /><badge text="物理" />
+#### `顶部漫射`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `顶部法线`<badge text="启用全局坐标=true" type="warning" /><badge text="物理" />
+#### `顶部法线`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `顶部遮罩`<badge text="启用全局坐标=true" type="warning" /><badge text="物理" />
+#### `顶部遮罩`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空

@@ -1,106 +1,106 @@
-# 路面生成器
+# Road Generator
 
-::: warning 注意
+::: warning
 
-由于路面生成器在制图环节中起着至关重要的作用，因此，在基础篇增设这一章节，用于介绍路面生成器最基本的使用方法。
+Because the road generator plays a crucial role in the mapping process, this chapter has been added to the basic section to introduce the most fundamental usage of the road generator.
 
-本章节内容对制图质量和效率具有决定性影响，请务必认真阅读，多加练习。请勿跳过本章节！
-
-:::
-
-Ballex² 中的路面、钢轨、木板和管道均由路面生成器制作而成。
-
-## 创建路面生成器
-
-`创建 → 路面生成器`
-
-在起步板块，只讲解常见的用法和常用的参数项。最关键的参数项为：
-
-- `生成器算法`
-- `长度`
-- `宽度`
-- `末端宽度`
-- `分段`
-- `弯曲`
-- `偏移`<badge text="生成器算法 = 轨道" />
-
-::: tip 提示
-
-- [`自定义顶点`](../advanced/item/roadGenerator#自定义顶点) 路面生成器将在 `进阶` 板块中详细介绍
-- [`自定义脚本`](../script/roadGenerator) 路面生成器将在 `脚本` 板块中详细介绍
+The content of this chapter has a decisive impact on mapping quality and efficiency. Please be sure to read it carefully and practice a lot. Do not skip this chapter!
 
 :::
 
-## 直路面
+The roads, rails, wood boards, and tubes in Ballex² are all made with the road generator.
 
-- 选择 `生成器算法` 为 `石质路面`
-- 设置 `长度`
-- 若要制作凹路面，设置 `凹陷` 和 `末端凹陷`（推荐值为 `0.1`）
-- 若要制作宽路面，设置 `宽度` 和 `末端宽度`（推荐值为 `3`）
-- 若要制作斜坡路面，设置 `末端高度`，并勾选 `精确 UV 长度`
+## Creating a Road Generator
 
-::: tip 提示
+`Create → Road Generator`
 
-`长度` 为到水平面的投影长度，与 `末端高度` 是独立的参数。
+In this Start section, only common usages and frequently used parameters will be explained. The most critical parameters are:
 
-如果两端都有其它物体遮挡，可以取消 `创建封盖` 以提升性能。
+- `Generator Algorithm`
+- `Length`
+- `Width`
+- `End Width`
+- `Segments`
+- `Bend`
+- `Offsets`<badge text="Generator Algorithm = Rail" />
 
-:::
+::: tip
 
-## 直木板
-
-- 选择 `生成器算法` 为 `木板`
-- 设置 `长度`
-- 若要制作宽木板，设置 `宽度`（推荐值为 `2`）
-- 若要制作斜坡木板，设置 `末端高度`，并勾选 `精确 UV 长度`
-
-## 直钢轨
-
-- 选择 `生成器算法` 为 `轨道`
-- 设置 `长度`
-- 若要改变双轨轨距，设置 `偏移`（不推荐修改）
-- 若要制作单轨，设置 `偏移` 数量为 `1`，值为 `(0, 0)`
-- 若要制作斜坡钢轨，旋转钢轨并配套衔接圆弧弯轨
-
-## 直管道
-
-- 选择 `生成器算法` 为 `管道`
-- 设置 `长度`
-- 若要扩大管道外径，设置 `半径` 和 `末端半径`（推荐值为 `0.75`）
-- 若要改变横截面圆心角，设置 `切片`（推荐值为 `(0, 180)`）
-
-## 圆弧
-
-- 根据所需的半径和圆心角计算对应的 `长度`
-- 将 `弯曲 y` 设置为末端方向与起始方向的夹角，单位为角度，右转为正，左转为负
-- 根据上述夹角适当设置 `分段数` （推荐值为 `偏航角 / 7.5` 向上取整）
-
-## 螺旋
-
-- 设置 `末端高度` 为末端与头部的高度差
-- 其它同圆弧
-
-## 滚轴
-
-- 将 `弯曲 x` 设置为末端方向与起始方向的夹角，单位为角度，下压为正，上抬为负
-- 其它同圆弧
-
-## 麻花
-
-- 将 `弯曲 z` 设置为末端方向与起始方向的夹角，单位为角度，逆时针扭转为正，顺时针为负
-- 其它同圆弧
-
-::: warning 注意
-
-为了避免得到诡异的结果：
-
-- 请勿同时设置 `末端高度` 和 `弯曲 x` 两个参数
-- 请勿同时设置 `弯曲 x` 和 `弯曲 y` 两个参数
+- The [`Custom Vertices`](../advanced/item/roadGenerator#Custom-Vertices) road generator will be detailed in the `Advance` section.
+- The [`Custom Script`](../script/roadGenerator) road generator will be detailed in the `Script` section.
 
 :::
 
-## 拐角
+## Straight Road
 
-- 选择 `生成器算法` 为 `拐角`
-- 根据路面宽度设定对应的 `尺寸`
-- 点击修改边缘和角落的纹理样式
+- Select `Generator Algorithm` as `Road`.
+- Set the `Length`.
+- To create a concave road, set `Concave` and `End Concave` (recommended value is `0.1`).
+- To create a wide road, set `Width` and `End Width` (recommended value is `3`).
+- To create a sloped road, set `End Height` and check `Precise UV Length`.
+
+::: tip
+
+`Length` is the projected length onto the horizontal plane and is an independent parameter from `End Height`.
+
+If both ends are obstructed by other objects, you can uncheck `Create Caps` to improve performance.
+
+:::
+
+## Straight Wood Board
+
+- Select `Generator Algorithm` as `Wood Board`.
+- Set the `Length`.
+- To create a wide wood board, set `Width` (recommended value is `2`).
+- To create a sloped wood board, set `End Height` and check `Precise UV Length`.
+
+## Straight Rail
+
+- Select `Generator Algorithm` as `Rail`.
+- Set the `Length`.
+- To change the dual-rail gauge, set the `Offsets` (not recommended to modify).
+- To create a monorail, set the `Offsets` count to `1` with a value of `(0, 0)`.
+- To create a sloped rail, rotate the rail and connect it with matching curved arc rails.
+
+## Straight Tube
+
+- Select `Generator Algorithm` as `Tube`.
+- Set the `Length`.
+- To increase the tube's outer diameter, set `Radius` and `End Radius` (recommended value is `0.75`).
+- To change the cross-section's central angle, set `Slice` (recommended value is `(0, 180)`).
+
+## Arc
+
+- Calculate the corresponding `Length` based on the desired radius and central angle.
+- Set `Bend Y` to the angle between the end direction and the start direction, in degrees. A right turn is positive, a left turn is negative.
+- Set the `Segments` appropriately based on the angle above (recommended value is `Yaw Angle / 7.5`, rounded up).
+
+## Spiral
+
+- Set `End Height` to the height difference between the end and the start.
+- Other settings are the same as for an Arc.
+
+## Roll
+
+- Set `Bend X` to the angle between the end direction and the start direction, in degrees. Pushing down is positive, pulling up is negative.
+- Other settings are the same as for an Arc.
+
+## Twist
+
+- Set `Bend Z` to the angle between the end direction and the start direction, in degrees. A counter-clockwise twist is positive, a clockwise twist is negative.
+- Other settings are the same as for an Arc.
+
+::: warning
+
+To avoid strange results:
+
+- Do not set both `End Height` and `Bend X` parameters at the same time.
+- Do not set both `Bend X` and `Bend Y` parameters at the same time.
+
+:::
+
+## Corner
+
+- Select `Generator Algorithm` as `Corner`.
+- Set the `Size` corresponding to the road width.
+- Click to modify the texture styles of the edges and corners.

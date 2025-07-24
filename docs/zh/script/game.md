@@ -128,7 +128,7 @@ export const onEvents: (self: Item, events: Events) => void
 export const onTrigger: (
   self: Item,
   triggeredItem: Item | Player,
-  type: CollisionEvent["eventType"]
+  type: "Enter" | "Stay" | "Exit"
 ) => void
 ```
 
@@ -136,7 +136,7 @@ export const onTrigger: (
 
 - `self`：触发器组件所在元件的引用
 - `triggeredItem`：触发触发器的元件或玩家引用
-- `type`：触发事件类型，`"Enter" | "Stay" | "Exit"`
+- `type`：触发事件类型
 
 ### `onCollide`
 

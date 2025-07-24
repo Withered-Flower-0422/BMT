@@ -1,90 +1,90 @@
-# 元件设置
+# Item Settings
 
-## `作为模板`
+## `As Template`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-作为模板的元件不会在进入游戏时被创建。目前，作为模板的元件有以下两个作用：
+Items marked as a template will not be created when the game starts. Currently, items marked as a template have the following two uses:
 
-- 配合 [`自定义玩家球`](../sceneSettings/customBall) 使用
-- 使用脚本中的 [`scene.createItem()`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/scene.d.ts) 函数根据模板创建元件实例
+- Used in conjunction with [`Custom Ball`](../sceneSettings/customBall).
+- Used with the script function [`scene.createItem()`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/scene.d.ts) to create item instances from the template.
 
-## `模板名`<badge text="作为模板 = true" />
+## `Template Name`<badge text="As Template = true" />
 
-- 类型：`string`
-- 默认值：空
+- Type: `string`
+- Default: Empty
 
-作为模板的元件的模板名。
+The template name for the item marked as a template.
 
-## `层级图标`
+## `Hierarchy Icon`
 
-- 类型：`enum`
-- 默认值：`自动`
+- Type: `enum`
+- Default: `Auto`
 
-该元件在 `层级` 中的图标。
+The icon for this item in the `Hierarchy`.
 
-## `层级颜色`
+## `Hierarchy Color`
 
-- 类型：`colorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-该元件在 `层级` 中的颜色。
+The color for this item in the `Hierarchy`.
 
-## `显示方块`
+## `Show Cube`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-是否在 `场景` 中显示该元件的方块。用于方便没有 [`渲染器`](renderer) 的元件进行选择操作。
+Whether to display a cube for this item in the `Scene`. This is used to make it easier to select items that do not have a [`Renderer`](renderer).
 
-## `方块位置`<badge text="显示方块 = true" />
+## `Cube Position`<badge text="Display Cube = true" />
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-该元件方块相对于元件自身位置的偏移。
+The offset of this item's cube relative to the item's own position.
 
-## `方块旋转`<badge text="显示方块 = true" />
+## `Cube Rotation`<badge text="Display Cube = true" />
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-该元件方块的旋转角度。会与元件自身的旋转角度叠加。
+The rotation angle of this item's cube. It will be added to the item's own rotation angle.
 
-## `方块缩放`<badge text="显示方块 = true" />
+## `Cube Scale`<badge text="Display Cube = true" />
 
-- 类型：`Float3`
-- 默认值：`(1, 1, 1)`
+- Type: `Float3`
+- Default: `(1, 1, 1)`
 
-该元件方块的缩放比例。会与元件自身的缩放比例叠加。
+The scale of this item's cube. It will be multiplied with the item's own scale.
 
-## `方块颜色`<badge text="显示方块 = true" />
+## `Cube Color`<badge text="Display Cube = true" />
 
-- 类型：`colorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-该元件方块的颜色。
+The color of this item's cube.
 
-## `标签`
+## `Tags`
 
-- 类型：`string[]`
-- 默认值：`[]`
+- Type: `string[]`
+- Default: `[]`
 
-该元件的标签。标签可以用于在 `层级` 中快速筛选。
+The tags for this item. Tags can be used for quick filtering in the `Hierarchy`.
 
-::: tip 提示
+::: tip
 
-在 `层级` 中，可以根据元件的 [`guid`](item#Guid) 或者 `标签` 快速查找到该元件。
+In the `Hierarchy`, you can quickly find an item based on its [`guid`](item#Guid) or `Tags`.
 
-- 使用 `guid` 查找
-  - 在层级中输入前缀 `guid:`，然后输入 `guid` 值
-  - 确保 `guid` 这四个字母以及输入的 `guid` 值中所有的字母都小写
-  - 确保 `:` 后面没有空格
-  - 确保 `guid` 值是完整的
-- ~~使用 `标签` 查找~~（目前编辑器中通过 `标签` 查找元件的功能存在 bug，暂不可用）
-  - 在层级中输入 `tag:`，然后输入 `标签` 值
-  - 确保 `tag` 这三个字母为小写
-  - 确保 `:` 后面没有空格
+- Searching by `guid`:
+  - In the Hierarchy, enter the prefix `guid:`, then enter the `guid` value.
+  - Ensure the four letters `guid` and all letters in the entered `guid` value are lowercase.
+  - Ensure there are no spaces after the `:`.
+  - Ensure the `guid` value is complete.
+- ~~Searching by `Tag`~~ (Currently, the feature to find items by `Tag` in the editor has a bug and is temporarily unavailable):
+  - In the Hierarchy, enter `tag:`, then enter the `Tag` value.
+  - Ensure the three letters `tag` are lowercase.
+  - Ensure there are no spaces after the `:`.
 
 :::

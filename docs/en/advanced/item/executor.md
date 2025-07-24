@@ -1,14 +1,14 @@
-# 执行器
+# Executor
 
-执行器需配合 [脚本](../../script/game) 使用。
+The Executor needs to be used in conjunction with a [Script](../../script/game).
 
-## `脚本`
+## `Script`
 
-- 类型：`Script`
-- 默认值：空
+- Type: `Script`
+- Default: Empty
 
-执行器所执行的脚本。
+The script that the executor will execute.
 
-## `变量`
+## `Variables`
 
-执行器中设置的变量将以键值对的形式通过 [`init()`](../../script/game#init) 函数导入脚本。
+Variables set in the executor will be imported into the script as key-value pairs through the [`init()`](../../script/game#init) function.

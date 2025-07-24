@@ -1,25 +1,25 @@
-# 摄像机
+# Camera
 
-自定义相机需通过脚本的 [`levelManager.setCustomCamera()`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/levelManager.d.ts) 使用。
+A custom camera must be used via the script's [`levelManager.setCustomCamera()`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/levelManager.d.ts).
 
-## `正交视角`
+## `Orthographic`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-是否使用正交视角。
+Whether to use an orthographic view.
 
-## `视场角`<badge text="正交视角 = false" />
+## `Field of View`<badge text="Orthographic View = false" />
 
-- 类型：`float`
-- 默认值：`60.0`
+- Type: `float`
+- Default: `60.0`
 
-## `正交视角大小`<badge text="正交视角 = true" />
+## `Orthographic Size`<badge text="Orthographic View = true" />
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-## `裁切平面`
+## `Clipping Plane`
 
-- 类型：`Float2`
-- 默认值：`(0.3, 1000)`
+- Type: `Float2`
+- Default: `(0.3, 1000)`

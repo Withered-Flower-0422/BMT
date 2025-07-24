@@ -1,128 +1,127 @@
-# 机关
+# Machinery
 
-- 在地图中添加机关可以丰富关卡逻辑
-- 本章节将介绍所有官方机关的特性
-- 可以将本章节视作官方机关图鉴
+- Adding machineries to a map can enrich the level's logic.
+- This chapter will introduce the characteristics of all official machineries.
+- This chapter can be considered an official mechanism compendium.
 
-## 门和钥匙
+## Doors and Keys
 
-::: tip 提示
+::: tip
 
-- 门和钥匙可在 `素材 → 元件 → 门和钥匙` 中找到
-
-- `普通钥匙` 和 `不透明钥匙` 功能上没有区别，不过当摄像机在水面上而 `普通钥匙` 在水池中时，钥匙不会被渲染，因此需要在水池中放置钥匙时请使用 `不透明钥匙`
-
-:::
-
-|     门的名称     |         解锁需要的钥匙          |                     特点                      |
-| :--------------: | :-----------------------------: | :-------------------------------------------: |
-|  `蓝色上锁的门`  |   `蓝钥匙` 或 `蓝钥匙_不透明`   |      `门` 和 `钥匙` 在玩家死亡后重置状态      |
-|  `绿色上锁的门`  |   `绿钥匙` 或 `绿钥匙_不透明`   |      `门` 和 `钥匙` 在玩家死亡后重置状态      |
-|  `红色上锁的门`  |   `红钥匙` 或 `红钥匙_不透明`   |      `门` 和 `钥匙` 在玩家死亡后重置状态      |
-|  `青色上锁的门`  |   `青钥匙` 或 `青钥匙_不透明`   | `门` 和 `钥匙` 在玩家死亡后 **不会** 重置状态 |
-|  `黄色上锁的门`  |   `黄钥匙` 或 `黄钥匙_不透明`   | `门` 和 `钥匙` 在玩家死亡后 **不会** 重置状态 |
-| `洋红色上锁的门` | `洋红钥匙` 或 `洋红钥匙_不透明` | `门` 和 `钥匙` 在玩家死亡后 **不会** 重置状态 |
-
-## 物理机关
-
-::: tip 提示
-
-- 物理机关可在 `素材 → 元件 → 机关` 中找到
-
-- ~~有些机关可能不太物理~~
+- Doors and Keys can be found in `Assets → Items → DoorsAndKeys`.
+- There is no functional difference between a `Normal Key` and an `Opaque Key`. However, when the camera is above water and a `Normal Key` is in the water, the key will not be rendered. Therefore, please use an `Opaque Key` when placing keys in water.
 
 :::
 
-|    机关名称     |              特性              |  互动  |               备注               |
-| :-------------: | :----------------------------: | :----: | :------------------------------: |
-|     `帆板`      |          摇晃、不稳定          |   -    |                -                 |
-|     `风扇`      |    吹动轻物体，加快湿度流逝    |  纸球  |     海绵球需两个风扇才能吹起     |
-|   `可转风扇`    |       同 `风扇` ，可旋转       |  纸球  |                -                 |
-|   `自转风扇`    |      同 `风扇` ，自动旋转      |  纸球  |                -                 |
-|  `双向挡板_A`   |  允许两条并行路面中的一条通行  | 非轻球 |                -                 |
-|  `双向挡板_B`   |     `双向挡板_A` 的镜像版      | 非轻球 |                -                 |
-|     `蓝板`      |       接触任意物体后掉落       |   -    |                -                 |
-|     `栅栏`      |    路面障碍物，在侧面被推开    | 非轻球 |                -                 |
-|     `浮板`      |      托起轻物，被重物压下      |   -    |   自身有重力，对齐参考辅助方块   |
-|  `浮板_无重力`  |     同 `浮板`，自身无重力      |   -    |                -                 |
-|    `上浮板`     | 接触任意物体后上升，被重物压下 |   -    |                -                 |
-|    `脆弱板`     |        被压下后失去弹性        | 非重球 |                -                 |
-|    `弹跳盒`     |    给触碰到的物体施力或速度    |   -    |     参数可在 `检视器` 中设置     |
-|     `跳板`      |       接触任意物体后弹起       |   -    |                -                 |
-|    `升降机`     |      推动推靶改变托盘高度      |   -    |         最高高度为 2 格          |
-|     `推板`      |    路面障碍物，在正面被推开    | 非轻球 |                -                 |
-|     `木筏`      |     在水面上移动、运载物体     |   -    |                -                 |
-|    `轨道板`     |   沿自身 z 轴移动、运载物体    |   -    |          顶部不刚需轨道          |
-|    `跷跷板`     |      允许路面一个方向通行      |   -    |          可被非轻球压下          |
-| `跷跷板_无挡板` |      同 `跷跷板`，无挡板       |   -    |          自行设置阻挡物          |
-|    `流星锤`     |  在自身 xy 面摆动，可造成伤害  |   -    |                -                 |
-|     `钉板`      |    接触玩家球后对其造成伤害    |   -    |                -                 |
-|     `铁门`      |     路面障碍物，被重球推开     |  重球  |                -                 |
-|     `落石`      |        沿自身 y 轴移动         |   -    | 通常在其下方放置 `箱子` 制造障碍 |
-|   `机关挡板`    |         配合无挡板机关         |   -    |                -                 |
-|    `软木桥`     |        仅允许非重球通过        |   -    |    也可横置，需重球撞断后通过    |
-|     `秋千`      |  在自身 yz 面摆动，运载玩家球  |   -    |         仅建议非重球使用         |
-|      `T板`      |           在侧面推落           | 非轻球 |                -                 |
-|  `T板_无挡板`   |        同 `T板`，无挡板        | 非轻球 |          自行设置阻挡物          |
-|   `传送器_蓝`   | 将玩家球传至最近的另一蓝传送器 |   -    |                -                 |
-|   `传送器_绿`   | 将玩家球传至最近的另一绿传送器 |   -    |                -                 |
-|   `传送器_红`   | 将玩家球传至最近的另一红传送器 |   -    |                -                 |
-|    `三棱柱`     |  一端重球压下，另一端轻球压下  |   -    |                -                 |
-| `三棱柱_无锚点` |      同 `三棱柱`，无锚点       |   -    |                -                 |
-|     `单摆`      | 用于推动另一侧路面的物体或机关 |   -    |                -                 |
+|          Door Name          |         Key Needed to Unlock          |                            Characteristics                            |
+| :-------------------------: | :-----------------------------------: | :-------------------------------------------------------------------: |
+|  `LockedLocked_Door_Blue`   |    `Key_Blue` or `Key_Blue_Opaque`    |      The `Door` and `Key`'s states reset after the player dies.       |
+|  `LockedLocked_Door_Green`  |   `Key_Green` or `Key_Green_Opaque`   |      The `Door` and `Key`'s states reset after the player dies.       |
+|   `LockedLocked_Door_Red`   |     `Key_Red` or `Key_Red_Opaque`     |      The `Door` and `Key`'s states reset after the player dies.       |
+|  `LockedLocked_Door_Cyan`   |    `Key_Cyan` or `Key_Cyan_Opaque`    | The `Door` and `Key`'s states do **not** reset after the player dies. |
+| `LockedLocked_Door_Yellow`  |  `Key_Yellow` or `Key_Yellow_Opaque`  | The `Door` and `Key`'s states do **not** reset after the player dies. |
+| `LockedLocked_Door_Magenta` | `Key_Magenta` or `Key_Magenta_Opaque` | The `Door` and `Key`'s states do **not** reset after the player dies. |
 
-## 补给品
+## Physical Machineries
 
-::: tip 提示
+::: tip
 
-- 补给品可在 `素材 → 元件 → 杂项` 中找到
+- Physical Machineries can be found in `Assets → Items → Machinery`.
+- ~~Some machineries may not be very physical.~~
 
 :::
 
-| 补给品名称 |                  特性                   | 死亡后 |           备注           |
-| :--------: | :-------------------------------------: | :----: | :----------------------: |
-| `耐久补给` |  为玩家球恢复 15 耐久，并提供 15 分数   |  重置  |    重置后不再提供分数    |
-| `电力补给` | 恢复粘球 50 电力，弹开其他球并造成伤害  |  重置  | 无法弹开钢球，冰球不触发 |
-| `冰霜补给` | 增加冰球 50% 大小，对其他球降低 50 温度 |  重置  |      可立即扑灭火焰      |
-| `恢复补给` |   重置玩家球所有状态，并提供 100 分数   |  重置  |    重置后不再提供分数    |
-| `分数补给` |   本体和后续每个小分数球提供 100 分数   | 不重置 |    产生 5 个小分数球     |
+|     Machinery Name      |                         Characteristics                         |  Interaction   |                               Notes                                |
+| :---------------------: | :-------------------------------------------------------------: | :------------: | :----------------------------------------------------------------: |
+|     `BalanceBoard`      |                         Shaky, unstable                         |       -        |                                 -                                  |
+|        `Blower`         |         Blows light objects, accelerates humidity loss          |   Paper Ball   |           Two blowers are needed to lift a Sponge Ball.            |
+|   `Blower_Rotatable`    |                 Same as `Blower`, but rotatable                 |   Paper Ball   |                                 -                                  |
+|    `Blower_Rotating`    |           Same as `Blower`, but rotates automatically           |   Paper Ball   |                                 -                                  |
+| `DoublePushBoard_TypeA` |           Allows passage on one of two parallel paths           | Non-light Ball |                                 -                                  |
+| `DoublePushBoard_TypeB` |          A mirrored version of `DoublePushBoard_TypeA`          | Non-light Ball |                                 -                                  |
+|     `FallDownBoard`     |               Falls after contact with any object               |       -        |                                 -                                  |
+|         `Fence`         |           A path obstacle, pushed open from the side            | Non-light Ball |                                 -                                  |
+|      `FloatBoard`       |      Lifts light objects, is pushed down by heavy objects       |       -        |       Has its own gravity, align using the assistance cube.        |
+|     `FloatBoard_ng`     |            Same as `FloatBoard`, but has no gravity             |       -        |                                 -                                  |
+|     `FloatUpBoard`      |         Rises on contact, pushed down by heavy objects          |       -        |                                 -                                  |
+|     `FragileBoard`      |            Loses elasticity after being pushed down             | Non-heavy Ball |                                 -                                  |
+|       `JumpArea`        |         Applies force or velocity to objects it touches         |       -        |             Parameters can be set in the `Inspector`.              |
+|       `JumpBoard`       |             Flips up after contact with any object              |       -        |                                 -                                  |
+|        `Lifter`         |         Push the target to change the platform's height         |       -        |                     Maximum height is 2 units.                     |
+|       `PushBoard`       |           A path obstacle, pushed open from the front           | Non-light Ball |                                 -                                  |
+|     `PushBoard_ns`      |           Same as `PushBoard`, but without a stopper            | Non-light Ball |                                 -                                  |
+|         `Raft`          |                 Moves on water, carries objects                 |       -        |                                 -                                  |
+|       `RailBoard`       |           Moves along its own Z-axis, carries objects           |       -        |              A rail on top is not strictly necessary.              |
+|      `SeesawBoard`      |                Allows one-way passage on a path                 |       -        |               Can be pushed down by non-light balls.               |
+|    `SeesawBoard_ns`     |          Same as `SeesawBoard`, but without a stopper           |       -        |                     Set up your own obstacles.                     |
+|      `SpikedFlail`      |            Swings on its XY plane, can cause damage             |       -        |                                 -                                  |
+|       `StabPlate`       |               Damages the player ball on contact                |       -        |                                 -                                  |
+|       `SteelDoor`       |           A path obstacle, pushed open by heavy balls           |   Heavy Ball   |                                 -                                  |
+|      `StoneBlock`       |                   Moves along its own Y-axis                    |       -        |     Usually, a `Box` is placed under it to create an obstacle.     |
+|        `Stopper`        |               Used with stopper-less machineries                |       -        |                                 -                                  |
+|   `SuspensionBridge`    |               Only allows non-heavy balls to pass               |       -        | Can also be placed horizontally, needing a heavy ball to break it. |
+|      `SwingChest`       |         Swings on its YZ plane, carries the player ball         |       -        |               Recommended for non-heavy balls only.                |
+|        `TTBoard`        |                    Pushed off from the side                     | Non-light Ball |                                 -                                  |
+|      `TTBoard_ns`       |             Same as `TBoard`, but without a stopper             | Non-light Ball |                     Set up your own obstacles.                     |
+|    `Teleporter_Blue`    | Teleports the player ball to the nearest other blue teleporter  |       -        |                                 -                                  |
+|   `Teleporter_Green`    | Teleports the player ball to the nearest other green teleporter |       -        |                                 -                                  |
+|    `Teleporter_Red`     |  Teleports the player ball to the nearest other red teleporter  |       -        |                                 -                                  |
+|       `TriPrism`        | One end is pushed down by heavy balls, the other by light balls |       -        |                                 -                                  |
+|      `TriPrism_na`      |            Same as `TriPrism`, but without an anchor            |       -        |                                 -                                  |
+|       `Turnstile`       | Used to push objects or machineries on the other side of a path |       -        |                                 -                                  |
 
-## 变球器
+## Supplies
 
-::: tip 提示
+::: tip
 
-- 变球器可在 `素材 → 元件 → 变球器` 中找到
+- Supplies can be found in `Assets → Items → Misc`.
 
 :::
 
-- 玩家球处于变球器触发区域内时可迅速恢复球的 `大小`<badge text="冰球" /> 和 `电力`<badge text="粘球" />
-- 玩家球 _进入变球器触发区域_ 或者 _触碰到变球器_ 时都会触发变球流程
-- 当玩家球 _已处于变球器触发区域内_ 时则不会再次触发变球流程
+| Supply Name |                             Characteristics                              |  After Death   |                        Notes                        |
+| :---------: | :----------------------------------------------------------------------: | :------------: | :-------------------------------------------------: |
+|   `Cure`    |      Restores 15 durability to the player ball and gives 15 score.       |     Resets     |        Does not give score after resetting.         |
+| `Electric`  | Restores 50 power to Sticky Ball, repels other balls and causes damage.  |     Resets     | Cannot repel Steel Ball, not triggered by Ice Ball. |
+|  `Frozen`   | Increases Ice Ball's size by 50%, lowers other balls' temperature by 50. |     Resets     |         Can extinguish flames immediately.          |
+|  `Recover`  |       Resets all of the player ball's states and gives 100 score.        |     Resets     |        Does not give score after resetting.         |
+|   `Score`   |  The main item and each subsequent small score ball provide 100 score.   | Does not reset |           Generates 5 small score balls.            |
 
-## 轨道小车
+## Ball Switchers
 
-::: tip 提示
+::: tip
 
-- 轨道小车可在 `素材 → 元件 → RailBlock` 中找到
-
-:::
-
-使用方法：
-
-- 创建好一段或者多段轨道路面，可以是单轨或者双轨
-- 根据轨道的种类以及实际需求，选择合适的轨道小车类型，将其放置在轨道上
-- 调整轨道小车的位置，正常来说，小车的 y 轴高度应该与轨道的 y 轴高度一致
-- 选中小车，在 `检视器 → 元件链接 → 设置` 中添加小车需要行驶的所有轨道元件
-  - 在 `层级` 中选中轨道元件，将其一一拖入其列表中
-
-## 死亡区
-
-::: tip 提示
-
-- 死亡区可在 `素材 → 元件 → 杂项` 中找到
+- Ball Switchers can be found in `Assets → Items → Switcher`.
 
 :::
 
-- 请确保死亡区足够大，覆盖玩家球所有可能死亡的区域
-- 当地图中涉及到 `气球` 时，请在路面上方也覆盖一层死亡区
-- 尽量不要使用死亡区封捷径
+- When the player ball is within the Ball Switcher's trigger area, its `scale`<badge text="Ice Ball" /> and `power`<badge text="Sticky Ball" /> can be rapidly restored.
+- The ball-switching process is triggered when the player ball _enters the trigger area_ or _touches the Ball Switcher_.
+- When the player ball is _already inside the trigger area_, the ball-switching process will not be triggered again.
+
+## Rail Cart
+
+::: tip
+
+- Rail Carts can be found in `Assets → Items → RailBlock`.
+
+:::
+
+Usage:
+
+- Create one or more sections of rail, which can be single or double rails.
+- Based on the rail type and your actual needs, select a suitable rail cart type and place it on the track.
+- Adjust the position of the rail cart. Normally, the cart's Y-axis height should be the same as the rail's Y-axis height.
+- Select the cart, and in the `Inspector → Item Links → Settings`, add all the rail items the cart needs to travel on.
+  - In the `Hierarchy`, select the rail items and drag them one by one into its list.
+
+## Death Area
+
+::: tip
+
+- The Death Area can be found in `Assets → Items → Misc`.
+
+:::
+
+- Please ensure the Death Area is large enough to cover all possible areas where the player ball might die.
+- When the map involves the `Balloon Ball`, please also cover the area above the path with a Death Area.
+- Try not to use Death Areas to block shortcuts.

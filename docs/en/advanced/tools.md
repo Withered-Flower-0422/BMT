@@ -1,69 +1,69 @@
-# 工具
+# Tools
 
-- 工具选项卡在编辑器顶部菜单栏中可以找到
+- The Tools tab can be found in the top menu bar of the editor.
 
-- 合理利用某些工具可以提高制图效率
+- Proper use of certain tools can improve mapping efficiency.
 
-## 图片处理
+## Image Process
 
-### 切为立方体贴图
+### Slice to Cubemap
 
-该工具可以将一张纹理贴图切割为适用于 [`HDRI 天空`](sceneSettings/sky#HDRI-天空) 的六张纹理贴图。
+This tool can slice a single texture map into six texture maps suitable for an [`HDRI Sky`](sceneSettings/sky#HDRI-Sky).
 
-使用方法：
+Usage:
 
-1. 准备好一张天空盒纹理图片，将其[导入编辑器](assets#导入纹理)
-2. 在 `素材 → 纹理` 中选中导入的图片，点击 `切为立方体贴图` 按钮
-3. 将在同级目录下生成六张纹理贴图，命名分别为原文件名加上 `_Back` `_Down` `_Front` `_Left` `_Right` `_Up` 后缀
-4. 根据后缀名，将六张纹理贴图分别拖入 `HDRI 天空` 纹理节点的相应位置
+1. Prepare a skybox texture image and [import it into the editor](assets#Import-Texture).
+2. In `Assets → Textures`, select the imported image and click the `Slice to Cubemap` button.
+3. Six texture maps will be generated in the same directory, named with the original filename plus the suffixes `_Back`, `_Down`, `_Front`, `_Left`, `_Right`, and `_Up`.
+4. Based on the suffixes, drag the six texture maps into the corresponding slots of the `HDRI Sky` texture nodes.
 
-::: tip 提示
+::: tip
 
-- 天空盒纹理图片推荐 hdr 格式，可以自己在 Photoshop 等软件中制作，也可以在网上下载
-- 普通的 png 图片也可作为天空盒纹理
+- The recommended format for skybox texture images is `.hdr`. You can create them yourself in software like Photoshop or download them from the internet.
+- Regular `.png` images can also be used as skybox textures.
 
-::: details 推荐网站
+::: details Recommended HDRI Sources
 
 [Poly Haven](https://polyhaven.com/hdris)
 
 :::
 
-### Tex 转 Png
+### Tex to Png
 
-该工具可以将导入进编辑器的纹理文件转回 png 格式。
+This tool can convert texture files imported into the editor back to `.png` format.
 
-使用方法：
+Usage:
 
-1. 在 `素材 → 纹理` 中选中需要转换的的纹理文件，点击 `Tex 转 Png` 按钮
-2. 选择保存路径，点击 `保存` 按钮
-3. 转换完成，可在指定路径下找到转换后的 png 文件
+1. In `Assets → Textures`, select the texture file you want to convert and click the `Tex to Png` button.
+2. Choose a save path and click the `Save` button.
+3. After the conversion is complete, you can find the converted `.png` file at the specified path.
 
-## 添加柱子
+## Add Pillar
 
-该工具可以帮助你在制图时快速添加柱子。
+This tool can help you quickly add pillars while mapping.
 
-使用方法：
+Usage:
 
-1. 点击 `工具 → 添加柱子` 按钮
-2. 将会弹出一个子窗口，设置柱子的轴心偏移量，即<u>柱子生成位置</u>相对于<u>选中元件位置</u>的偏移量
-3. 在场景中选中所有需要添加柱子的元件，之后点击 `创建` 按钮
+1. Click the `Tools → Add Pillar` button.
+2. A sub-window will pop up. Set the pillar's axis offset, which is the offset of the <u>pillar's generation position</u> relative to the <u>selected item's position</u>.
+3. In the scene, select all the items where you want to add pillars, then click the `Create` button.
 
-## 添加路灯
+## Add Light
 
-该工具可以帮助你在制图时快速添加路灯。
+This tool can help you quickly add lights while mapping.
 
-使用方法：
+Usage:
 
-1. 点击 `工具 → 添加路灯` 按钮
-2. 将会弹出一个子窗口，设置路灯的轴心偏移量，即<u>路灯生成位置</u>相对于<u>选中元件位置</u>的偏移量
-3. 在场景中选中所有需要添加路灯的元件，之后点击 `创建` 按钮
+1. Click the `Tools → Add Light` button.
+2. A sub-window will pop up. Set the light's axis offset, which is the offset of the <u>light's generation position</u> relative to the <u>selected item's position</u>.
+3. In the scene, select all the items where you want to add lights, then click the `Create` button.
 
-::: tip 提示
+::: tip
 
-此窗口有 3 个 `创建` 按钮，上面两个按钮可分别在对应位置创建 1 个路灯，下面一个按钮可同时创建 2 个路灯。
+This window has 3 `Create` buttons. The top two buttons can each create 1 light at their respective positions, while the bottom button can create 2 lights simultaneously.
 
 :::
 
-## 重置布局
+## Reset Layout
 
-该工具可将编辑器的布局重置为默认状态。
+This tool resets the editor's layout to its default state.

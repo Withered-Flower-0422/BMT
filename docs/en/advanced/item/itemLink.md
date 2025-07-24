@@ -1,11 +1,11 @@
-# 元件链接
+# Item Link
 
-该组件无法，也无需手动开启。使用官方的链接元件时可在此组件内配置相应的属性参数。
+This component cannot and does not need to be enabled manually. When using an official linked item, you can configure its corresponding properties and parameters within this component.
 
-## `替换`
+## `Replace`
 
-点击该按钮可以替换当前选中元件的链接。
+Clicking this button allows you to replace the link of the currently selected item.
 
-## `保存网格`
+## `Save Mesh`
 
-点击该按钮可以保存当前选中链接元件中的所有网格。网格保存在 `素材 → 网格 → 默认` 中。
+Clicking this button allows you to save all meshes from the currently selected linked item. The meshes are saved in `Assets → Meshes → Default`.

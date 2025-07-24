@@ -1,36 +1,36 @@
-# 贴花投射器
+# Decal
 
-在一定范围内将贴花投射到物体上。
+Projects a decal onto objects within a certain range.
 
-## [变换偏移](item#变换偏移)
+## [Transform Offset](item#Transform-Offset)
 
-## `材质`
+## `Material`
 
-- 类型：`Material`
-- 默认值：空
+- Type: `Material`
+- Default: Empty
 
-贴花的材质。参考 [素材 → 材质 → 材质属性 → 贴花材质](../assets#材质属性) 。
+The material for the decal. Refer to [Assets → Materials → Material Properties → Decal Material](../assets#Material-Properties).
 
-## `绘制距离`
+## `Draw Distance`
 
-- 类型：`float`
-- 默认值：`50.0`
+- Type: `float`
+- Default: `50.0`
 
-当摄像机和该组件的距离大于此值时，贴花将不会被渲染。
+When the distance between the camera and this component is greater than this value, the decal will not be rendered.
 
-## `开始淡出比率`
+## `Start Fade`
 
-- 类型：`float`
-- 默认值：`0.8`
+- Type: `float`
+- Default: `0.8`
 
-当摄像机和该组件的距离大于 `此值 * 绘制距离` 时，贴花将开始淡出。
+When the distance between the camera and this component is greater than `this value * Draw Distance`, the decal will begin to fade out.
 
-## `不透明度`
+## `Opacity`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-## `旋转速度`
+## `Rotation Speed`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`

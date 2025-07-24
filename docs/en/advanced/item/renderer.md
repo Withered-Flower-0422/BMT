@@ -1,86 +1,86 @@
-# 渲染器
+# Renderer
 
-::: tip 提示
+::: tip
 
-该组件仅负责图形渲染。如需设置元件的碰撞箱，请移步 [`物理物体`](physicsObject) 。
+This component is only responsible for graphics rendering. To set up the item's collider, please go to [`Physics Object`](physicsObject).
 
 :::
 
-## `自动获取网格`
+## `Auto Get Mesh`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-当设置为 `true` 时，渲染器将试图从 [`路面生成器`](roadGenerator) 组件中获取网格。
+When set to `true`, the renderer will attempt to get the mesh from the [`Road Generator`](roadGenerator) component.
 
-## `网格`<badge text="自动获取网格 = false" />
+## `Mesh`<badge text="Auto Get Mesh = false" />
 
-- 类型：`Mesh`
-- 默认值：空
+- Type: `Mesh`
+- Default: Empty
 
-当 `自动获取网格` 设置为 `false` 时，渲染器将使用此网格。
+When `Auto Get Mesh` is set to `false`, the renderer will use this mesh.
 
-## `自动获取材质`
+## `Auto Get Materials`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-当设置为 `true` 时，渲染器将试图从 [`路面生成器`](roadGenerator) 组件中根据路面类型获取材质。
+When set to `true`, the renderer will attempt to get the material from the [`Road Generator`](roadGenerator) component based on the road type.
 
-## `材质`<badge text="自动获取网格 = false" />
+## `Materials`<badge text="Auto Get Materials = false" />
 
-- 类型：`Material[]`
-- 默认值：`[]`
+- Type: `Material[]`
+- Default: `[]`
 
-当 `自动获取材质` 设置为 `false` 时，渲染器将使用此材质。材质对应关系与建模软件中的设定一致。
+When `Auto Get Materials` is set to `false`, the renderer will use these materials. The material correspondence is consistent with the settings in the modeling software.
 
-## `获取全局 UV 材质`<badge text="自动获取网格 = true" />
+## `Get Global UV Mat`<badge text="Auto Get Mesh = true" />
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-试图获取[全局 UV 材质](../assets#启用全局坐标)。
+Attempts to get a [Global UV Material](../assets#Global-UV).
 
-## `阴影投射模式`
+## `Shadow Casting Mode`
 
-- 类型：`开启 | 关闭 | 双面 | 仅阴影`
-- 默认值：`开启`
+- Type: `On | Off | Two Sided | Shadows Only`
+- Default: `On`
 
-设置阴影投射模式。
+Sets the shadow casting mode.
 
-- `开启`：启用阴影投射。
-- `关闭`：禁用阴影投射。
-- `双面`：启用双面阴影。
-- `仅阴影`：仅渲染阴影。
+- `On`: Enables shadow casting.
+- `Off`: Disables shadow casting.
+- `Two Sided`: Enables two-sided shadows.
+- `Shadows Only`: Renders only the shadows.
 
-## `自动优化`
+## `Auto Optimize`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-启用自动优化后，渲染器将会在游戏启动后渲染一次，之后不再实时渲染。因此，对于固定不动的元件，推荐开启此选项，可以大幅优化性能。
+After enabling auto-optimize, the renderer will render once after the game starts and will not render in real-time thereafter. Therefore, for stationary items, it is recommended to enable this option to significantly optimize performance.
 
-## `强制设置不透明度`
+## `Force Set Opacity`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-当设置为 `true` 时，渲染器将强制设置所有材质的不透明度。
+When set to `true`, the renderer will forcibly set the opacity for all materials.
 
-## `不透明度`<badge text="强制设置不透明度 = true" />
+## `Opacity`<badge text="Force Set Opacity = true" />
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-设置所有材质的不透明度。
+Sets the opacity for all materials.
 
-- 当值为 1 时，仍使用[漫射贴图](../assets#漫射贴图)中 `A` 通道的值作为不透明度
-- 当值不为 1 时，将使用此值作为不透明度
+- When the value is 1, it still uses the `A` channel value from the [albedo map](../assets#Albedo-Map) as the opacity.
+- When the value is not 1, this value will be used as the opacity.
 
-## `近处溶解`
+## `Near Dissolve`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-启用近处溶解后，渲染器将会在距离摄像机较近的地方对网格进行模糊处理。
+After enabling near dissolve, the renderer will apply a dissolve effect to the mesh when it is close to the camera.

@@ -1,82 +1,82 @@
-# 环境
+# Environment
 
-## `环境温度`
+## `Environment Temp.`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-::: tip 提示
+::: tip
 
-- 玩家球的初始默认温度为 20 度，之后会趋近环境温度
-- `冰球` 温度不会改变，转而变为改变缩放（大小）
-- 当玩家球温度低于 -10 度时会结冰，此时摩擦力消失，玩家球的湿度被冻结
-- 当玩家球温度到达 200 度时
-  - `木球` 和 `纸球` 会着火，温度瞬间升至 500 度，随后缓慢趋近于 333 度
-  - `气球` 直接死亡
-  - 其他球获得光源效果
-
-:::
-
-## `自动避雨`
-
-- 类型：`bool`
-- 默认值：`false`
-
-勾选自动避雨后，当玩家球上方有碰撞箱时，球的湿度不会受 [`雨粒子`](#雨粒子) 的影响而上升。
-
-## `风`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-这里的风**只会影响下方粒子的运动方向**。
-
-::: tip 提示
-
-若要模拟风的施力效果，请通过设置 [`地图信息 → 重力`](../../start/release#重力) 来模拟。
+- The player ball's initial default temperature is 20 degrees, after which it will approach the environment temperature.
+- The `Ice Ball`'s temperature does not change; instead, its scale (size) changes.
+- When the player ball's temperature drops below -10 degrees, it will freeze. At this point, friction disappears, and the player ball's wetness is frozen.
+- When the player ball's temperature reaches 200 degrees:
+  - The `Wood Ball` and `Paper Ball` will catch fire, their temperature instantly rises to 500 degrees, and then slowly approaches 333 degrees.
+  - The `Balloon Ball` dies instantly.
+  - Other balls gain a light source effect.
 
 :::
 
-## `雨粒子`
+## `Auto Rain Avoidance`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `bool`
+- Default: `false`
 
-雨粒子会全局影响玩家球的湿度；雨粒子值越大，玩家球湿度上升越快。
+When Auto Rain Avoidance is checked, if there is a collider above the player ball, the ball's wetness will not increase due to the effect of [`Rain Particle`](#Rain-Particle).
 
-## `雪粒子`
+## `Wind`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-## `雾粒子`
+The wind here **only affects the movement direction of the particles below**.
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+::: tip
 
-## `萤火虫粒子`
+To simulate the effect of wind force, please simulate it by setting [`Map Info → Gravity`](../../start/release#Gravity).
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+:::
 
-## `火花粒子`
+## `Rain Particle`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
 
-## `全局雪覆盖`
+Rain particle will globally affect the player ball's wetness; the higher the rain particle value, the faster the player ball's wetness increases.
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+## `Snow Particle`
 
-## `全局雨覆盖`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+## `Fog Particle`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
+
+## `Firefly Particle`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
+
+## `Spark Particle`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
+
+## `Global Snow Cover`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
+
+## `Global Wetness Cover`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`

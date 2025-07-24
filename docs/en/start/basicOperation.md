@@ -1,221 +1,222 @@
-# 基础操作
+# Basic Operation
 
-## 添加元件
+## Adding an Item
 
-在 `素材 → 元件` 面板中找到需要的元件，拖入 `场景` 窗口，即可添加元件。你会在 `层级` 窗口的列表末尾看到它，并可在 `检视器` 窗口中调整它的位置，姿态，缩放和其它提供的参数。
+Find the desired item in the `Assets → Items` panel and drag it into the `Scene` window to add it. You will see it appear at the end of the list in the `Hierarchy` window, and you can adjust its position, rotation, scale, and other available parameters in the `Inspector` window.
 
-## 撤销
+## Undo
 
-`编辑 → 撤销` / `Ctrl + Z`，对应右上角工具栏第一个按钮。
+`Edit → Undo` / `Ctrl + Z`, corresponds to the first button on the top-right toolbar.
 
-## 重做
+## Redo
 
-`编辑 → 重做` / `Ctrl + Y`，对应右上角工具栏第二个按钮。
+`Edit → Redo` / `Ctrl + Y`, corresponds to the second button on the top-right toolbar.
 
-## 视图调整
+## View Adjustment
 
-### 平移视图 & 漫游
+### Pan View & Free Move
 
-- 首先在 `设置 → 自由移动工具快捷键` 中设置漫游快捷键，推荐设置为 `鼠标中键`
-- 按住 _设置的键位_ 进入漫游模式。拖动改变摄像机朝向，按住 `W` 前进，`S` 后退，`A` 左移，`D` 右移，`Q` 下降，`E` 上升
-- 按住 _另一个键位_ 进入平移模式，拖动以平移视图
+- First, set the free move shortcut in `Settings → Shortcut of Free-Move Tool`. The Middle Mouse Button is recommended.
+- Press and hold the _configured key_ to enter free move mode. Drag the mouse to change the camera's orientation. Press `W` to move forward, `S` backward, `A` left, `D` right, `Q` down, and `E` up.
+- Press and hold _another key_ to enter pan mode, and drag the mouse to pan the view.
 
-### 旋转视图
+### Rotate View
 
-按住 `Alt + 鼠标左键` 并拖动。
+Hold `Alt + Left Mouse Button` and drag.
 
-### 缩放视图
+### Zoom View
 
-使用 `鼠标滚轮`。
+Use the `Mouse Wheel`.
 
-### 聚焦
+### Focus
 
 `F`
 
-该功能将自动调整视图，使选定元件位于视野中心，并改变视图调整中心点为当前位置。
+This function will automatically adjust the view to center the selected item in the field of vision and set the view adjustment pivot to the current position.
 
-::: tip 提示
+::: tip
 
-所有视图调整操作的效果都与视图调整中心点有关。如果调整时遇到困难，可以尝试使用聚焦功能改变视图调整中心。
-
-:::
-
-### 三视图
-
-点击右上角坐标轴箭头。
-
-### 切换透视 / 正交视角
-
-右上角坐标轴下方显示了当前视角（透视 `Persp` / 正交 `Ortho`），点击即可切换。正交视角在精调布局时很有用。
-
-## 元件调整
-
-### 观察模式
-
-`Q`，对应右上角工具栏第 3 个按钮，也称 `抓手工具` 。
-
-该模式下无法选中元件，也无法对元件作任何调整。此时鼠标左键的功能退化为鼠标中键的功能。
-
-### 移动模式
-
-`W`，对应右上角工具栏第 4 个按钮，也称 `移动工具` 。
-
-拖动三个坐标轴箭头在该方向内移动元件，或拖动面符号在该面内移动元件。
-
-### 旋转模式
-
-`E`，对应右上角工具栏第 5 个按钮，也称 `旋转工具` 。
-
-拖动三个有色圆弧在对应面内旋转元件，或拖动白色大圆在投影面内旋转元件，或拖动圆面自由旋转元件。
-
-### 缩放模式
-
-`R`，对应右上角工具栏第 6 个按钮，也称 `缩放工具` 。
-
-拖动三个操作柄在该方向内缩放元件。可以拖动到负半轴，此时元件会变为原来的镜像。
-
-::: warning 注意
-
-- 对于固定元件，多数情况下不需要缩放
-
-- 对于机关，多数机关缩放后会引发意外性质。因此在有其它可行方案时，请不要缩放元件
+The effect of all view adjustment operations is related to the view adjustment pivot point. If you encounter difficulties during adjustment, try using the Focus function to change the pivot.
 
 :::
 
-### 标尺模式
+### Three Views
 
-`T`，对应右上角工具栏第 7 个按钮，也称 `矩形缩放工具` 。
+Click the axis arrows in the top-right corner gizmo.
 
-拖动矩形边角处的操作柄缩放元件，会实时显示当前尺寸。[旋转视图](#旋转视图)可以切换到另一平面操作。
+### Toggle Perspective / Orthographic View
 
-::: tip 提示
+The current view (`Persp` for Perspective / `Ortho` for Orthographic) is displayed below the coordinate axis gizmo in the top-right corner. Click it to toggle. Orthographic view is very useful for fine-tuning layouts.
 
-目前 T 键标尺模式对于个别元件可能没有适配。如果遇到问题，请换用 R 键缩放模式或者直接在 `检视器` 窗口调整参数。
+## Item Adjustment
 
-:::
+### View Mode
 
-### 切换全局/本地模式
+`Q`, corresponds to the 3rd button on the top-right toolbar, also known as the `Hand Tool`.
 
-`X`，对应右上角工具栏第 8 个按钮。
+In this mode, you cannot select or modify items. The left mouse button's function becomes equivalent to the middle mouse button.
 
-- 本地模式：元件的位置、旋转操作采用选中元件的局部坐标系
-- 全局模式：元件的位置、旋转操作采用全局坐标系
+### Move Mode
 
-### 切换中心/轴心模式
+`W`, corresponds to the 4th button on the top-right toolbar, also known as the `Move Tool`.
 
-`Z`，对应右上角工具栏第 9 个按钮。
+Drag the three axis arrows to move the item along that axis, or drag the plane handles to move it within that plane.
 
-- 中心模式：元件的旋转操作中心点为所有选中元件的中心点
-- 轴心模式：元件的旋转操作中心点为选中元件各自的轴心点
+### Rotate Mode
 
-::: tip 提示
+`E`, corresponds to the 5th button on the top-right toolbar, also known as the `Rotate Tool`.
 
-轴心模式在需要批量对多个元件进行绕着自身轴旋转时很有用。
+Drag the three colored arcs to rotate the item within the corresponding plane, drag the large white circle to rotate within the view plane, or drag the sphere face to rotate freely.
 
-:::
+### Scale Mode
 
-### 量化
+`R`, corresponds to the 6th button on the top-right toolbar, also known as the `Scale Tool`.
 
-`Ctrl`，按住开启，松开关闭。
+Drag the three handles to scale the item along that axis. You can drag into the negative axis, which will mirror the item.
 
-在量化开启时，可以以 0.5 为单位移动，以 15° 为单位旋转，以相对当前大小 50% 为单位缩放，以 0.5 为单位对齐标尺。
+::: warning
 
-::: warning 注意
+- For fixed items, scaling is not needed in most cases.
 
-量化模式下，如果元件不是沿着坐标轴移动，会出现意外行为。
+- For mechanisms, scaling most of them will cause unexpected behavior. Therefore, please do not scale items if other viable solutions exist.
 
 :::
 
-### 顶点对齐
+### Rect Tool Mode
 
-`V`，按住开启，松开关闭。
+`T`, corresponds to the 7th button on the top-right toolbar, also known as the `Rect Transform Tool`.
 
-**在移动模式下**，按住 `V` 键，坐标轴将吸附在光标附近的一个顶点上，此时再按住 `鼠标左键` 拖动该顶点，将会吸附在另一元件的某个顶点上。松开 `鼠标左键`，再松开 `V` 键，就完成了一次顶点对齐。
+Drag the handles at the corners of the rectangle to scale the item. The current dimensions will be displayed in real-time. You can [Rotate the View](#Rotate-View) to operate on a different plane.
 
-常用于路块、木板、木箱等棱角方正的元件对齐，以及钢轨间衔接。
+::: tip
 
-::: tip 提示
+Currently, the T-key Rect Tool mode may not be adapted for some individual items. If you encounter issues, please use the R-key Scale Mode or adjust the parameters directly in the `Inspector` window.
 
-- 可以选中多个元件同时顶点对齐，它们的相对位置保持不变
+:::
 
-- 这里的顶点均指建模意义中的顶点，包括几何意义中的顶点和材质交界处的控制点。多加尝试很容易掌握两者的实际表现。绝大多数情况下，顶点对齐只需要使用前者
+### Toggle Global / Local Mode
 
-::: details 顶点对齐示例
+`X`, corresponds to the 8th button on the top-right toolbar.
+
+- Local Mode: The item's position and rotation operations use the selected item's local coordinate system.
+- Global Mode: The item's position and rotation operations use the global coordinate system.
+
+### Toggle Center / Pivot Mode
+
+`Z`, corresponds to the 9th button on the top-right toolbar.
+
+- Center Mode: The pivot for rotation is the center point of all selected items.
+- Pivot Mode: The pivot for rotation is the individual pivot point of each selected item.
+
+::: tip
+
+Pivot mode is very useful when you need to batch rotate multiple items around their own axes.
+
+:::
+
+### Quantization
+
+`Ctrl`, hold to enable, release to disable.
+
+When quantization is enabled, you can move in increments of 0.5, rotate in increments of 15°, scale by 50% of the current size, and align with the ruler tool in increments of 0.5.
+
+::: warning
+
+In quantization mode, if an item is not moved along a coordinate axis, unexpected behavior may occur.
+
+:::
+
+### Vertex Snapping
+
+`V`, hold to enable, release to disable.
+
+**In Move Mode**, hold the `V` key, and the axis gizmo will snap to a vertex near the cursor. Then, hold the `Left Mouse Button` and drag that vertex; it will snap to a vertex on another item. Release the `Left Mouse Button`, then release the `V` key to complete the vertex snap.
+
+This is often used for aligning items with sharp corners like road blocks, planks, and wooden boxes, as well as for connecting rails.
+
+::: tip
+
+- You can select and vertex-snap multiple items simultaneously; their relative positions will be maintained.
+
+- "Vertices" here refer to vertices in the modeling sense, including both geometric vertices and control points at material junctions. It's easy to grasp their practical behavior with a bit of practice. In most cases, you only need to use the former for vertex snapping.
+
+:::
+
+::: details Vertex Snapping Example
 
 <div align="center">
 
-![顶点对齐示例](../../public/images/vertex-alignment-example.gif)
+![Vertex Snapping Example](../../public/images/vertex-alignment-example.gif)
 
 </div>
 
 :::
 
-## 多选
+## Multi-selection
 
-- 在 `场景` 窗口中多选：按住 `Ctrl` 逐个单选，或按住 `鼠标左键` 框选
-- 在 `层级` 窗口中多选：可按照通用多选方法配合 `Ctrl` `Shift` 多选
+- In the `Scene` window: Hold `Ctrl` to select one by one, or hold the `Left Mouse Button` to box-select.
+- In the `Hierarchy` window: You can use standard multi-selection methods with `Ctrl` and `Shift`.
 
-## 复制元件
+## Duplicate Item
 
-`编辑 → 复制` / `Ctrl + D`
+`Edit → Duplicate` / `Ctrl + D`
 
-按下后在原位生成一个新元件，出现在 `层级` 窗口列表末尾。
+Pressing this creates a new item at the same position, which appears at the end of the `Hierarchy` window list.
 
-## 删除元件
+## Delete Item
 
-`编辑 → 删除` / `Delete`
+`Edit → Delete` / `Delete`
 
-## 创建起点、检查点和终点
+## Creating Starting Point, Checkpoints, and Destination
 
-`素材 → 元件 → 检查点`
+`Assets → Items → CheckPoint`
 
-- 玩家球开局出生点始终为坐标 `(0, 2, 0)` 处，与起点的摆放位置无关
-- 起点本质上是一个开局即触发过的检查点。图内建议只在坐标 `(0, 0, 0)` 处摆放一个起点
-- 检查点不分顺序，可以多次触发，始终从最后一次点亮的检查点重生
-- 请注意检查点的摆放朝向，玩家球重生时视角由检查点的 y 轴旋转决定，且朝向检查点的 z 轴正方向（四向视角下不要将 y 轴旋转设置成非 90 度倍数的数值）
-- 终点可以存在多个，玩家球进入任一终点即通关，且不必点亮所有检查点
+- The player ball always spawns at the coordinates `(0, 2, 0)` at the start of the game, regardless of where the Starting Point is placed.
+- The Starting Point is essentially a checkpoint that is triggered at the very beginning. It is recommended to place only one Starting Point in the map, at coordinates `(0, 0, 0)`.
+- Checkpoints have no specific order, can be triggered multiple times, and the player will always respawn from the last activated checkpoint.
+- Pay attention to the orientation of the checkpoint. The player ball's camera angle upon respawning is determined by the checkpoint's Y-axis rotation, and it will face the positive Z-axis direction of the checkpoint (in four-directional camera mode, do not set the Y-axis rotation to a value that is not a multiple of 90 degrees).
+- There can be multiple Destinations. The player completes the level upon entering any one of them, and it is not necessary to activate all checkpoints.
 
-## 测图
+## Map Testing
 
-`文件 → 测试地图` / `F9`
+`File → Test The Map` / `F9`
 
-如果正确[设置了 Ballex² 路径](preparation#设置-ballex-路径)，Ballex² 将自动启动。
+If you have correctly [Set Ballex² Path](preparation#set-ballex-path), Ballex² will launch automatically.
 
-::: tip 提示
+::: tip
 
-- 测图模式无法激活终点
-
-- 测图模式中，可在游戏内的设置界面设置 `向上移动` 和 `向下移动` 的键位辅助测图
-
-:::
-
-### 快速变球 & 恢复玩家球属性
-
-- 快速变球：`1` ~ `9`
-- 恢复属性：`0`
-
-| 按键 |      功能      |
-| :--: | :------------: |
-| `1`  |  变为**木球**  |
-| `2`  |  变为**石球**  |
-| `3`  |  变为**纸球**  |
-| `4`  |  变为**冰球**  |
-| `5`  |  变为**钢球**  |
-| `6`  | 变为**橡胶球** |
-| `7`  |  变为**气球**  |
-| `8`  |  变为**粘球**  |
-| `9`  | 变为**海绵球** |
-| `0`  |  恢复所有属性  |
-
-::: tip 提示
-
-此处的数字键 **非** 小键盘数字键。
+- The Destination cannot be activated in test mode.
+- In test mode, you can set keys for `Move Up` and `Move Down` in the in-game settings menu to assist with testing.
 
 :::
 
-### 截图
+### Quick Ball Switch & Recover Player Ball Properties
+
+- Quick Ball Switch: `1` ~ `9`
+- Recover Properties: `0`
+
+| Key |          Function          |
+| :-: | :------------------------: |
+| `1` |  Switch to **Wood Ball**   |
+| `2` |  Switch to **Stone Ball**  |
+| `3` |  Switch to **Paper Ball**  |
+| `4` |   Switch to **Ice Ball**   |
+| `5` |  Switch to **Steel Ball**  |
+| `6` | Switch to **Rubber Ball**  |
+| `7` | Switch to **Balloon Ball** |
+| `8` | Switch to **Sticky Ball**  |
+| `9` | Switch to **Sponge Ball**  |
+| `0` |   Recover All Properties   |
+
+::: tip
+
+These are the number keys at the top of the keyboard, **not** the numeric keypad keys.
+
+:::
+
+### Screenshot
 
 `F5`
 
-- 进入截图模式后可使用 `W` `A` `S` `D` `Q` `E` 键配合鼠标移动视角，按住 `Shift` 键可加速移动，按 `Enter` 键截图
-- 截图为 1920×1080 及 3840×2160 分辨率的 2 张 `.png` 文件，保存在 `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP\Screenshots`
+- After entering screenshot mode, you can use `W`, `A`, `S`, `D`, `Q`, `E` along with the mouse to move the camera. Hold `Shift` to move faster. Press `Enter` to take the screenshot.
+- Two `.png` files of 1920×1080 and 3840×2160 resolution will be saved in `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP\Screenshots`.

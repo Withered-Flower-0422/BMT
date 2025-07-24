@@ -1,39 +1,39 @@
-# 欢迎来到 Ballex² 制图教程
+# Welcome to the Ballex² Mapping Tutorial
 
-本教程分为 [`起步`](preparation) [`进阶`](../advanced/about) [`脚本`](../script/about) 三个板块。
+This tutorial is divided into three sections: [`Start`](preparation), [`Advance`](../advanced/about), and [`Script`](../script/about).
 
-## 起步
+## Start
 
-起步板块将介绍 BME Pro 中所有的基本功能和操作。
+The Start section will introduce all the basic functions and operations in BME Pro.
 
-阅读建议：
+Reading Suggestions:
 
-- 这里的每一个章节都很重要，请尽量不要跳过某个部分
+- Every chapter here is important. Please try not to skip any part.
 
-- 推荐在阅读教程的时在制图器中同步操作练习，自己总结 BME Pro 的运行机制
+- It is recommended to practice the operations in the map editor as you read the tutorial to better understand how BME Pro works.
 
-- 学会本板块的所有内容后，你将有能力复刻官方关卡中的大多数布局
+- After mastering all the content in this section, you will be able to replicate most of the layouts found in the official levels.
 
-## 进阶
+## Advance
 
-进阶板块将介绍 BME Pro 中一些高级功能和操作，包括模型、贴图、材质等系统的使用。
+The Advance section will cover some of the advanced features and operations in BME Pro, including the use of systems for meshes, textures, and materials.
 
-阅读建议：
+Reading Suggestions:
 
-- 本版块中各个部分基本独立，制图时可根据需要寻找对应的内容进行阅读学习
+- The topics in this section are largely independent. You can look up and learn the specific content you need while mapping.
 
-- 一些内容可能会涉及到其他软件的知识，比如模型系统，会涉及到一些建模软件的操作，请确保自己对相关知识有一定的了解
+- Some content may involve knowledge of other software. For example, the mesh system will involve operations in modeling software, so please ensure you have a basic understanding of related topics.
 
-- 学完本板块的内容后，你将有能力制作一些复杂的元件和装饰，制作具有独特风格的地图
+- After completing this section, you will be able to create complex items and decorations, and build maps with a unique style.
 
-## 脚本
+## Script
 
-脚本板块将介绍 BME Pro 的脚本系统，包括游戏内脚本，编辑器脚本，路面生成器脚本系统。
+The Script section will introduce the scripting system of BME Pro, including in-game scripts, editor scripts, and the road generator script system.
 
-阅读建议：
+Reading Suggestions:
 
-- BME Pro 使用的脚本语言为 JavaScript。本教程不包含 [JavaScript 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)，请确保自己对 JavaScript 的语法有一定的了解
+- The scripting language used by BME Pro is JavaScript. This tutorial does not include a [JavaScript tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Please ensure you have a basic understanding of JavaScript syntax.
 
-- 使用脚本前，建议先下载 [BME Script Typings](https://github.com/Withered-Flower-0422/BST)，为自己的编辑器添加 BME Pro 的代码提示功能
+- Before using scripts, it is recommended to download [BME Script Typings](https://github.com/Withered-Flower-0422/BST) to add BME Pro's code completion features to your editor.
 
-- 学完本板块的内容后，你将有能力编写脚本，制作出具有独特机制的地图，甚至客制化属于自己的 BME Pro 编辑器
+- After completing this section, you will be able to write scripts to create maps with unique mechanics and even customize your own BME Pro editor.

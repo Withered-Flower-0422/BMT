@@ -1,65 +1,64 @@
-# 收集品原型
+# Collection Prototype
 
-- 游戏中使用到的所有自定义收集品都需要在本组件中进行注册
-- 注册了名称为 `name` 的收集品原型后，可以在场景中创建名称为 `name` 的收集品，此时游戏内会自动创建名称为 `C_name` 的变量，可以使用脚本的 [变量模块](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/variables.d.ts) 进行修改
+- All custom collections used in the game need to be registered in this component.
+- After registering a collection prototype named `name`, you can create a collection named `name` in the scene. At this point, a variable named `C_name` will be automatically created in-game, which can be modified using the script's [Variables Module](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/variables.d.ts).
 
-::: tip 提示
+::: tip
 
-- 如果仅仅注册了收集品原型，但并没有在场景中创建任何对应的收集品，则不会创建对应的变量
-
-- 如果确实需要注册名称为 `name` 的收集品原型，且不希望在场景中创建对应的收集品，仅希望通过脚本控制其数量，可以在场景中创建一个名称为 `name` 的收集品，并关闭其 [`触发器`](../item/trigger) 和 [`渲染器`](../item/renderer)
-
-:::
-
-## `重置时机`
-
-- 类型：`生命开始时 | 关卡重开时 `
-- 默认值：`生命开始时`
-
-控制收集品的重置时机。
-
-::: tip 提示
-
-- `生命开始时`：在玩家死亡后，关卡内所有该类型的收集品会被重置，玩家拥有的该类型收集品数量重置为 0（例如：官方收集品中的 `红、绿、蓝钥匙`）
-- `关卡重开时`：该类型的收集品和玩家拥有的该类型收集品数量不会在玩家死亡后重置，仅在关卡重开时重置（例如：官方收集品中的 `青、黄、洋红钥匙`）
+- If you only register the collection prototype but do not create any corresponding collections in the scene, the corresponding variable will not be created.
+- If you need to register a collection prototype named `name` and do not want to create a corresponding collection in the scene, only wishing to control its quantity via script, you can create a collection named `name` in the scene and disable its [`Trigger`](../item/trigger) and [`Renderer`](../item/renderer).
 
 :::
 
-## `收集品名称`
+## `Reset Timing`
 
-- 类型：`string`
-- 默认值：空
+- Type: `On Life Start | On Restart`
+- Default: `On Life Start`
 
-请务必只填写 ASCII 字符，且不要使用重复的名称。
+Controls when the collection is reset.
 
-## `优先级`
+::: tip
 
-- 类型：`int`
-- 默认值：`0`
+- `On Life Start`: After the player dies, all collections of this type in the level are reset, and the player's count of this collection type is reset to 0 (e.g., the official `Red, Green, Blue Keys`).
+- `On Restart`: Collections of this type and the player's count of this collection type are not reset after the player dies; they are only reset when the level is restarted (e.g., the official `Cyan, Yellow, Magenta Keys`).
 
-决定收集品的显示顺序：
+:::
 
-- 红、绿、蓝、青、洋红、黄钥匙的优先级分别为 `10` `20` `30` `40` `50` `60`
-- 不同优先级的收集品，优先级低的在前
-- 相同优先级的收集品，制图器中靠前的在前，钥匙在最后
+## `Collection Name`
 
-## `图标`
+- Type: `string`
+- Default: Empty
 
-- 类型：`Texture`
-- 默认值：空
+Please be sure to only fill in ASCII characters and do not use duplicate names.
 
-在界面左下角显示的收集品图标。
+## `Priority`
 
-## `一直显示`
+- Type: `int`
+- Default: `0`
 
-- 类型：`bool`
-- 默认值：`false`
+Determines the display order of the collections:
 
-收集品数量为 0 时是否仍然显示。
+- The priorities for the Red, Green, Blue, Cyan, Magenta, and Yellow keys are `10`, `20`, `30`, `40`, `50`, and `60` respectively.
+- For collections with different priorities, the one with the lower priority comes first.
+- For collections with the same priority, the one that appears earlier in the map editor's list comes first, and keys are displayed last.
 
-## `显示最大数量`
+## `Icon`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `Texture`
+- Default: Empty
 
-是否显示场景内该类型收集品的所有数量。
+The collection icon displayed in the bottom-left corner of the UI.
+
+## `Always Show`
+
+- Type: `bool`
+- Default: `false`
+
+Whether to still display when the collection count is 0.
+
+## `Show Max Count`
+
+- Type: `bool`
+- Default: `false`
+
+Whether to display the total count of this type of collection in the scene.

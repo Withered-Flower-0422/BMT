@@ -1,119 +1,119 @@
-# 镜头
+# Lens
 
-## 曝光
+## Exposure
 
-### `自动曝光`
+### `Auto Exposure`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-当启用自动曝光时，曝光值会根据场景的亮度和光照条件自动调整，以获得最佳视觉效果。
+When auto exposure is enabled, the exposure value will automatically adjust based on the scene's brightness and lighting conditions to achieve the best visual effect.
 
-::: tip 提示
+::: tip
 
-- 制作白天地图时，建议开启 `自动曝光` 功能
-- 制作夜间地图时，由于场景的光照值较低，自动曝光会将曝光值调低，此时场景中的光源就会显得刺眼。因此建议关闭 `自动曝光` 功能，手动调整曝光值
+- When making a daytime map, it is recommended to enable the `Auto Exposure` feature.
+- When making a nighttime map, because the scene's lighting value is low, auto exposure will lower the exposure value, making light sources in the scene appear glaring. Therefore, it is recommended to disable `Auto Exposure` and manually adjust the exposure value.
 
 :::
 
-### `低限`<badge text="自动曝光 = true" />
+### `Limit Min`<badge text="Auto Exposure = true" />
 
-- 类型：`float`
-- 默认值：`4.5`
-- 范围：`-5.0` ~ `15.0`
+- Type: `float`
+- Default: `4.5`
+- Range: `-5.0` ~ `15.0`
 
-当启用 `自动曝光` 时，允许的最小曝光值。
+When `Auto Exposure` is enabled, the minimum allowed exposure value.
 
-### `高限`<badge text="自动曝光 = true" />
+### `Limit Max`<badge text="Auto Exposure = true" />
 
-- 类型：`float`
-- 默认值：`14.5`
-- 范围：`-5.0` ~ `15.0`
+- Type: `float`
+- Default: `14.5`
+- Range: `-5.0` ~ `15.0`
 
-当启用 `自动曝光` 时，允许的最大曝光值。
+When `Auto Exposure` is enabled, the maximum allowed exposure value.
 
-### `曝光补偿`<badge text="自动曝光 = true" />
+### `Exposure Compensation`<badge text="Auto Exposure = true" />
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-当启用 `自动曝光` 时，自动曝光的曝光补偿值。
+When `Auto Exposure` is enabled, the exposure compensation value for auto exposure.
 
-### `亮适应速度`<badge text="自动曝光 = true" />
+### `Dark To Light Speed`<badge text="Auto Exposure = true" />
 
-- 类型：`float`
-- 默认值：`3`
+- Type: `float`
+- Default: `3`
 
-当启用 `自动曝光` 时，画面从<u>过亮</u>过渡到<u>最佳亮度</u>的速度。
+When `Auto Exposure` is enabled, the speed at which the screen transitions from <u>overly bright</u> to the <u>optimal brightness</u>.
 
-### `暗适应速度`<badge text="自动曝光 = true" />
+### `Light To Dark Speed`<badge text="Auto Exposure = true" />
 
-- 类型：`float`
-- 默认值：`1`
+- Type: `float`
+- Default: `1`
 
-当启用 `自动曝光` 时，画面从<u>过暗</u>过渡到<u>最佳亮度</u>的速度。
+When `Auto Exposure` is enabled, the speed at which the screen transitions from <u>overly dark</u> to the <u>optimal brightness</u>.
 
-### `固定曝光`<badge text="自动曝光 = false" />
+### `Fixed Exposure`<badge text="Auto Exposure = false" />
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-当禁用 `自动曝光` 时，手动设定的曝光值。
+When `Auto Exposure` is disabled, the manually set exposure value.
 
-## 颜色调整
+## Color Adjustment
 
-### `后期曝光`
+### `Post Exposure`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `对比度`
+### `Contrast`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-100.0` ~ `100.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-100.0` ~ `100.0`
 
-### `颜色滤镜`
+### `Color Filter`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-### `色相偏移`
+### `Hue Shift`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-180.0` ~ `180.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-180.0` ~ `180.0`
 
-### `饱和度`
+### `Saturation`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-100.0` ~ `100.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-100.0` ~ `100.0`
 
-### `暗调`
+### `Shadows`
 
-- 类型：`ColorRGBA`
-- 默认值：`(0.5, 0.5, 0.5, 1)`
+- Type: `ColorRGBA`
+- Default: `(0.5, 0.5, 0.5, 1)`
 
-### `亮调`
+### `Highlights`
 
-- 类型：`ColorRGBA`
-- 默认值：`(0.5, 0.5, 0.5, 1)`
+- Type: `ColorRGBA`
+- Default: `(0.5, 0.5, 0.5, 1)`
 
-### `平衡`
+### `Balance`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-100.0` ~ `100.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-100.0` ~ `100.0`
 
-### `色温`
+### `Temperature`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-100.0` ~ `100.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-100.0` ~ `100.0`
 
-### `色调`
+### `Tint`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-100.0` ~ `100.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-100.0` ~ `100.0`

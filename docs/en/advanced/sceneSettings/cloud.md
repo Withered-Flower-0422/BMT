@@ -1,102 +1,102 @@
-# 云
+# Cloud
 
-BME Pro 提供了两层平面云层，下面列出云层中的各项属性、其类型及默认值。
+BME Pro provides two layers of planar clouds. The properties, types, and default values for the cloud layers are listed below.
 
-## `启用`
+## `Enabled`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-是否启用该云层。
+Whether to enable this cloud layer.
 
-## `纹理 A`
+## `Texture A`
 
-- 类型：`float`
-- 默认值：`1.0`<badge text="云层 1" />，`0.0`<badge text="云层 2" />
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`<badge text="Cloud Layer 1" />, `0.0`<badge text="Cloud Layer 2" />
+- Range: `0.0` ~ `1.0`
 
-云层纹理 A 的强度。
+The intensity of cloud texture A.
 
-## `纹理 B`
+## `Texture B`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
 
-云层纹理 B 的强度。
+The intensity of cloud texture B.
 
-## `纹理 C`
+## `Texture C`
 
-- 类型：`float`
-- 默认值：`0.0`<badge text="云层 1" />，`0.5`<badge text="云层 2" />
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0`<badge text="Cloud Layer 1" />, `0.5`<badge text="Cloud Layer 2" />
+- Range: `0.0` ~ `1.0`
 
-云层纹理 C 的强度。
+The intensity of cloud texture C.
 
-## `纹理 D`
+## `Texture D`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `1.0`
 
-云层纹理 D 的强度。
+The intensity of cloud texture D.
 
-## `海拔`
+## `Altitude`
 
-- 类型：`float`
-- 默认值：`2000.0`<badge text="云层 1" />，`4000.0`<badge text="云层 2" />
+- Type: `float`
+- Default: `2000.0`<badge text="Cloud Layer 1" />, `4000.0`<badge text="Cloud Layer 2" />
 
-云层海拔高度。
+The altitude of the cloud layer.
 
-## `旋转`
+## `Rotation`
 
-- 类型：`float`
-- 默认值：`0.0`<badge text="云层 1" />，`45.0`<badge text="云层 2" />
-- 范围：`0.0` ~ `360.0`
+- Type: `float`
+- Default: `0.0`<badge text="Cloud Layer 1" />, `45.0`<badge text="Cloud Layer 2" />
+- Range: `0.0` ~ `360.0`
 
-云层的旋转角度。
+The rotation angle of the cloud layer.
 
-## `色调`
+## `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-云层的颜色。
+The color of the cloud layer.
 
-## `曝光补偿`
+## `ExposureCompensation`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-## `风向`
+## `Wind Direction`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`0.0` ~ `360.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `0.0` ~ `360.0`
 
-云层的运动方向。
+The direction of the cloud's movement.
 
-## `风速`
+## `Wind Speed`
 
-- 类型：`float`
-- 默认值：`300.0`<badge text="云层 1" />，`200.0`<badge text="云层 2" />
+- Type: `float`
+- Default: `300.0`<badge text="Cloud Layer 1" />, `200.0`<badge text="Cloud Layer 2" />
 
-云层的运动速度。
+The speed of the cloud's movement.
 
-## `计算步数`
+## `Raymarching Step`
 
-- 类型：`int`
-- 默认值：`8`<badge text="云层 1" />，`6`<badge text="云层 2" />
-- 范围：`2` ~ `32`
+- Type: `int`
+- Default: `8`<badge text="Cloud Layer 1" />, `6`<badge text="Cloud Layer 2" />
+- Range: `2` ~ `32`
 
-## `密度`
+## `Density`
 
-- 类型：`float`
-- 默认值：`0.07`<badge text="云层 1" />，`0.05`<badge text="云层 2" />
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.07`<badge text="Cloud Layer 1" />, `0.05`<badge text="Cloud Layer 2" />
+- Range: `0.0` ~ `1.0`
 
-## `环境光照`
+## `Ambient Lighting`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`

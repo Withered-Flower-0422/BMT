@@ -1,33 +1,33 @@
-# 路点
+# Way Point
 
-`路点` 需配合 [`路径`](wayPath) 组件使用。
+`Way Point` needs to be used in conjunction with the [`Way Path`](wayPath) component.
 
-## ~~[变换偏移](item#变换偏移)~~
+## ~~[Transform Offset](item#Transform-Offset)~~
 
-目前路点的变换偏移暂时没有作用。
+Currently, the transform offset for a waypoint has no effect.
 
-## `移动类型`
+## `Move Type`
 
-- 类型：`速度 | 时长`
-- 默认值：`速度`
+- Type: `Speed | Duration`
+- Default: `Speed`
 
-## `移动速度`<badge text="移动类型 = 速度" />
+## `Move Speed`<badge text="Move Type = Speed" />
 
-- 类型：`float`
-- 默认值：`5.0`
+- Type: `float`
+- Default: `5.0`
 
-元件经过此路点后，将以此速度移动至下个路点。
+After an item passes this waypoint, it will move to the next waypoint at this speed.
 
-## `移动时长`<badge text="移动类型 = 时长" />
+## `Move Duration`<badge text="Move Type = Duration" />
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-元件经过此路点后，将在此时间内移动至下个路点。单位为秒。
+After an item passes this waypoint, it will move to the next waypoint within this amount of time. The unit is seconds.
 
-## `停留时间`
+## `Stay Time`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-元件到达此路点时，将停留在原地的时间。单位为秒。
+When an item reaches this waypoint, this is the amount of time it will stay in place. The unit is seconds.

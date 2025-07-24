@@ -1,67 +1,67 @@
-# 从入门到精通
+# From Beginner to Expert
 
-进阶板块将介绍 BME Pro 中一些高级功能和操作。
+The Advance section will introduce some advanced functions and operations in BME Pro.
 
-## 进阶
+## Advance
 
-在本进阶板块中将介绍：
+In this Advance section, we will introduce:
 
-- 编辑器 [`工具`](tools) 选项卡里各工具的功能及用法
+- The functions and usage of each tool in the editor's [`Tools`](tools) tab.
 
-- 编辑器中关于 [`素材`](assets) 面板及其子项 [`场景`](assets#场景) [`元件`](assets#元件) [`网格`](assets#网格) [`纹理`](assets#纹理) [`材质`](assets#材质) [`音频`](assets#音频) 面板的一些进阶操作技巧
+- Some advanced operation techniques for the [`Assets`](assets) panel and its sub-items: the [`Scenes`](assets#Scene), [`Items`](assets#Item), [`Meshes`](assets#Mesh), [`Textures`](assets#Texture), [`Materials`](assets#Material), and [`Audios`](assets#Audio) panels.
 
-- [`场景设置`](sceneSettings/sceneSettings) 中各组件的功能及用法
+- The functions and usage of each component in [`Scene Settings`](sceneSettings/sceneSettings).
 
-- [`元件`](item/item) 中各组件的功能及用法
+- The functions and usage of each component in an [`Item`](item/item).
 
-## 阅读建议
+## Reading Suggestions
 
-- 本版块中各个部分基本独立，制图时可根据需要寻找对应的内容进行阅读学习
+- The topics in this section are largely independent. You can look up and learn the specific content you need while mapping.
 
-- 一些内容可能会涉及到其他软件的知识，比如模型系统，会涉及到一些建模软件的操作，请确保自己对相关知识有一定的了解
+- Some content may involve knowledge of other software. For example, the mesh system will involve operations in modeling software, so please ensure you have a basic understanding of related topics.
 
-- 学完本板块的内容后，你将有能力制作一些复杂的元件和装饰，制作具有独特风格的地图
+- After completing this section, you will be able to create complex items and decorations, and build maps with a unique style.
 
-## 数据类型
+## Data Types
 
-本板块可能涉及到的数据类型有：
+The data types that may be involved in this section are:
 
-- `int`：整型数据类型，如 `123`、`456`
-- `float`：浮点型数据类型，如 `3.14`、`2.71`
-- `string`：字符串数据类型，如 `"Hello World"`、`""`
-- `bool`：布尔型数据类型，如 `true`、`false`
-- `enum`：枚举数据类型
-  - 如果枚举数量较少，将直接使用 `枚举 A | 枚举 B | 枚举 C` 的形式书写
-- `Float2`：浮点型二维向量数据类型
-  - 拥有 `x` `y` 两个分量
-  - 为方便书写，后续 `Float2` 类型的数据将简写为 `(x, y)` 的形式，且省略不必要的小数点，如 `(1, 2)`
-  - 在编辑器中，该类型往往描述一个范围，其中 `x` 代表最小值，`y` 代表最大值
-- `Float3`：浮点型三维向量数据类型
-  - 拥有 `x` `y` `z` 三个分量
-  - 为方便书写，后续 `Float3` 类型的数据将简写为 `(x, y, z)` 的形式，且省略不必要的小数点，如 `(1, 2, 3)`
-- `Float4`：浮点型四维向量数据类型
-  - 拥有 `x` `y` `z` `w` 四个分量
-  - 为方便书写，后续 `Float4` 类型的数据将简写为 `(x, y, z, w)` 的形式，且省略不必要的小数点，如 `(1, 2, 3, 4)`
-- `Quaternion`：四元数数据类型
-  - 拥有 `x` `y` `z` `w` 四个分量
-  - 为方便书写，后续 `Quaternion` 类型的数据将简写为 `(x, y, z, w)` 的形式，且省略不必要的小数点，如 `(0, 0, 0, 1)`
-- `Bool3`：布尔型三维向量数据类型
-  - 拥有 `x` `y` `z` 三个分量
-  - 为方便书写，后续 `Bool3` 类型的数据将简写为 `(x, y, z)` 的形式，如 `(true, false, true)`
-- `Trans`：变换数据类型
-  - 拥有 `pos` `rot` `scl` 三个分量
-  - `pos` 代表位置，`rot` 代表旋转，`scl` 代表缩放，均为 `Float3` 类型
-- `ColorRGBA`：颜色数据类型
-  - 拥有 `r` `g` `b` `a` 四个分量
-  - `r` `g` `b` 分量代表颜色的红绿蓝分量，`a` 分量代表颜色的不透明度，均为 `float` 类型，范围为 `0` ~ `1`
-  - 为方便书写，后续 `ColorRGBA` 类型的数据将简写为 `(r, g, b, a)` 的形式，且省略不必要的小数点，如 `(1, 1, 1, 1)`
+- `int`: Integer data type, e.g., `123`, `456`.
+- `float`: Floating-point data type, e.g., `3.14`, `2.71`.
+- `string`: String data type, e.g., `"Hello World"`, `""`.
+- `bool`: Boolean data type, e.g., `true`, `false`.
+- `enum`: Enumeration data type.
+  - If the number of enumerations is small, they will be written directly in the form `Enum A | Enum B | Enum C`.
+- `Float2`: 2D float vector data type.
+  - Has two components: `x` and `y`.
+  - For ease of writing, `Float2` data will be abbreviated as `(x, y)`, omitting unnecessary decimal points, e.g., `(1, 2)`.
+  - In the editor, this type often describes a range, where `x` represents the minimum value and `y` represents the maximum value.
+- `Float3`: 3D float vector data type.
+  - Has three components: `x`, `y`, and `z`.
+  - For ease of writing, `Float3` data will be abbreviated as `(x, y, z)`, omitting unnecessary decimal points, e.g., `(1, 2, 3)`.
+- `Float4`: 4D float vector data type.
+  - Has four components: `x`, `y`, `z`, and `w`.
+  - For ease of writing, `Float4` data will be abbreviated as `(x, y, z, w)`, omitting unnecessary decimal points, e.g., `(1, 2, 3, 4)`.
+- `Quaternion`: Quaternion data type.
+  - Has four components: `x`, `y`, `z`, and `w`.
+  - For ease of writing, `Quaternion` data will be abbreviated as `(x, y, z, w)`, omitting unnecessary decimal points, e.g., `(0, 0, 0, 1)`.
+- `Bool3`: 3D boolean vector data type.
+  - Has three components: `x`, `y`, and `z`.
+  - For ease of writing, `Bool3` data will be abbreviated as `(x, y, z)`, e.g., `(true, false, true)`.
+- `Trans`: Transform data type.
+  - Has three components: `pos`, `rot`, and `scl`.
+  - `pos` represents position, `rot` represents rotation, and `scl` represents scale. All are of `Float3` type.
+- `ColorRGBA`: Color data type.
+  - Has four components: `r`, `g`, `b`, and `a`.
+  - The `r`, `g`, `b` components represent the red, green, and blue components of the color, while the `a` component represents the color's opacity. All are `float` types with a range from `0` to `1`.
+  - For ease of writing, `ColorRGBA` data will be abbreviated as `(r, g, b, a)`, omitting unnecessary decimal points, e.g., `(1, 1, 1, 1)`.
 
-::: tip 提示
+::: tip
 
-本版块中，`Item` `Mesh` `Texture` `Material` `Audio` `Script` 等类型均为其对应资源的引用或路径，实际类型为 `string` 。
+In this section, types such as `Item`, `Mesh`, `Texture`, `Material`, `Audio`, and `Script` are references or paths to their corresponding resources. Their actual type is `string`.
 
 :::
 
-## 游戏物理帧
+## Game Physics Frame
 
-Ballex² 的物理帧频率为 100Hz。
+The physics frame rate of Ballex² is 100Hz.

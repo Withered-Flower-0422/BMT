@@ -3,17 +3,17 @@ outline:
   level: 2
 ---
 
-# 路面生成器
+# Road Generator
 
-- 编辑器提供了 7 中路面生成器算法：`路面` `拐角` `木板` `轨道` `管道` `自定义顶点` `自定义脚本`
-- 在 `起步 → 路面生成器` 中，已初步介绍了路面生成器的使用方法，且提供了一些示例
-- 路面生成器的各项属性较为直观，建议实际上手操作，自己调节每个属性，领悟每个属性的作用和效果
-- 对于在起步章节已介绍过的路面生成器算法，这里只列出其各项属性、其类型及默认值，不做过多说明
-- 点击跳转至 [`自定义顶点`](#自定义顶点) 路面生成器的使用方法
-- [`自定义脚本`](../../script/roadGenerator) 路面生成器将在 `脚本` 板块中介绍
-- 更高级的路面生成器：[`路点路面生成器`](#路点路面生成器)
+- The editor provides 7 road generator algorithms: `Road`, `Corner`, `Wood Board`, `Rail`, `Tube`, `Custom Vertices`, `Custom Script`.
+- In [`Start → Road Generator`](../../start/roadGenerator), the basic usage of the road generator has been introduced, and some examples were provided.
+- The various properties of the road generator are quite intuitive. It is recommended to experiment hands-on, adjusting each property yourself to understand its function and effect.
+- For road generator algorithms already introduced in the Start section, only their properties, types, and default values are listed here, without extensive explanation.
+- Click to jump to the usage of the [`Custom Vertices`](#Custom-Vertices) road generator.
+- The [`Custom Script`](../../script/roadGenerator) road generator will be introduced in the `Script` section.
+- A more advanced road generator: [`Way Point Road Generator`](#Way-Point-Road-Generator).
 
-::: details 弯曲算法
+::: details Bending Algorithm
 
 ```py
 def skeletonGenerator(
@@ -47,426 +47,427 @@ def skeletonGenerator(
 
 :::
 
-## 快捷功能
+## Quick Functions
 
-在 `路面生成器` 组件中提供了 3 个快捷功能：
+The `Road Generator` component provides 3 quick functions:
 
-- `克隆`：在其尾部创建与当前路面相同的路面，并自动设置好其旋转等属性
-- `生成`：强制刷新当前的路面生成器。对于 [`自定义脚本`](../../script/roadGenerator) 路面生成器，在修改脚本后可以点击此按钮刷新生成结果
-- `创建路点`：根据当前路面生成器的分段在对应位置创建 [`路点`](wayPoint)
+- `Clone`: Creates an identical road at the end of the current road and automatically sets its rotation and other properties.
+- `Generate`: Forcibly refreshes the current road generator. For a [`Custom Script`](../../script/roadGenerator) road generator, you can click this button to refresh the generated result after modifying the script.
+- `Create Way Point`: Creates [`Way Point`](wayPoint) at the corresponding positions based on the current road generator's segments.
 
-## 路面
+## Road
 
-::: details 路面
+::: details Road
 
-### `长度`
+### `Length`
 
-- 类型：`float`
-- 默认值：`4.0`
+- Type: `float`
+- Default: `4.0`
 
-### `宽度`
+### `Width`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### `末端宽度`
+### `End Width`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### `末端高度`
+### `End Height`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `末端偏移`
+### `End Offset`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `厚度`
+### `Thickness`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### `分段`
+### `Segments`
 
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `256`
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `256`
 
-### `弯曲`
+### `Bend`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-### `创建封盖`
+### `Create Cap`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `true`
 
-### `精确 UV 长度`
+### `Precise UV Length`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `旋转主 UV`
+### `Rotate Main UV`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-### `主 UV 偏移`
+### `Main UV Offset`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-### `侧边 UV 偏移`
+### `Sides UV Offset`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `凹陷`
+### `Concave`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `末端凹陷`
+### `End Concave`
 
-- 类型：`float`
-- 默认值：`0.0`
-
-:::
-
-## 拐角
-
-::: details 拐角
-
-### `尺寸`
-
-- 类型：`float`
-- 默认值：`1.0`
-
-### `厚度`
-
-- 类型：`float`
-- 默认值：`1.0`
-
-### `创建封盖`
-
-- 类型：`bool`
-- 默认值：`true`
-
-### `旋转主 UV`
-
-- 类型：`bool`
-- 默认值：`false`
-
-### `主 UV 偏移`
-
-- 类型：`Float2`
-- 默认值：`(0, 0)`
-
-### `凹陷`
-
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
 :::
 
-## 木板
+## Corner
 
-::: details 木板
+::: details Corner
 
-### `长度`
+### `Size`
 
-- 类型：`float`
-- 默认值：`4.0`
+- Type: `float`
+- Default: `1.0`
 
-### `宽度`
+### `Thickness`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### `末端高度`
+### `Create Cap`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `bool`
+- Default: `true`
 
-### `末端偏移`
+### `Rotate Main UV`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `bool`
+- Default: `false`
 
-### `厚度`
+### `Main UV Offset`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-### `分段`
+### `Concave`
 
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `256`
-
-### `弯曲`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-### `创建封盖`
-
-- 类型：`bool`
-- 默认值：`true`
-
-### `精确 UV 长度`
-
-- 类型：`bool`
-- 默认值：`false`
-
-### `旋转主 UV`
-
-- 类型：`bool`
-- 默认值：`false`
-
-### `主 UV 偏移`
-
-- 类型：`Float2`
-- 默认值：`(0, 0)`
-
-### `侧边 UV 偏移`
-
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
 :::
 
-## 轨道
+## Wood Board
 
-::: details 轨道
+::: details Wood Board
 
-### `长度`
+### `Length`
 
-- 类型：`float`
-- 默认值：`4.0`
+- Type: `float`
+- Default: `4.0`
 
-### `偏移`
+### `Width`
 
-- 类型：`Float2[]`
-- 默认值：`[(-0.38, 0), (0.38, 0)]`
+- Type: `float`
+- Default: `1.0`
 
-### `末端高度`
+### `End Height`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `末端偏移`
+### `End Offset`
 
-- 类型：`float`
-- 默认值：`0.0`
+- Type: `float`
+- Default: `0.0`
 
-### `分段`
+### `Thickness`
 
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `256`
+- Type: `float`
+- Default: `1.0`
 
-### `旋转分段`
+### `Segments`
 
-- 类型：`int`
-- 默认值：`8`
-- 范围：`1` ~ `128`
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `256`
 
-钢轨横截面的分段数。
+### `Bend`
 
-### `旋转偏移`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-180` ~ `180`
+### `Create Cap`
 
-钢轨横截面的旋转角度。
+- Type: `bool`
+- Default: `true`
 
-### `弯曲`
+### `Precise UV Length`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `bool`
+- Default: `false`
 
-### `创建封盖`
+### `Rotate Main UV`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `bool`
+- Default: `false`
 
-### `精确 UV 长度`
+### `Main UV Offset`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `Float2`
+- Default: `(0, 0)`
 
-### `主 UV 偏移`
+### `Sides UV Offset`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
-
-### `半径`
-
-- 类型：`float`
-- 默认值：`0.06`
-
-钢轨的横截面半径（粗细）。
-:::
-
-## 管道
-
-::: details 管道
-
-### `长度`
-
-- 类型：`float`
-- 默认值：`4.0`
-
-### `末端高度`
-
-- 类型：`float`
-- 默认值：`0.0`
-
-### `末端偏移`
-
-- 类型：`float`
-- 默认值：`0.0`
-
-### `半径`
-
-- 类型：`float`
-- 默认值：`0.5`
-
-### `末端半径`
-
-- 类型：`float`
-- 默认值：`0.5`
-
-### `切片`
-
-- 类型：`Float2`
-- 默认值：`(0, 360)`
-
-管道横截面的 `起始角度` 与 `终止角度` 。
-
-### `厚度`
-
-- 类型：`float`
-- 默认值：`0.05`
-
-### `分段`
-
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `256`
-
-### `旋转分段`
-
-- 类型：`int`
-- 默认值：`16`
-- 范围：`1` ~ `128`
-
-管道横截面的分段数。
-
-### `弯曲`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-### `创建封盖`
-
-- 类型：`bool`
-- 默认值：`true`
-
-### `精确 UV 长度`
-
-- 类型：`bool`
-- 默认值：`false`
-
-### `主 UV 偏移`
-
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `float`
+- Default: `0.0`
 
 :::
 
-## 自定义顶点
+## Rail
 
-- `顶点组`：每个顶点组对应一段路面
-- `顶点`：每个顶点对应 **xy 面内** 的一点坐标
-  - `位置`：该顶点的位置坐标，以 **元件位置** 为原点
-  - `UV`：该顶点的 UV 坐标
+::: details Rail
 
-::: tip 提示
+### `Length`
 
-- 不同段的路面可以设置不同的材质
-- 自定义顶点路面 **无法** 创建封盖
-- 请确保每个顶点组中的首尾顶点相连
-- 相邻的两个顶点 UV 坐标不要相同
+- Type: `float`
+- Default: `4.0`
+
+### `Offsets`
+
+- Type: `Float2[]`
+- Default: `[(-0.38, 0), (0.38, 0)]`
+
+### `End Height`
+
+- Type: `float`
+- Default: `0.0`
+
+### `End Offset`
+
+- Type: `float`
+- Default: `0.0`
+
+### `Segments`
+
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `256`
+
+### `Rotation Segments`
+
+- Type: `int`
+- Default: `8`
+- Range: `1` ~ `128`
+
+Number of segments in the rail's cross-section.
+
+### `Rotation Offset`
+
+- Type: `float`
+- Default: `0.0`
+- Range: `-180` ~ `180`
+
+Rotation angle of the rail's cross-section.
+
+### `Bend`
+
+- Type: `Float3`
+- Default: `(0, 0, 0)`
+
+### `Create Cap`
+
+- Type: `bool`
+- Default: `true`
+
+### `Precise UV Length`
+
+- Type: `bool`
+- Default: `false`
+
+### `Main UV Offset`
+
+- Type: `Float2`
+- Default: `(0, 0)`
+
+### `Radius`
+
+- Type: `float`
+- Default: `0.06`
+
+The cross-sectional radius (thickness) of the rail.
 
 :::
 
-::: details 自定义顶点
+## Tube
 
-### `长度`
+::: details Tube
 
-- 类型：`float`
-- 默认值：`4.0`
+### `Length`
 
-### `末端高度`
+- Type: `float`
+- Default: `4.0`
 
-- 类型：`float`
-- 默认值：`0.0`
+### `End Height`
 
-### `末端偏移`
+- Type: `float`
+- Default: `0.0`
 
-- 类型：`float`
-- 默认值：`0.0`
+### `End Offset`
 
-### `分段`
+- Type: `float`
+- Default: `0.0`
 
-- 类型：`int`
-- 默认值：`1`
-- 范围：`1` ~ `256`
+### `Radius`
 
-### `弯曲`
+- Type: `float`
+- Default: `0.5`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+### `End Radius`
 
-### `精确 UV 长度`
+- Type: `float`
+- Default: `0.5`
 
-- 类型：`bool`
-- 默认值：`false`
+### `Slice`
 
-### `旋转主 UV`
+- Type: `Float2`
+- Default: `(0, 360)`
 
-- 类型：`bool`
-- 默认值：`false`
+The `Start Angle` and `End Angle` of the tube's cross-section.
 
-### `主 UV 偏移`
+### `Thickness`
 
-- 类型：`Float2`
-- 默认值：`(0, 0)`
+- Type: `float`
+- Default: `0.05`
+
+### `Segments`
+
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `256`
+
+### `Rotation Segments`
+
+- Type: `int`
+- Default: `16`
+- Range: `1` ~ `128`
+
+Number of segments in the tube's cross-section.
+
+### `Bend`
+
+- Type: `Float3`
+- Default: `(0, 0, 0)`
+
+### `Create Cap`
+
+- Type: `bool`
+- Default: `true`
+
+### `Precise UV Length`
+
+- Type: `bool`
+- Default: `false`
+
+### `Main UV Offset`
+
+- Type: `Float2`
+- Default: `(0, 0)`
 
 :::
 
-## 自定义脚本
+## Custom Vertices
 
-[`自定义脚本`](../../script/roadGenerator) 路面生成器将在 `脚本` 板块中介绍。
+- `Vertices Group`: Each vertices group corresponds to a section of the road.
+- `Vertices`: Each vertex corresponds to a point coordinate in the **XY plane**.
+  - `Position`: The position coordinate of the vertex, with the **item's position** as the origin.
+  - `UV`: The UV coordinate of the vertex.
 
-## 路点路面生成器
+::: tip
 
-目前路点路面生成器仅对 `路面` 和 `木板` 有效。
+- Different sections of the road can have different materials.
+- Custom vertices roads **cannot** have caps created.
+- Please ensure that the first and last vertices in each vertices group are connected.
+- The UV coordinates of two adjacent vertices should not be the same.
 
-建议先阅读关于 [`路点`](wayPoint) 和 [`路径`](wayPath) 组件的相关内容。
+:::
 
-使用方法：
+::: details Custom Vertices
 
-1. 创建一些 `路点`，并在 `层级` 中将这些 `路点` 拖入 `路面生成器` 元件中作为其子元件
-2. `路面生成器` 元件启用 `路径` 组件，勾选 `自动收集` ，此时路径会自动收集子元件中的所有 `路点`
-3. 根据需要选择是否勾选 `使用曲线` 和 `闭合路径`
-4. 在 `路面生成器` 组件中调整 `分段` 属性
-5. 此时 `路面生成器` 组件中仅有 `厚度` `凹陷` `末端凹陷` 属性起作用，其余均通过 `路点` 控制
-6. 调整每个路点的 `位置` `旋转` `缩放` 属性以调整路面的形状
+### `Length`
+
+- Type: `float`
+- Default: `4.0`
+
+### `End Height`
+
+- Type: `float`
+- Default: `0.0`
+
+### `End Offset`
+
+- Type: `float`
+- Default: `0.0`
+
+### `Segments`
+
+- Type: `int`
+- Default: `1`
+- Range: `1` ~ `256`
+
+### `Bend`
+
+- Type: `Float3`
+- Default: `(0, 0, 0)`
+
+### `Precise UV Length`
+
+- Type: `bool`
+- Default: `false`
+
+### `Rotate Main UV`
+
+- Type: `bool`
+- Default: `false`
+
+### `Main UV Offset`
+
+- Type: `Float2`
+- Default: `(0, 0)`
+
+:::
+
+## Custom Script
+
+The [`Custom Script`](../../script/roadGenerator) road generator will be introduced in the `Script` section.
+
+## Way Point Road Generator
+
+Currently, the waypoint road generator is only effective for `Road` and `Wood Board`.
+
+It is recommended to first read the content related to the [`Way Point`](wayPoint) and [`Way Path`](wayPath) components.
+
+Usage:
+
+1. Create some `Way Points` and, in the `Hierarchy`, drag these `Way Points` into the `Road Generator` item to make them its children.
+2. On the `Road Generator` item, enable the `Way Path` component and check `Auto Collect`. The path will now automatically collect all `Way Points` from its children.
+3. Depending on your needs, choose whether to check `Use Curve` and `Closed Path`.
+4. In the `Road Generator` component, adjust the `Segments` property.
+5. At this point, only the `Thickness`, `Concave`, and `End Concave` properties in the `Road Generator` component will have an effect; the rest are controlled by the `Way Points`.
+6. Adjust the `Position`, `Rotation`, and `Scale` properties of each `Way Point` to shape the road.

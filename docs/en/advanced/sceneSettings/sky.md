@@ -1,228 +1,228 @@
-# 天空
+# Sky
 
-天空分为 `物理天空` 和 `HDRI 天空` 。
+Sky is divided into `Physics Sky` and `HDRI Sky`.
 
-::: tip 提示
+::: tip
 
-- 天空的各项属性较为复杂，难以用文字准确描述每个属性的作用
-- 建议实际上手操作，自己调节每个属性，领悟每个属性的作用和效果
-- 这里只列出各项属性、其类型及默认值，不做过多说明
-- 如果要模拟地球的天空，该组件保持默认即可
+- The various properties of the sky are quite complex, and it is difficult to accurately describe the function of each property in words.
+- It is recommended to experiment hands-on, adjusting each property yourself to understand its function and effect.
+- Here, only the properties, their types, and default values are listed, without extensive explanation.
+- If you want to simulate Earth's sky, you can keep the default settings for this component.
 
 :::
 
-## `天空类型`
+## `Sky Type`
 
-- 类型：`物理天空 | HDRI 天空`
-- 默认值：`物理天空`
+- Type: `Physics Sky | HDRI Sky`
+- Default: `Physics Sky`
 
-## `曝光补偿`
+## `Exposure Compensation`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-20.0` ~ `20.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-20.0` ~ `20.0`
 
-## 物理天空
+## Physics Sky
 
-### 地面
+### Ground
 
-#### `旋转`
+#### `Rotation`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-#### `颜色纹理`
+#### `Color Texture`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-#### `色调`
+#### `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(59 / 255, 64 / 255, 71 / 255, 1)`
+- Type: `ColorRGBA`
+- Default: `(59 / 255, 64 / 255, 71 / 255, 1)`
 
-#### `发光纹理`
+#### `Emission Texture`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-#### `发光强度`
+#### `Emission Multiplier`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### 太空
+### Space
 
-#### `旋转`
+#### `Space Rotation`
 
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-#### `发光纹理`
+#### `Emission Texture`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-#### `发光强度`
+#### `Emission Multiplier`
 
-- 类型：`float`
-- 默认值：`1.0`
+- Type: `float`
+- Default: `1.0`
 
-### 空气
+### Air
 
-#### `最大高度`
+#### `Maximum Altitude`
 
-- 类型：`float`
-- 默认值：`55000.0`
+- Type: `float`
+- Default: `55000.0`
 
-#### `红色密度`
+#### `Density R`
 
-- 类型：`float`
-- 默认值：`0.0453`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0453`
+- Range: `0.0` ~ `1.0`
 
-#### `绿色密度`
+#### `Density G`
 
-- 类型：`float`
-- 默认值：`0.1024`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.1024`
+- Range: `0.0` ~ `1.0`
 
-#### `蓝色密度`
+#### `Density B`
 
-- 类型：`float`
-- 默认值：`0.2326`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.2326`
+- Range: `0.0` ~ `1.0`
 
-#### `色调`
+#### `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-### 气溶胶
+### Aerosols
 
-#### `密度`
+#### `Density`
 
-- 类型：`float`
-- 默认值：`0.012`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.012`
+- Range: `0.0` ~ `1.0`
 
-#### `色调`
+#### `Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-#### `各向异性`
+#### `Anisotropy`
 
-- 类型：`float`
-- 默认值：`0.8`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `0.8`
+- Range: `0.0` ~ `1.0`
 
-#### `最大高度`
+#### `Maximum Altitude`
 
-- 类型：`float`
-- 默认值：`8290.0`
+- Type: `float`
+- Default: `8290.0`
 
-### 臭氧层
+### Ozone
 
-#### `密度`
+#### `Density Dimmer`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-#### `最小高度`
+#### `Minimum Altitude`
 
-- 类型：`float`
-- 默认值：`20000.0`
+- Type: `float`
+- Default: `20000.0`
 
-#### `层厚度`
+#### `Layer Width`
 
-- 类型：`float`
-- 默认值：`20000.0`
+- Type: `float`
+- Default: `20000.0`
 
-### 艺术性调参
+### Artistic Overrides
 
-#### `颜色饱和度`
+#### `Color Saturation`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-#### `透明饱和度`
+#### `Alpha Saturation`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-#### `透明值倍率`
+#### `Alpha Multiplier`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-#### `地平线色调`
+#### `Horizon Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-#### `穹顶偏移`
+#### `Zenith Shift`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-1.0` ~ `1.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-1.0` ~ `1.0`
 
-#### `穹顶色调`
+#### `Zenith Tint`
 
-- 类型：`ColorRGBA`
-- 默认值：`(1, 1, 1, 1)`
+- Type: `ColorRGBA`
+- Default: `(1, 1, 1, 1)`
 
-## HDRI 天空
+## HDRI Sky
 
-### `上`
+### `Up`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `下`
+### `Down`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `左`
+### `Left`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `右`
+### `Right`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `前`
+### `Front`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `后`
+### `Back`
 
-- 类型：`Texture`
-- 默认值：空
+- Type: `Texture`
+- Default: Empty
 
-### `旋转`
+### `Rotation`
 
-- 类型：`float`
-- 默认值：`0`
-- 范围：`0` ~ `360`
+- Type: `float`
+- Default: `0`
+- Range: `0` ~ `360`
 
-### `Gamma 偏移`
+### `Gamma Offset`
 
-- 类型：`float`
-- 默认值：`0.0`
-- 范围：`-3.0` ~ `3.0`
+- Type: `float`
+- Default: `0.0`
+- Range: `-3.0` ~ `3.0`
 
-::: tip 提示
+::: tip
 
-- 如果使用 `HDRI 天空`，导入天空纹理后发现天空效果不理想，可以尝试调整 `Gamma 偏移` 和 `曝光补偿` 两个属性
-- 设置完 `Gamma 偏移` 和 `曝光补偿` 后，需要点击 `刷新` 按钮以应用
+- If using `HDRI Sky` and the sky effect is not ideal after importing the sky texture, you can try adjusting the `Gamma Offset` and `Exposure Compensation` properties.
+- After setting `Gamma Offset` and `Exposure Compensation`, you need to click the `Refresh` button to apply.
 
 :::

@@ -1,219 +1,197 @@
-# 关节
+# Joint
 
-该组件的属性较为晦涩难懂，在本节末尾将给出几个[示例](#示例)帮助理解。
+The properties of this component are rather obscure and difficult to understand. A few [examples](#Examples) will be provided at the end of this section to help with comprehension.
 
-::: warning 注意
+::: warning
 
-关节组件中用到的元件不能是链接类型的元件，且所有元件都必须拥有 [`物理物体`](physicsObject) 组件。
-
-:::
-
-## `连接自身`
-
-- 类型：`bool`
-- 默认值：`true`
-
-::: warning 注意
-
-`连接自身` 设置为 `true` 时，请确保自身所在元件拥有 [`物理物体`](physicsObject) 组件。
+Items used in the Joint component cannot be linked-type items, and all items must have a [`Physics Object`](physicsObject) component.
 
 :::
 
-## `物理物体 A`<badge text="连接自身 = false" />
+## `Connect Self`
 
-- 类型：`Item`
-- 默认值：空
+- Type: `bool`
+- Default: `true`
 
-关节连接的其中一个物理物体。
+::: warning
 
-## `物理物体 B`
-
-- 类型：`Item`
-- 默认值：空
-
-关节连接的另一个物理物体。
-
-::: tip 提示
-
-`物理物体 B` 可以为空。为空时，关节仅对一个物理物体施加关节限制。
+When `Connect Self` is set to `true`, please ensure that the item itself has a [`Physics Object`](physicsObject) component.
 
 :::
 
-## `启用碰撞`
+## `Physics Object A`<badge text="Connect Self = false" />
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `Item`
+- Default: Empty
 
-是否仍然启用物理物体中的碰撞箱效果。若无特殊情况，请保持该值为 `false` 以保证移动、旋转通畅。
+One of the physics objects connected by the joint.
 
-## `自动设置连接`
+## `Physics Object B`
 
-- 类型：`bool`
-- 默认值：`true`
+- Type: `Item`
+- Default: Empty
 
-## 关节连接点
+The other physics object connected by the joint.
 
-用于设置两个物理物体之间的连接点。在场景中将会显示
-<span class="text-red">不</span>
-<span class="text-green">同</span>
-<span class="text-blue">颜</span>
-<span class="text-yellow">色</span>
-球体的可视化位置。
+::: tip
 
-### `相对位置`
-
-- 类型：`Float3`
-- 默认值：`(0, 0, 0)`
-
-### `相对轴向`
-
-- 类型：`Float3`
-- 默认值：`(1, 0, 0)`
-
-### `相对垂直轴向`
-
-- 类型：`Float3`
-- 默认值：`(0, 1, 0)`
-
-## 关节约束
-
-用于设置两个物理物体之间的约束。可添加多个约束。
-
-### `约束类型`
-
-- 类型：`线性 | 角`
-- 默认值：`线性`
-
-### `约束轴`
-
-- 类型：`Bool3`
-- 默认值：`(false, false, false)`
-
-### `范围`
-
-- 类型：`Float2`
-- 默认值：`(0, 0)`
-
-### `启用弹簧`
-
-- 类型：`bool`
-- 默认值：`false`
-
-启用弹簧后，允许物理物体的活动范围超出约束范围，且会在物理物体超出约束范围时施加弹簧力，超出范围越大弹簧力越大。未超出范围时无弹簧效果。
-
-### `弹簧弹性`
-
-- 类型：`float`
-- 默认值：`0.0`
-
-### `弹簧阻尼`
-
-- 类型：`float`
-- 默认值：`0.0`
-
-## 示例
-
-### 落石
-
-::: tip 提示
-
-该例用于演示使用关节的完整流程，并利用 `路面生成器` 生成网格，不需要导入外部文件，适合起步练习。
-
-制图请使用现成元件：`素材 → 元件 → 机关 → 落石`。
+`Physics Object B` can be empty. When empty, the joint only applies constraints to a single physics object.
 
 :::
 
-1. 创建落石
+## `Enable Collision`
 
-- `创建 → 路面生成器`
-- 设置 `生成器类型` 为 `拐角`
+- Type: `bool`
+- Default: `false`
 
-2. 设置物理物体属性
+Whether to keep the collider effect in the physics object enabled. If there are no special circumstances, please keep this value as `false` to ensure smooth movement and rotation.
 
-- 设置 `碰撞箱类型` 为 `长方体`，不改动碰撞箱相关参数
-- 设置 `物理体类型` 为 `刚体`
-- 根据需要调整刚体相关参数
-- 将物体摆放在合适的位置
+## `Auto Set Connection`
 
-3. 添加并设置关节
+- Type: `bool`
+- Default: `true`
 
-- 启用 `关节` 组件
-- 设置 2 个约束
-  - 线性约束，锁定 `x` `z` 两轴，确保物体只能沿 `y` 轴移动
-  - 角约束，锁定 `x` `y` `z` 三轴，确保物体无法旋转
-  - 此时关节表现为平动关节（类似套筒，活塞等）
-- 不改动其它参数
+## Joint Point
 
-4. 在游戏中测试，此时落石应当可以正常工作
+Used to set the connection point between two physics objects. The visualized position will be displayed in the scene as a <span class="text-colorful">multi-colored</span> sphere.
 
-### 推板
+### `Position`
 
-::: tip 提示
+- Type: `Float3`
+- Default: `(0, 0, 0)`
 
-该例用于演示需要建模后导入网格的情形。
+### `Axis`
 
-制图请使用现成元件：`素材 → 元件 → 机关 → 推板`。
+- Type: `Float3`
+- Default: `(1, 0, 0)`
+
+### `Perpendicular Axis`
+
+- Type: `Float3`
+- Default: `(0, 1, 0)`
+
+## Joint Constraints
+
+Used to set the constraints between two physics objects. Multiple constraints can be added.
+
+### `Constraint Type`
+
+- Type: `Linear | Angular`
+- Default: `Linear`
+
+### `Constrained Axis`
+
+- Type: `Bool3`
+- Default: `(false, false, false)`
+
+### `Min Max`
+
+- Type: `Float2`
+- Default: `(0, 0)`
+
+### `Enable Spring`
+
+- Type: `bool`
+- Default: `false`
+
+When the spring is enabled, it allows the physics object's range of motion to exceed the constraint range. A spring force will be applied when the object goes beyond the constraint range; the further it exceeds the range, the greater the spring force. There is no spring effect when it is within the range.
+
+### `Spring Elastic`
+
+- Type: `float`
+- Default: `0.0`
+
+### `Spring Damping`
+
+- Type: `float`
+- Default: `0.0`
+
+## Examples
+
+### Stone Block
+
+::: tip
+
+This example demonstrates the complete process of using a joint and utilizes the `Road Generator` to generate a mesh, so no external files need to be imported. It is suitable for beginner practice.
+
+For mapping, please use the ready-made item: `Assets → Items → Machinery → StoneBlock`.
 
 :::
 
-1. 建模
+1. Create the stone block.
+   - `Create → Road Generator`
+   - Set `Generator Type` to `Corner`
+2. Set the Physics Object properties.
+   - Set `Collider Type` to `Box`, do not change the collider-related parameters.
+   - Set `Physics Body Type` to `Rigid`.
+   - Adjust rigid parameters as needed.
+   - Place the object in a suitable position.
+3. Add and set up the Joint.
+   - Enable the `Joint` component.
+   - Set 2 constraints:
+     - A linear constraint, locking the `x` and `z` axes, ensuring the object can only move along the `y` axis.
+     - An angular constraint, locking the `x`, `y`, and `z` axes, ensuring the object cannot rotate.
+     - At this point, the joint behaves as a prismatic joint (similar to a sleeve, piston, etc.).
+   - Do not change other parameters.
+4. Test in the game. The stone block should now work correctly.
 
-- 使用建模软件创建一个长方体
-  - 此处假设推板绕 `x` 轴旋转
-  - 参考尺寸：`x = 1m` `y = 2m` `z = 0.1m`
-- 设定轴心位于底面中心
-- 可在建模软件中使用旋转工具，绕 `x` 轴旋转测试是否符合预期
-- 此处不考虑 UV 和材质匹配问题
+### Push Board
+
+::: tip
+
+This example demonstrates a situation that requires modeling and then importing a mesh.
+
+For mapping, please use the ready-made item: `Assets → Items → Machinery → PushBoard`.
+
+:::
 
 <div align="center">
 
-![](/images/push-board-example.png)
+![](../../../public/images/push-board-example.png)
 
 </div>
 
-2. 添加并设置物体
+1. Modeling.
+   - Use modeling software to create a rectangular prism.
+     - Assume here that the push board rotates around the `x`-axis.
+     - Reference dimensions: `x = 1m`, `y = 2m`, `z = 0.1m`.
+   - Set the pivot point to the center of the bottom face.
+   - You can use the rotation tool in your modeling software to rotate around the `x`-axis to test if it meets expectations.
+   - UVs and material matching are not considered here.
+2. Add and set up the object.
+   - [Import](../assets#Import-Mesh) the mesh created in the previous step.
+   - The wood material is located at `Assets → Materials → Utility → Wood`.
+   - Please complete the other steps yourself.
+3. Add and set up the Joint.
+   - Add 2 constraints:
+     - A linear constraint, locking the `x`, `y`, and `z` axes, ensuring the object cannot move.
+     - An angular constraint, locking the `y` and `z` axes, ensuring the object can only rotate around the `x`-axis.
+     - At this point, the joint behaves as a revolute joint (similar to a collar, hinge, etc.).
+   - Please complete the other steps yourself.
+4. Test in the game.
+   - The push board should now be able to rotate freely.
+   - You need to add limiters and slightly rotate the board to tilt it, ensuring it is in the correct initial position and can work properly.
 
-- [导入](../assets#导入网格)上一步创建的网格
-- 木板材质位于 `素材 → 材质 → Utility → Wood`
-- 请自行完成其它步骤
+### Float Board
 
-3. 添加并设置关节
+::: tip
 
-- 添加 2 个约束
-  - 线性约束，锁定 `x` `y` `z` 三轴，确保物体无法移动
-  - 角约束，锁定 `y` `z` 两轴，确保物体只能沿 `x` 轴旋转
-  - 此时关节表现为平面转动关节（类似套环、铰链等）
-- 请自行完成其它步骤
+This example adds the use of a linear spring. Please use this example to practice the various operations!
 
-4. 在游戏中测试
-
-- 此时推板应当可以自由旋转
-- 需要添加限位物体，并略微旋转使推板倾斜，使得推板位于正确的初始位置，并可正常工作
-
-### 浮板
-
-::: tip 提示
-
-该例新增了线性弹簧的使用。请利用这个例子练习各个操作！
-
-制图请使用现成元件：`素材 → 元件 → 机关 → 浮板`。
+For mapping, please use the ready-made item: `Assets → Items → Machinery → FloatBoard`.
 
 :::
 
-1. 请自行建模导入网格和材质，也可使用现成的素材
-
-- [保存](itemLink#保存网格) `素材 → 元件 → 机关 → 浮板` 的网格
-- 设置 3 个材质
-  - `素材 → 材质 → Machinery → Machinery_Wood`
-  - `素材 → 材质 → Machinery → Machinery_Target_Green`
-  - `素材 → 材质 → Machinery → Machinery_Steel`
-
-2. 需要在 `y` 轴使用线性弹簧
-
-- 添加线性约束，限制 `y` 轴
-- 勾选 `使用线性弹簧`
-- 根据需要设置弹簧参数
-  - 参考：`弹簧频率 = 0.5` `弹簧阻尼 = 0.25`
-
-3. 请自行完成其它步骤
-4. 在游戏中测试
+1. Please model and import the mesh and materials yourself, or use existing assets.
+   - [Save](itemLink#Save-Mesh) the mesh of `Assets → Items → Machinery → FloatBoard`.
+   - Set up 3 materials:
+     - `Assets → Materials → Machinery → Machinery_Wood`
+     - `Assets → Materials → Machinery → Machinery_Target_Green`
+     - `Assets → Materials → Machinery → Machinery_Steel`
+2. A linear spring is needed on the `y`-axis.
+   - Add a linear constraint, constraining the `y`-axis.
+   - Check `Use Linear Spring`.
+   - Set the spring parameters as needed.
+     - Reference: `Spring Elastic = 0.5`, `Spring Damping = 0.25`.
+3. Please complete the other steps yourself.
+4. Test in the game.

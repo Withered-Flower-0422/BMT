@@ -1,44 +1,44 @@
-# 音频播放器
+# Audio Player
 
-用于播放音频，需通过脚本 [audioPlayer.play()](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/itemComponents/audioPlayer.d.ts) 播放。
+Used to play audio. It must be played via the script [audioPlayer.play()](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/itemComponents/audioPlayer.d.ts).
 
-## [变换偏移](item#变换偏移)
+## [Transform Offset](item#Transform-Offset)
 
-## `音频文件`
+## `Audio File`
 
-- 类型：`string`
-- 默认值：空
+- Type: `Audio`
+- Default: Empty
 
-## `循环`
+## `Loop`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-## `音量`
+## `Volume`
 
-- 类型：`float`
-- 默认值：`1.0`
-- 范围：`0.0` ~ `1.0`
+- Type: `float`
+- Default: `1.0`
+- Range: `0.0` ~ `1.0`
 
-## `空间化音频`
+## `Spatialize Audio`
 
-- 类型：`bool`
-- 默认值：`false`
+- Type: `bool`
+- Default: `false`
 
-空间音频具有立体声和多普勒效应。
+Spatial audio has stereo sound and the Doppler effect.
 
-## `最小距离`
+## `Min Distance`
 
-- 类型：`float`
-- 默认值：`5.0`
-- 范围：`0.0` ~ `100.0`
+- Type: `float`
+- Default: `5.0`
+- Range: `0.0` ~ `100.0`
 
-摄像机与音源距离大于 `最小距离` 时，音量开始衰减。
+When the distance between the camera and the audio source is greater than the `Min Distance`, the volume begins to fall off.
 
-## `最大距离`
+## `Max Distance`
 
-- 类型：`float`
-- 默认值：`20.0`
-- 范围：`0.0` ~ `100.0`
+- Type: `float`
+- Default: `20.0`
+- Range: `0.0` ~ `100.0`
 
-摄像机与音源距离大于 `最大距离` 时，无法听到声音。
+When the distance between the camera and the audio source is greater than the `Max Distance`, the sound cannot be heard.
