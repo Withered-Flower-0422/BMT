@@ -151,7 +151,7 @@ Executed when an object collides.
 
 ## Modules
 
-The game provides the following 9 modules:
+The game provides the following 10 modules:
 
 - [`audioManager`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/audioManager.d.ts)
 - [`console`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/console.d.ts)
@@ -162,6 +162,7 @@ The game provides the following 9 modules:
 - [`tweenManager`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/tweenManager.d.ts)
 - [`uiCanvas`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/uiCanvas.d.ts)
 - [`variables`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/variables.d.ts)
+- [`math`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/utils/math.d.ts)
 
 For details, see [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules).
 

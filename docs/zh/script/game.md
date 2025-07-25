@@ -151,7 +151,7 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 
 ## 模块
 
-游戏内共提供了以下 9 个模块：
+游戏内共提供了以下 10 个模块：
 
 - [`audioManager`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/audioManager.d.ts)
 - [`console`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/console.d.ts)
@@ -162,6 +162,7 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 - [`tweenManager`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/tweenManager.d.ts)
 - [`uiCanvas`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/uiCanvas.d.ts)
 - [`variables`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/variables.d.ts)
+- [`math`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/utils/math.d.ts)
 
 具体参见 [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules)。
 

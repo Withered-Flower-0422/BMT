@@ -39,13 +39,14 @@ export const execute: () => void
 
 ## 模块
 
-编辑器共提供了以下 5 个模块：
+编辑器共提供了以下 6 个模块：
 
 - [`console`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/modules/console.d.ts)
 - [`dialogWindowManager`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/modules/dialogWindowManager.d.ts)
 - [`editor`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/modules/editor.d.ts)
 - [`file`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/modules/file.d.ts)
 - [`scene`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/modules/scene.d.ts)
+- [`math`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/utils/math.d.ts)
 
 具体参见 [BST/\_Typings/editorApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/editorApi/modules)。
 
