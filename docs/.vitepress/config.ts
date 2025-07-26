@@ -1,14 +1,16 @@
 import { defineConfig } from "vitepress"
 
+const base = "/BMT/"
+
 export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
 
-  base: "/BMT/",
+  base,
 
   rewrites: { "zh/:rest*": ":rest*" },
-  head: [["link", { rel: "icon", href: "/BMT/ballex2.ico" }]],
+  head: [["link", { rel: "icon", href: `${base}ballex2.ico` }]],
   locales: { root: { label: "简体中文" }, en: { label: "English" } },
 
   themeConfig: {

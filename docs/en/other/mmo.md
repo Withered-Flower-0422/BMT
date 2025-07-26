@@ -1,12 +1,18 @@
+<script setup>
+
+import { withBase } from 'vitepress'
+
+</script>
+
 # Multiplayer
 
 ## Preparation
 
-- Download the <a href="patches/release/MMOServer.patch" download>`MMOServer.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
+- Download the <a :href="withBase('/patches/release/MMOServer.patch')" download>`MMOServer.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
 
 ::: details maxider
 
-- If you are in the `maxider` group, please download this <a href="patches/maxider/MMOServer.patch" download>`MMOServer.patch`</a> file instead.
+- If you are in the `maxider` group, please download this <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> file instead.
 
 :::
 

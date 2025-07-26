@@ -1,3 +1,9 @@
+<script setup>
+
+import { withBase } from 'vitepress'
+
+</script>
+
 # Tricks
 
 ## Test Map Mode
@@ -23,11 +29,11 @@ The hotkey to open the console can be set in the game settings.
 
 :::
 
-- Download the <a href="patches/release/ExclusiveFullscreen.patch" download>`ExclusiveFullscreen.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
+- Download the <a :href="withBase('/patches/release/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
 
 ::: details maxider
 
-- If you are in the `maxider` group, please download this <a href="patches/maxider/ExclusiveFullscreen.patch" download>`ExclusiveFullscreen.patch`</a> file instead.
+- If you are in the `maxider` group, please download this <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> file instead.
 
 :::
 

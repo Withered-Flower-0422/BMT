@@ -1,3 +1,9 @@
+<script setup>
+
+import { withBase } from 'vitepress'
+
+</script>
+
 # 小技巧
 
 ## 测图模式
@@ -23,11 +29,11 @@
 
 :::
 
-- 在这里或在 [QQ 群](https://qm.qq.com/q/2mIPnK8JIk) 中下载 <a href="patches/release/ExclusiveFullscreen.patch" download>`ExclusiveFullscreen.patch`</a> 文件
+- 在这里或在 [QQ 群](https://qm.qq.com/q/2mIPnK8JIk) 中下载 <a :href="withBase('/patches/release/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
 
 ::: details maxider
 
-- 如果你在 `maxider` 组，请下载此 <a href="patches/maxider/ExclusiveFullscreen.patch" download>`ExclusiveFullscreen.patch`</a> 文件
+- 如果你在 `maxider` 组，请下载此 <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
 
 :::
 
