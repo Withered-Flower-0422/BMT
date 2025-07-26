@@ -388,9 +388,20 @@ The material will move on its own according to the `Speed`.
 - Type: `Opaque | Alpha Clip | Alpha Blend`
 - Default: `Opaque`
 
+#### `Alpha Dither`<badge text="Transparency Type = Alpha Clip" type="warning" /><badge text="Physically Based" /><badge text="Unlit" />
+
+- Type: `bool`
+- Default: `false`
+
+#### `Alpha Clip Threshold`<badge text="Transparency Type = Alpha Clip" type="warning" /><badge text="Physically Based" /><badge text="Unlit" />
+
+- Type: `float`
+- Default: `0.5`
+- Range: `0` ~ `1`
+
 ::: tip
 
-- When `Alpha Clip` mode is selected, the material is completely transparent where the albedo map's `A` channel is less than 128, and completely opaque otherwise.
+- When `Alpha Clip` mode is selected, the material is completely transparent where the albedo map's `A` channel is less than the `Alpha Clip Threshold`, and completely opaque otherwise.
 - When `Alpha Blend` mode is selected, the material's opacity depends on the albedo map's `A` channel.
 
 The performance of `Alpha Clip` mode is much higher than `Alpha Blend` mode. If the effect meets expectations, please prioritize using `Alpha Clip` mode.
