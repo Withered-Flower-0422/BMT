@@ -45,7 +45,7 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Fog Blend Mode`
 
@@ -66,7 +66,7 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `0.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Fog Distance`
 
@@ -77,7 +77,7 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `1.0` - `8.0`
+- Range: `1.0` ~ `8.0`
 
 #### `Height`
 
@@ -88,7 +88,7 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `1.0` - `8.0`
+- Range: `1.0` ~ `8.0`
 
 #### `Far Fog Height`
 
@@ -106,37 +106,37 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Height`
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `8.0`
+- Range: `0.0` ~ `8.0`
 
 #### `Falloff`
 
 - Type: `float`
 - Default: `1.0`
-- Range: `1.0` - `8.0`
+- Range: `1.0` ~ `8.0`
 
 #### `Offset`
 
 - Type: `float`
 - Default: `0.0`
-- Range: `-1.0` - `1.0`
+- Range: `-1.0` ~ `1.0`
 
 #### `Bottom`
 
 - Type: `float`
 - Default: `0.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Fill`
 
 - Type: `float`
 - Default: `0.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 ### Directional Light Influence
 
@@ -144,13 +144,13 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Falloff`
 
 - Type: `float`
 - Default: `1.0`
-- Range: `1.0` - `8.0`
+- Range: `1.0` ~ `8.0`
 
 #### `Color`
 
@@ -163,19 +163,19 @@ Fog is divided into `Physics Fog` and `Artistic Fog`.
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Min`
 
 - Type: `float`
 - Default: `0.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Max`
 
 - Type: `float`
 - Default: `1.0`
-- Range: `0.0` - `1.0`
+- Range: `0.0` ~ `1.0`
 
 #### `Scale`
 
