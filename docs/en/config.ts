@@ -203,6 +203,7 @@ export default defineAdditionalConfig({
             text: "Other",
             items: [
               { text: "MMO", link: "mmo" },
+              { text: "Tricks", link: "tricks" },
               { text: "Acknowledgements", link: "acknowledgements" },
             ],
           },

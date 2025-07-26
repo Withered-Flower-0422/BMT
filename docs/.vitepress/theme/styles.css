@@ -56,7 +56,7 @@
 }
 
 .dark .text-red {
-  color: red;
+  color: rgb(255, 64, 64);
 }
 
 .dark .text-green {

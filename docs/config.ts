@@ -203,6 +203,7 @@ export default defineAdditionalConfig({
             text: "其他",
             items: [
               { text: "联机", link: "mmo" },
+              { text: "小技巧", link: "tricks" },
               { text: "致谢", link: "acknowledgements" },
             ],
           },
