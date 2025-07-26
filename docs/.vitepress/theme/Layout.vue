@@ -3,6 +3,8 @@ import { useData } from "vitepress"
 import DefaultTheme from "vitepress/theme"
 import { nextTick, provide } from "vue"
 
+import BackToTop from "./components/BackToTop.vue"
+
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -42,6 +44,7 @@ provide("toggle-appearance", async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
     <DefaultTheme.Layout />
+    <BackToTop />
 </template>
 
 <style>
