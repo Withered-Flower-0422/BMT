@@ -23,7 +23,7 @@ It is recommended to launch online, as you cannot upload or update maps in offli
 
 ### Set Frame Rate Limit
 
-`Settings → Frame Rate Limit`
+`Settings → FPS Limit`
 
 Set the frame rate limit according to your computer's configuration. It is recommended to set the frame rate limit to 60 FPS.
 
@@ -37,7 +37,7 @@ Auto-saved map backups are located in the `%USERPROFILE%\AppData\LocalLow\AppDat
 
 ### Set Ballex² Path
 
-`Settings → Set Ballex2 Launch Path`
+`Settings → Set Ballex2 Path`
 
 You need to locate `B2HDRP.exe`. When entering test mode, the Ballex² pointed to by this path will launch automatically.
 

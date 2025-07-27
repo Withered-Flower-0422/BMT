@@ -179,7 +179,7 @@
 
 `文件 → 测试地图` / `F9`
 
-如果正确[设置了 Ballex² 路径](preparation#设置-ballex-路径)，Ballex² 将自动启动。
+如果正确[设置了 Ballex² 路径](preparation#设置-Ballex2-路径)，Ballex² 将自动启动。
 
 ::: tip 提示
 

@@ -181,7 +181,7 @@ Pressing this creates a new item at the same position, which appears at the end 
 
 `File → Test The Map` / `F9`
 
-If you have correctly [Set Ballex² Path](preparation#set-ballex-path), Ballex² will launch automatically.
+If you have correctly [Set Ballex² Path](preparation#Set-Ballex2-Path), Ballex² will launch automatically.
 
 ::: tip
 
