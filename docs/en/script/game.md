@@ -166,6 +166,16 @@ The game provides the following 10 modules:
 
 For details, see [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules).
 
+::: tip
+
+To import custom modules from within the project, please use BME's resource path, for example:
+
+```js
+import { dotProduct } from "Scripts/Utility/MathExtension.js"
+```
+
+:::
+
 ## Template
 
 See [BST/Templates/gameTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/gameTemplate.js).

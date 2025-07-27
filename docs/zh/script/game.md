@@ -166,6 +166,16 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 
 具体参见 [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules)。
 
+::: tip 提示
+
+如需导入工程内的自制模块，请使用 BME 的资源路径，如：
+
+```js
+import { dotProduct } from "Scripts/Utility/MathExtension.js"
+```
+
+:::
+
 ## 模板
 
 参见 [BST/Templates/gameTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/gameTemplate.js)。
