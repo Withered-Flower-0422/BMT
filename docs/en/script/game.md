@@ -174,6 +174,10 @@ To import custom modules from within the project, please use BME's resource path
 import { dotProduct } from "Scripts/Utility/MathExtension.js"
 ```
 
+::: warning
+
+The `.js` suffix **cannot** be omitted here.
+
 :::
 
 ## Template

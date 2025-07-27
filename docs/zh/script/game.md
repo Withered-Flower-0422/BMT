@@ -174,6 +174,10 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 import { dotProduct } from "Scripts/Utility/MathExtension.js"
 ```
 
+::: warning 注意
+
+此处的 `.js` 后缀 **不能** 被省略。
+
 :::
 
 ## 模板
