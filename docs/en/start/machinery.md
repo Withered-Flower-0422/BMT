@@ -2,7 +2,7 @@
 
 - Adding machineries to a map can enrich the level's logic.
 - This chapter will introduce the characteristics of all official machineries.
-- This chapter can be considered an official mechanism compendium.
+- This chapter can be considered an official machinery compendium.
 
 ## Doors and Keys
 
