@@ -171,7 +171,7 @@ Pressing this creates a new item at the same position, which appears at the end 
 
 `Assets → Items → CheckPoint`
 
-- The player ball always spawns at the coordinates `(0, 2, 0)` at the start of the game, regardless of where the Starting Point is placed.
+- The player ball always spawns at the coordinates `(0, 1.5, 0)` at the start of the game, regardless of where the Starting Point is placed.
 - The Starting Point is essentially a checkpoint that is triggered at the very beginning. It is recommended to place only one Starting Point in the map, at coordinates `(0, 0, 0)`.
 - Checkpoints have no specific order, can be triggered multiple times, and the player will always respawn from the last activated checkpoint.
 - Pay attention to the orientation of the checkpoint. The player ball's camera angle upon respawning is determined by the checkpoint's Y-axis rotation, and it will face the positive Z-axis direction of the checkpoint (in four-directional camera mode, do not set the Y-axis rotation to a value that is not a multiple of 90 degrees).
