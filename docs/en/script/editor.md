@@ -50,6 +50,35 @@ The editor provides the following 6 modules:
 
 For details, see [BST/\_Typings/editorApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/editorApi/modules).
 
+To import modules, use the following syntax:
+
+```js
+import {
+  // modules
+  editor,
+  console,
+  file,
+  scene,
+  dialogWindowManager,
+  math,
+
+  // basic data types
+  Float2,
+  Float3,
+  Float4,
+  Bool3,
+  ColorRGBA,
+  Trans,
+  Quaternion,
+} from "editorApi"
+```
+
+::: warning
+
+Editor scripts **cannot** import custom modules.
+
+:::
+
 ## Template
 
 See [BST/Templates/editorTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/editorTemplate.js).

@@ -50,6 +50,35 @@ export const execute: () => void
 
 具体参见 [BST/\_Typings/editorApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/editorApi/modules)。
 
+使用如下语法导入模块：
+
+```js
+import {
+  // modules
+  editor,
+  console,
+  file,
+  scene,
+  dialogWindowManager,
+  math,
+
+  // basic data types
+  Float2,
+  Float3,
+  Float4,
+  Bool3,
+  ColorRGBA,
+  Trans,
+  Quaternion,
+} from "editorApi"
+```
+
+::: warning 注意
+
+编辑器脚本 **无法** 导入自制模块。
+
+:::
+
 ## 模板
 
 参见 [BST/Templates/editorTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/editorTemplate.js)。

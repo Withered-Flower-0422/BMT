@@ -166,6 +166,33 @@ The game provides the following 10 modules:
 
 For details, see [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules).
 
+To import modules, use the following syntax:
+
+```js
+import {
+  // modules
+  console,
+  scene,
+  variables,
+  settings,
+  audioManager,
+  levelManager,
+  inputManager,
+  tweenManager,
+  math,
+  uiCanvas,
+
+  // basic data types
+  Float2,
+  Float3,
+  Float4,
+  ColorRGBA,
+  Bool3,
+  Trans,
+  Quaternion,
+} from "gameApi"
+```
+
 ::: tip
 
 To import custom modules from within the project, please use BME's resource path, for example:

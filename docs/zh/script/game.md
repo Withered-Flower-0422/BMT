@@ -166,6 +166,33 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 
 具体参见 [BST/\_Typings/gameApi/modules](https://github.com/Withered-Flower-0422/BST/tree/main/_Typings/gameApi/modules)。
 
+使用如下语法导入模块：
+
+```js
+import {
+  // modules
+  console,
+  scene,
+  variables,
+  settings,
+  audioManager,
+  levelManager,
+  inputManager,
+  tweenManager,
+  math,
+  uiCanvas,
+
+  // basic data types
+  Float2,
+  Float3,
+  Float4,
+  ColorRGBA,
+  Bool3,
+  Trans,
+  Quaternion,
+} from "gameApi"
+```
+
 ::: tip 提示
 
 如需导入工程内的自制模块，请使用 BME 的资源路径，如：
