@@ -39,4 +39,5 @@ The hotkey to open the console can be set in the game settings.
 
 - Create a `Patch` folder in the `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` directory.
 - Place the `ExclusiveFullscreen.patch` file into the `Patch` folder.
+- Then the in-game `Full Screen` setting will become `Exclusive Fullscreen` (without the patch, `Full Screen` is `Borderless Fullscreen`).
 - <span class="text-red">Exclusive fullscreen may cause issues like game freezes and non-functional hotkeys. Please use with caution.</span>
