@@ -9,7 +9,7 @@
 
 - The player ball's initial default temperature is 20 degrees, after which it will approach the environment temperature.
 - The `Ice Ball`'s temperature does not change; instead, its scale (size) changes.
-- When the player ball's temperature drops below -10 degrees, it will freeze. At this point, friction disappears, and the player ball's wetness is frozen.
+- When the player ball's temperature drops below -20 degrees, it will freeze. At this point, friction disappears, and the player ball's wetness is frozen.
 - When the player ball's temperature reaches 200 degrees:
   - The `Wood Ball` and `Paper Ball` will catch fire, their temperature instantly rises to 500 degrees, and then slowly approaches 333 degrees.
   - The `Balloon Ball` dies instantly.
