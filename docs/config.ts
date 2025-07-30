@@ -205,6 +205,7 @@ export default defineAdditionalConfig({
               { text: "联机", link: "mmo" },
               { text: "小技巧", link: "tricks" },
               { text: "致谢", link: "acknowledgements" },
+              { text: "404", link: "404" },
             ],
           },
         ],

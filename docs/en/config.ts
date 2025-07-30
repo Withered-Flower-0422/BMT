@@ -205,6 +205,7 @@ export default defineAdditionalConfig({
               { text: "MMO", link: "mmo" },
               { text: "Tricks", link: "tricks" },
               { text: "Acknowledgements", link: "acknowledgements" },
+              { text: "404", link: "404" },
             ],
           },
         ],
