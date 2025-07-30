@@ -17,7 +17,7 @@
 3. 将在同级目录下生成六张纹理贴图，命名分别为原文件名加上 `_Back` `_Down` `_Front` `_Left` `_Right` `_Up` 后缀
 4. 根据后缀名，将六张纹理贴图分别拖入 `HDRI 天空` 纹理节点的相应位置
 
-::: tip 提示
+:::: tip 提示
 
 - 天空盒纹理图片推荐 hdr 格式，可以自己在 Photoshop 等软件中制作，也可以在网上下载
 - 普通的 png 图片也可作为天空盒纹理
@@ -27,6 +27,8 @@
 [Poly Haven](https://polyhaven.com/hdris)
 
 :::
+
+::::
 
 ### Tex 转 Png
 

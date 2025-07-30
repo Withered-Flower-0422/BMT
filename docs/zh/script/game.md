@@ -45,8 +45,7 @@ export const registerEvents: RegisterEvent[]
 
 导出一个 string 数组，注册需要接收的事件。
 
-<details class="details custom-block">
-<summary>事件列表</summary>
+:::: details 事件列表
 
 ::: warning 注意
 
@@ -109,7 +108,7 @@ export const registerEvents: RegisterEvent[]
 - `OnTntExploded` TNT 爆炸事件
   - 消息：`Float3[]` 所有 TNT 的爆炸位置
 
-</details>
+::::
 
 ### `onEvents`
 
@@ -193,7 +192,7 @@ import {
 } from "gameApi"
 ```
 
-::: tip 提示
+:::: tip 提示
 
 如需导入工程内的自制模块，请使用 BME 的资源路径，如：
 
@@ -206,6 +205,8 @@ import { dotProduct } from "Scripts/Utility/MathExtension.js"
 此处的 `.js` 后缀 **不能** 被省略。
 
 :::
+
+::::
 
 ## 模板
 

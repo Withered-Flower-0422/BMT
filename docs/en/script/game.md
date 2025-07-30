@@ -45,8 +45,7 @@ export const registerEvents: RegisterEvent[]
 
 Exports a string array to register the events it needs to receive.
 
-<details class="details custom-block">
-<summary>Event List</summary>
+:::: details Event List
 
 ::: warning
 
@@ -109,7 +108,7 @@ All messages passed in events are in the form of an array.
 - `OnTntExploded` TNT explosion event
   - Message: `Float3[]` the explosion positions of all TNTs
 
-</details>
+::::
 
 ### `onEvents`
 
@@ -193,7 +192,7 @@ import {
 } from "gameApi"
 ```
 
-::: tip
+:::: tip
 
 To import custom modules from within the project, please use BME's resource path, for example:
 
@@ -206,6 +205,8 @@ import { dotProduct } from "Scripts/Utility/MathExtension.js"
 The `.js` suffix **cannot** be omitted here.
 
 :::
+
+::::
 
 ## Template
 

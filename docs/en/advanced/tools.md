@@ -17,7 +17,7 @@ Usage:
 3. Six texture maps will be generated in the same directory, named with the original filename plus the suffixes `_Back`, `_Down`, `_Front`, `_Left`, `_Right`, and `_Up`.
 4. Based on the suffixes, drag the six texture maps into the corresponding slots of the `HDRI Sky` texture nodes.
 
-::: tip
+:::: tip
 
 - The recommended format for skybox texture images is `.hdr`. You can create them yourself in software like Photoshop or download them from the internet.
 - Regular `.png` images can also be used as skybox textures.
@@ -27,6 +27,8 @@ Usage:
 [Poly Haven](https://polyhaven.com/hdris)
 
 :::
+
+::::
 
 ### Tex to Png
 
