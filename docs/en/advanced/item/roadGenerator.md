@@ -13,39 +13,116 @@ outline:
 - The [`Custom Script`](../../script/roadGenerator) road generator will be introduced in the `Script` section.
 - A more advanced road generator: [`Way Point Road Generator`](#Way-Point-Road-Generator).
 
-::: details Bending Algorithm
+:::: details Bending Algorithm
 
-```py
+::: code-group
+
+```ts [typescript]
+class Float3 {
+  constructor(public x: float, public y: float, public z: float) {}
+}
+
+const addFloat3 = (...values: Float3[]) => {
+  let x = 0
+  let y = 0
+  let z = 0
+  for (const value of values) {
+    x += value.x
+    y += value.y
+    z += value.z
+  }
+  return new Float3(x, y, z)
+}
+
+const scaleFloat3 = (value: Float3, ...scales: float[]) => {
+  let { x, y, z } = value
+  for (const scale of scales) {
+    x *= scale
+    y *= scale
+    z *= scale
+  }
+  return new Float3(x, y, z)
+}
+
+const rotateFloat3 = (value: Float3, vec: Float3): Float3 => {
+  const { x: x1, y: y1, z: z1 } = value
+  const { x: x2, y: y2, z: z2 } = vec
+
+  const cx = Math.cos(x1)
+  const sx = Math.sin(x1)
+  const cy = Math.cos(y1)
+  const sy = Math.sin(y1)
+  const cz = Math.cos(z1)
+  const sz = Math.sin(z1)
+
+  return new Float3(
+    (cy * cz + sy * sx * sz) * x2 + (sy * sx * cz - cy * sz) * y2 + sy * cx * z2,
+    cx * sz * x2 + cx * cz * y2 - sx * z2,
+    (cy * sx * sz - sy * cz) * x2 + (cy * sx * cz + sy * sz) * y2 + cy * cx * z2
+  )
+}
+
+export const skeletonGenerator = (
+  length: float,
+  height: float,
+  bend: Float3,
+  segment: int
+): [Float3[], Float3[]] => {
+  const segmentLength: float = length / segment
+  const segmentHeight: float = height / segment
+  const pointPostureDelta: Float3 = scaleFloat3(bend, 1 / segment)
+  const segmentDirectionDelta: Float3 = scaleFloat3(bend, 1 / segment / 2)
+  const pointPositions: Float3[] = [new Float3(0, 0, 0)]
+  const pointPostures: Float3[] = [new Float3(0, 0, 0)]
+
+  for (let i = 1; i <= segment; i++) {
+    const segmentDirection: Float3 = scaleFloat3(segmentDirectionDelta, 2 * i - 1)
+    const pointPosition: Float3 = addFloat3(
+      pointPositions.at(-1),
+      rotateFloat3(segmentDirection, new Float3(0, 0, segmentLength)),
+      new Float3(0, segmentHeight, 0)
+    )
+    const pointPosture: Float3 = scaleFloat3(pointPostureDelta, i)
+    pointPositions.push(pointPosition)
+    pointPostures.push(pointPosture)
+  }
+
+  return [pointPositions, pointPostures]
+}
+```
+
+```py [python]
 def skeletonGenerator(
     length: float,
     height: float,
     bend: EulerAngle,
     segment: int
-) -> tuple[list[Vector3], list[EulerAngle]]:
+) -> tuple[list[Float3], list[EulerAngle]]:
 
     segment_length: float = length / segment
     segment_height: float = height / segment
     point_posture_delta: EulerAngle = bend / segment
     segment_direction_delta: EulerAngle = bend / segment / 2
-    point_positions: list[Vector3] = [Vector3(0, 0, 0)]
+    point_positions: list[Float3] = [Float3(0, 0, 0)]
     point_postures: list[EulerAngle] = [EulerAngle(0, 0, 0)]
 
     for i in range(1, segment + 1):
         segment_direction: EulerAngle = (2 * i - 1) * segment_direction_delta
-        point_position: Vector3 = (
+        point_position: Float3 = (
             point_positions[-1]
-            + segment_direction * Vector3(0, 0, segment_length)
-            + Vector3(0, segment_height, 0)
+            + segment_direction * Float3(0, 0, segment_length)
+            + Float3(0, segment_height, 0)
         )
         point_posture: EulerAngle = i * point_posture_delta
         point_positions.append(point_position)
         point_postures.append(point_posture)
 
     return point_positions, point_postures
-
 ```
 
 :::
+
+::::
 
 ## Quick Functions
 
