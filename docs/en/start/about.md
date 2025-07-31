@@ -34,6 +34,8 @@ Reading Suggestions:
 
 - The scripting language used by BME Pro is JavaScript. This tutorial does not include a [JavaScript tutorial](https://developer.mozilla.org/en-US/docs/Web/JavaScript). Please ensure you have a basic understanding of JavaScript syntax.
 
+- Please make sure you have a code editor installed on your computer, such as [Visual Studio Code](https://code.visualstudio.com/).
+
 - Before using scripts, it is recommended to download [BME Script Typings](https://github.com/Withered-Flower-0422/BST) to add BME Pro's code completion features to your editor.
 
 - After completing this section, you will be able to write scripts to create maps with unique mechanics and even customize your own BME Pro editor.

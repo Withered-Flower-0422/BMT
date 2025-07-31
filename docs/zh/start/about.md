@@ -34,6 +34,8 @@
 
 - BME Pro 使用的脚本语言为 JavaScript。本教程不包含 [JavaScript 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)，请确保自己对 JavaScript 的语法有一定的了解
 
+- 请确保自己的电脑上安装有合适的代码编辑器，如 [Visual Studio Code](https://code.visualstudio.com/)
+
 - 使用脚本前，建议先下载 [BME Script Typings](https://github.com/Withered-Flower-0422/BST)，为自己的编辑器添加 BME Pro 的代码提示功能
 
 - 学完本板块的内容后，你将有能力编写脚本，制作出具有独特机制的地图，甚至客制化属于自己的 BME Pro 编辑器
