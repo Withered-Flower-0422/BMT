@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "vitepress": "^2.0.0-alpha.9"
+    "vitepress": "https://pkg.pr.new/vitepress@b840877"
   },
   "scripts": {
     "dev": "vitepress dev docs",
