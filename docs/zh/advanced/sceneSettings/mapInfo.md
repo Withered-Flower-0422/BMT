@@ -1,4 +1,4 @@
-# 地图信息
+# 地图信息 {#map-information}
 
 ::: tip 提示
 
