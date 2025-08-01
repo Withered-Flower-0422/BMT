@@ -2,7 +2,7 @@
 
 ## Launching the Map Editor
 
-- Online Launch: In Steam, select the 2nd option `Launch Game Editor` to start.
+- Online Launch: In Steam, select the 2nd option `Level Editor` to start.
 - Offline Launch: In the local directory, double-click `BME Pro HDRP.exe` to start.
 
 ::: tip
