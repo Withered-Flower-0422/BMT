@@ -5,7 +5,7 @@ hero:
   name: "Ballex²\nMapping Tutorial"
   tagline: "Based on BME Pro Ver. 1.1.4 Release"
   actions:
-    - theme: brand
+    - theme: main
       text: Quick Start
       link: /en/start/about
     - theme: brand

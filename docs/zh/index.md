@@ -5,7 +5,7 @@ hero:
   name: "Ballex²\n制图教程"
   tagline: "基于 BME Pro Ver. 1.1.4 Release 编写"
   actions:
-    - theme: brand
+    - theme: main
       text: 快速上手
       link: /start/about
     - theme: brand
