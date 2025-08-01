@@ -19,7 +19,7 @@ Usage:
 
 :::: tip
 
-- The recommended format for skybox texture images is `.hdr`. You can create them yourself in software like Photoshop or download them from the internet.
+- The recommended format for skybox texture images is `.exr`. You can create them yourself in software like Photoshop or download them from the internet.
 - Regular `.png` images can also be used as skybox textures.
 
 ::: details Recommended HDRI Sources

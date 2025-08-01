@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "Ballex²\nMapping Tutorial"
-  tagline: "Based on BME Pro Ver. 1.1.1 Release"
+  tagline: "Based on BME Pro Ver. 1.1.4 Release"
   actions:
     - theme: brand
       text: Quick Start

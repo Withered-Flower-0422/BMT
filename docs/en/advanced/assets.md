@@ -97,7 +97,7 @@ Software confirmed to be compatible:
 
 ### Import Texture
 
-- Prepare your texture map files (`.png`, `.jpg`, `.hdr` format).
+- Prepare your texture map files (`.png`, `.jpg`, `.exr` format).
 - Select the `Assets → Textures` category and click the first button on the bottom right, `Import Texture`.
 - In the dialog box that appears, select the texture map file and click the `Open` button.
 
