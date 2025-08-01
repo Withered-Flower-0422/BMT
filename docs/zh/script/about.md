@@ -1,4 +1,4 @@
-# 脚本 {#script}
+# 脚本
 
 脚本板块将介绍 BME Pro 的脚本系统。
 
@@ -7,7 +7,7 @@
   - [`编辑器脚本`](editor)：用于操作编辑器里的元件
   - [`路面生成器脚本`](roadGenerator)：用于生成网格
 
-## 阅读建议 {#reading-suggestions}
+## 阅读建议
 
 - BME Pro 使用的脚本语言为 JavaScript。本教程不包含 [JavaScript 教程](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)，请确保自己对 JavaScript 的语法有一定的了解
 
@@ -17,7 +17,7 @@
 
 - 学完本板块的内容后，你将有能力编写脚本，制作出具有独特机制的地图，甚至客制化属于自己的 BME Pro 编辑器
 
-## 数据类型 {#data-types}
+## 数据类型
 
 `游戏内脚本` 和 `编辑器脚本` 中都可以导入并使用以下 7 种基本数据类型：
 

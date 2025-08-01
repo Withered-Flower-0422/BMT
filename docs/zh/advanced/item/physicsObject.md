@@ -1,4 +1,4 @@
-# 物理物体 {#physics-object}
+# 物理物体
 
 ::: tip 提示
 
@@ -6,47 +6,47 @@
 
 :::
 
-## `碰撞箱类型` {#collider-type}
+## `碰撞箱类型`
 
 - 类型：`长方体 | 球体 | 网格`
 - 默认值：`网格`
 
 物理物体的碰撞箱类型。
 
-### 长方体 {#box}
+### 长方体
 
-#### `中心` {#center}
+#### `中心`
 
 - 类型：`Float3`
 - 默认值：`(0, 0, 0)`
 
-#### `尺寸` {#size}
+#### `尺寸`
 
 - 类型：`Float3`
 - 默认值：`(1, 1, 1)`
 
-#### `倒角半径` {#bevel-radius}
+#### `倒角半径`
 
 - 类型：`float`
 - 默认值：`0.02`
 
-#### `自动识别` {#auto-detect}
+#### `自动识别`
 
 点击该按钮，可以根据 [`渲染器`](renderer) 组件中的网格自动设置最小包裹的长方体尺寸。
 
-### 球体 {#sphere}
+### 球体
 
-#### `中心` {#center}
+#### `中心`
 
 - 类型：`Float3`
 - 默认值：`(0, 0, 0)`
 
-#### `半径` {#radius}
+#### `半径`
 
 - 类型：`float`
 - 默认值：`0.5`
 
-### 网格 {#mesh}
+### 网格
 
 ::: tip 提示
 
@@ -54,21 +54,21 @@
 
 :::
 
-#### `自动获取网格` {#auto-get-mesh}
+#### `自动获取网格`
 
 - 类型：`bool`
 - 默认值：`true`
 
 当设置为 `true` 时，将试图从 [`渲染器`](renderer) 组件中获取网格。
 
-#### `网格`<badge text="自动获取网格 = false" /> {#mesh}
+#### `网格`<badge text="自动获取网格 = false" />
 
 - 类型：`Mesh`
 - 默认值：空
 
 当 `自动获取网格` 设置为 `false` 时将使用此网格。
 
-#### `凸面碰撞体` {#convex}
+#### `凸面碰撞体`
 
 - 类型：`bool`
 - 默认值：`false`
@@ -81,18 +81,18 @@
 
 :::
 
-## `物理体类型` {#physics-body-type}
+## `物理体类型`
 
 - 类型：`静态 | 运动学刚体 | 刚体`
 - 默认值：`静态`
 
-### 静态 {#static}
+### 静态
 
 完全静止的物理物体。如：地面。
 
 该类型的物理物体进入死亡区不会被摧毁。
 
-#### `焊接碰撞箱` {#weld-collider}
+#### `焊接碰撞箱`
 
 - 类型：`bool`
 - 默认值：`false`
@@ -105,116 +105,116 @@
 
 :::
 
-### 运动学刚体 {#kinematic}
+### 运动学刚体
 
 静止，只能通过 [执行器脚本](executor) 或者 [路径](wayPath)[路点](wayPoint) 调整位姿。如：移动路面。
 
 该类型的物理物体可以被死亡区摧毁。
 
-### 刚体 {#rigid}
+### 刚体
 
 参与物理模拟，将受到各种力的影响。如：箱子。
 
 该类型的物理物体可以被死亡区摧毁。
 
-#### `质量` {#mass}
+#### `质量`
 
 - 类型：`float`
 - 默认值：`1.0`
 
-#### `线性阻力` {#linear-drag}
+#### `线性阻力`
 
 - 类型：`float`
 - 默认值：`0.5`
 
-#### `旋转阻力` {#angular-drag}
+#### `旋转阻力`
 
 - 类型：`float`
 - 默认值：`0.05`
 
-#### `重力系数` {#gravity-factor}
+#### `重力系数`
 
 - 类型：`float`
 - 默认值：`1.0`
 
 可以设置成负数使其飞行。
 
-#### `密度` {#density}
+#### `密度`
 
 - 类型：`float`
 - 默认值：`10.0`
 
 影响在水中的受力。
 
-#### `浮力体素尺寸` {#buoyancy-voxel-size}
+#### `浮力体素尺寸`
 
 - 类型：`float`
 - 默认值：`0.5`
 
-## `覆写质量分布` {#override-mass-distribution}
+## `覆写质量分布`
 
 - 类型：`bool`
 - 默认值：`false`
 
-## `质量中心` {#center-of-mass}
+## `质量中心`
 
 - 类型：`Float3`
 - 默认值：`(0, 0, 0)`
 
 该属性仅在 `覆写质量分布` 设置为 `true` 时生效。
 
-## `自动获取物理材质` {#auto-get-physics-material}
+## `自动获取物理材质`
 
 - 类型：`bool`
 - 默认值：`true`
 
 当设置为 `true` 时，将试图从 [`路面生成器`](roadGenerator) 组件中根据路面类型获取物理材质。
 
-## `物理材质`<badge text="自动获取物理材质 = false" /> {#physics-material}
+## `物理材质`<badge text="自动获取物理材质 = false" />
 
 - 类型：`enum`
 - 默认值：`石`
 
 当 `自动获取物理材质` 设置为 `false` 时将使用此物理材质。
 
-## `自定义物理材质`<badge text="自动获取物理材质 = false" /> {#custom-physics-material}
+## `自定义物理材质`<badge text="自动获取物理材质 = false" />
 
 - 类型：`bool`
 - 默认值：`false`
 
 当设置为 `true` 时，将使用自定义的物理材质。
 
-## `自定义摩擦力模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" /> {#custom-friction-mode}
+## `自定义摩擦力模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
 
 - 类型：`几何平均值 | 最小值 | 最大值 | 算数平均值`
 - 默认值：`几何平均值`
 
-## `自定义摩擦力`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" /> {#custom-friction}
+## `自定义摩擦力`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
 
 - 类型：`float`
 - 默认值：`0.2`
 
-## `自定义弹性模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" /> {#custom-restitution-mode}
+## `自定义弹性模式`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
 
 - 类型：`几何平均值 | 最小值 | 最大值 | 算数平均值`
 - 默认值：`几何平均值`
 
-## `自定义弹性`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" /> {#custom-restitution}
+## `自定义弹性`<badge text="自定义物理材质 = true" /><badge text="自动获取物理材质 = false" />
 
 - 类型：`float`
 - 默认值：`0.2`
 
-## `禁用碰撞音` {#disable-collision-audio}
+## `禁用碰撞音`
 
 - 类型：`bool`
 - 默认值：`false`
 
-## `禁用碰撞伤害` {#disable-collision-damage}
+## `禁用碰撞伤害`
 
 - 类型：`bool`
 - 默认值：`false`
 
-## `碰撞层` {#collision-layer}
+## `碰撞层`
 
 - 类型：`enum`
 - 默认值：`静态路面`
@@ -232,21 +232,21 @@
 |  非玩家  |      |  √   |  √   |    √     |    √     |     |   √    |        |
 |  仅玩家  |  √   |      |      |          |          |     |        |        |
 
-## `碰撞进入` {#collision-enter}
+## `碰撞进入`
 
 - 类型：`bool`
 - 默认值：`false`
 
 当设置为 `true` 时，该物体会在与别的物体发生碰撞时的那一帧调用脚本的 [onCollide()](../../script/game#onCollide) 函数。
 
-## `碰撞停留` {#collision-stay}
+## `碰撞停留`
 
 - 类型：`bool`
 - 默认值：`false`
 
 当设置为 `true` 时，该物体会在与别的物体碰撞持续过程中的每一帧调用脚本的 [onCollide()](../../script/game#onCollide) 函数，**包括**进入和离开的那一帧。
 
-## `碰撞离开` {#collision-exit}
+## `碰撞离开`
 
 - 类型：`bool`
 - 默认值：`false`

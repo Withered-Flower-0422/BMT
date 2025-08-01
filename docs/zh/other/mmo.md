@@ -4,9 +4,9 @@ import { withBase } from 'vitepress'
 
 </script>
 
-# 联机 {#multiplayer}
+# 联机
 
-## 准备工作 {#preparation}
+## 准备工作
 
 - 在这里或在 [QQ 群](https://qm.qq.com/q/2mIPnK8JIk) 中下载 <a :href="withBase('/patches/release/MMOServer.patch')" download>`MMOServer.patch`</a> 文件
 
@@ -20,7 +20,7 @@ import { withBase } from 'vitepress'
 - 将 `MMOServer.patch` 文件放入 `Patch` 文件夹
 - 启动游戏，点击右上角的头像，点击 `MMO 服务器` 按钮以连接至服务器
 
-## 指令 {#commands}
+## 指令
 
 - 使用方法：
 
@@ -39,7 +39,7 @@ import { withBase } from 'vitepress'
 
 :::
 
-## 指令列表 {#command-list}
+## 指令列表
 
 ::: tip 提示
 
@@ -48,7 +48,7 @@ import { withBase } from 'vitepress'
 
 :::
 
-### 创建与加入 {#create-and-join}
+### 创建与加入
 
 进入任意关卡后，可以使用指令创建或加入房间。
 
@@ -58,7 +58,7 @@ import { withBase } from 'vitepress'
   - `{0}`：房间号 ID
   - `{1}`：房间密码，可选
 
-### 房间内 {#in-a-room}
+### 房间内
 
 加入房间后可进行的操作。
 
@@ -77,7 +77,7 @@ import { withBase } from 'vitepress'
 - `goto {0}`：<span class="text-red">**仅房主**</span> 将房间内所有玩家转移到另一关卡中，同时保持房间不变
   - `{0}`：目标关卡的标号，如 `5-3` `2-b` 等
 
-### 比赛中 {#during-a-match}
+### 比赛中
 
 比赛中可进行的操作。
 

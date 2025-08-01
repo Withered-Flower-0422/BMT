@@ -4,9 +4,9 @@ import { withBase } from 'vitepress'
 
 </script>
 
-# 小技巧 {#tricks}
+# 小技巧
 
-## 测图模式 {#test-map-mode}
+## 测图模式
 
 - 进入任意地图后，可以在控制台输入 `/t` 或者 `/testmap` 进入测图模式
 - 测图模式下，可以控制球飞行或者降落，对应按键在游戏设置中设置
@@ -20,7 +20,7 @@ import { withBase } from 'vitepress'
 
 :::
 
-## 独占全屏 {#exclusive-fullscreen}
+## 独占全屏
 
 ::: warning 注意
 
@@ -42,7 +42,7 @@ import { withBase } from 'vitepress'
 - 此时游戏内的 `全屏` 将变为 `独占全屏`（未安装补丁时 `全屏` 为 `无边框全屏`）
 - <span class="text-red">独占全屏可能导致游戏卡死、快捷键失效等问题，请谨慎使用</span>
 
-## 内测版本 {#beta-version}
+## 内测版本
 
 内测版本也称 maxider 测试，该版本下可以预览未正式发布的新功能。
 
