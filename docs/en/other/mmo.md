@@ -12,7 +12,7 @@ import { withBase } from 'vitepress'
 
 ::: details maxider
 
-- If you are in the `maxider` group, please download this <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> file instead.
+- If you are in the [`maxider`](tricks#Beta-Version) group, please download this <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> file instead.
 
 :::
 

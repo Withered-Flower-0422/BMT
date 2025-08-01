@@ -33,7 +33,7 @@ import { withBase } from 'vitepress'
 
 ::: details maxider
 
-- 如果你在 `maxider` 组，请下载此 <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
+- 如果你在 [`maxider`](#内测版本) 组，请下载此 <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
 
 :::
 
@@ -41,3 +41,20 @@ import { withBase } from 'vitepress'
 - 将 `ExclusiveFullscreen.patch` 文件放入 `Patch` 文件夹
 - 此时游戏内的 `全屏` 将变为 `独占全屏`（未安装补丁时 `全屏` 为 `无边框全屏`）
 - <span class="text-red">独占全屏可能导致游戏卡死、快捷键失效等问题，请谨慎使用</span>
+
+## 内测版本
+
+内测版本也称 maxider 测试，该版本下可以预览未正式发布的新功能。
+
+- 在 Steam 客户端中，右键游戏，选择 `属性...`
+- 在 `测试版` 标签页中的 `私密测试` 中输入代码 `mushrebgames`
+- 成功解锁测试后，在上方的 `参与测试` 中选择 `maxider - maxider`，此时会自动下载内测版本的游戏
+- 下载完成后，进入游戏，查看游戏主界面右下角的版本号，如果带有 `Maxider` 后缀，则已成功进入内测版本
+
+::: danger 警告
+
+- 内测版本下的一些改动随时可能发生变化，且不保证游戏的稳定性
+- 加入内测版本后，可能会遭遇游戏 bug、存档丢失、某些功能失效等问题
+- <span class="text-red">除非你明确知道自己在做什么，并且能够承担相应的风险，否则请不要加入内测版本</span>
+
+:::
