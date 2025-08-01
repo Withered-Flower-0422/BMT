@@ -1,6 +1,6 @@
-# 路面生成器脚本
+# 路面生成器脚本 #{road-generator-script}
 
-## 使用方法
+## 使用方法 #{usage}
 
 1. 参考 [模板](#模板) 和 [示例](#示例) 的书写方式编写好脚本
 2. 将脚本 [导入](../advanced/assets#脚本) 编辑器
@@ -8,11 +8,11 @@
 4. 变量改变时，脚本会自动重新执行，生成新的路面
 5. 如果没有变量，在修改脚本后可以点击 `生成` 按钮刷新生成路面
 
-## 钩子
+## 钩子 #{hooks}
 
 参见 [BST/\_Typings/roadGeneratorApi/exportFuncs.d.ts](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/roadGeneratorApi/exportFuncs.d.ts)。
 
-### `generate`
+### `generate` #{generate}
 
 ```ts
 export const generate: (vars: {
@@ -25,11 +25,11 @@ export const generate: (vars: {
 
 该函数需要返回一个 `subMesh[]` 数组，每个 `subMesh` 需包含 `顶点` `UV` `法线` `三角` 信息。具体参见 [示例](#示例) 。
 
-## 模板
+## 模板 #{template}
 
 参见 [BST/Templates/roadGeneratorTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/roadGeneratorTemplate.js)。
 
-## 示例
+## 示例 #{example}
 
 ::: info 猫菇原稿
 
