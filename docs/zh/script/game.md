@@ -1,6 +1,6 @@
-# 游戏内脚本
+# 游戏内脚本 {#game-script}
 
-## 使用方法
+## 使用方法 {#usage}
 
 1. 参考 [模板](#模板) 和 [示例](#示例) 的书写方式编写好脚本
 2. 将脚本 [导入](../advanced/assets#脚本) 编辑器
@@ -8,11 +8,11 @@
 4. 在 [`执行器`](../advanced/item/executor) 组件中添加脚本，并设置好需要的变量
 5. 进入游戏，脚本将自动执行
 
-## 钩子
+## 钩子 {#hooks}
 
 游戏内共提供了 6 个钩子，参见 [BST/\_Typings/gameApi/exportFuncs.d.ts](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/exportFuncs.d.ts)。
 
-### `init`
+### `init` {#init}
 
 ```ts
 export const init: (self: Item, vars: { [key: string]: any }) => void
@@ -29,7 +29,7 @@ export const init: (self: Item, vars: { [key: string]: any }) => void
 - `self`：执行器组件所在元件的引用
 - `vars`：执行器上设置的变量，以键值对的形式传入
 
-### `execute`
+### `execute` {#execute}
 
 ```ts
 export const execute: (...args: any[]) => void
@@ -37,7 +37,7 @@ export const execute: (...args: any[]) => void
 
 游戏中使用 `execute()` 被其他执行器调用时执行。
 
-### `registerEvents`
+### `registerEvents` {#registerevents}
 
 ```ts
 export const registerEvents: RegisterEvent[]
@@ -110,7 +110,7 @@ export const registerEvents: RegisterEvent[]
 
 ::::
 
-### `onEvents`
+### `onEvents` {#onevents}
 
 ```ts
 export const onEvents: (self: Item, events: Events) => void
@@ -121,7 +121,7 @@ export const onEvents: (self: Item, events: Events) => void
 - `self`：执行器组件所在元件的引用
 - `events`：触发的事件及其传递的消息，以键值对的形式传入，键为事件名，值为传递的消息**数组**
 
-### `onTrigger`
+### `onTrigger` {#ontrigger}
 
 ```ts
 export const onTrigger: (
@@ -137,7 +137,7 @@ export const onTrigger: (
 - `triggeredItem`：触发触发器的元件或玩家引用
 - `type`：触发事件类型
 
-### `onCollide`
+### `onCollide` {#oncollide}
 
 ```ts
 export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
@@ -148,7 +148,7 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 - `self`：碰撞发生的物体的引用
 - `collisionEvent`：碰撞事件对象，包含了碰撞的物体、碰撞的类型、碰撞的位置等信息
 
-## 模块
+## 模块 {#modules}
 
 游戏内共提供了以下 10 个模块：
 
@@ -208,10 +208,10 @@ import { dotProduct } from "Scripts/Utility/MathExtension.js"
 
 ::::
 
-## 模板
+## 模板 {#template}
 
 参见 [BST/Templates/gameTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/gameTemplate.js)。
 
-## 示例
+## 示例 {#example}
 
 参见 [BST/Samples/gameSamples](https://github.com/Withered-Flower-0422/BST/tree/main/Samples/gameSamples)。

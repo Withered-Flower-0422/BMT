@@ -1,6 +1,6 @@
-# 元件设置
+# 元件设置 {#item-settings}
 
-## `作为模板`
+## `作为模板` {#as-template}
 
 - 类型：`bool`
 - 默认值：`false`
@@ -10,63 +10,63 @@
 - 配合 [`自定义玩家球`](../sceneSettings/customBall) 使用
 - 使用脚本中的 [`scene.createItem()`](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/modules/scene.d.ts) 函数根据模板创建元件实例
 
-## `模板名`<badge text="作为模板 = true" />
+## `模板名`<badge text="作为模板 = true" /> {#template-name}
 
 - 类型：`string`
 - 默认值：空
 
 作为模板的元件的模板名。
 
-## `层级图标`
+## `层级图标` {#hierarchy-icon}
 
 - 类型：`enum`
 - 默认值：`自动`
 
 该元件在 `层级` 中的图标。
 
-## `层级颜色`
+## `层级颜色` {#hierarchy-color}
 
 - 类型：`ColorRGBA`
 - 默认值：`(1, 1, 1, 1)`
 
 该元件在 `层级` 中的颜色。
 
-## `显示方块`
+## `显示方块` {#show-cube}
 
 - 类型：`bool`
 - 默认值：`false`
 
 是否在 `场景` 中显示该元件的方块。用于方便没有 [`渲染器`](renderer) 的元件进行选择操作。
 
-## `方块位置`<badge text="显示方块 = true" />
+## `方块位置`<badge text="显示方块 = true" /> {#cube-position}
 
 - 类型：`Float3`
 - 默认值：`(0, 0, 0)`
 
 该元件方块相对于元件自身位置的偏移。
 
-## `方块旋转`<badge text="显示方块 = true" />
+## `方块旋转`<badge text="显示方块 = true" /> {#cube-rotation}
 
 - 类型：`Float3`
 - 默认值：`(0, 0, 0)`
 
 该元件方块的旋转角度。会与元件自身的旋转角度叠加。
 
-## `方块缩放`<badge text="显示方块 = true" />
+## `方块缩放`<badge text="显示方块 = true" /> {#cube-scale}
 
 - 类型：`Float3`
 - 默认值：`(1, 1, 1)`
 
 该元件方块的缩放比例。会与元件自身的缩放比例叠加。
 
-## `方块颜色`<badge text="显示方块 = true" />
+## `方块颜色`<badge text="显示方块 = true" /> {#cube-color}
 
 - 类型：`ColorRGBA`
 - 默认值：`(1, 1, 1, 1)`
 
 该元件方块的颜色。
 
-## `标签`
+## `标签` {#tags}
 
 - 类型：`string[]`
 - 默认值：`[]`
