@@ -1,6 +1,6 @@
-# 编辑器脚本 #{editor-script}
+# 编辑器脚本
 
-## 使用方法 #{usage}
+## 使用方法
 
 1. 参考 [模板](#模板) 和 [示例](#示例) 的书写方式编写好脚本
 2. 将脚本 [导入](../advanced/assets#脚本) 编辑器
@@ -17,11 +17,11 @@
 
 :::
 
-## 钩子 #{hooks}
+## 钩子
 
 编辑器共提供了 2 个钩子，参见 [BST/\_Typings/editorApi/exportFuncs.d.ts](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/exportFuncs.d.ts)。
 
-### `menuPath` #{menupath}
+### `menuPath`
 
 ```ts
 export const menuPath: string
@@ -29,7 +29,7 @@ export const menuPath: string
 
 用于将脚本注册至菜单栏。
 
-### `execute` #{execute}
+### `execute`
 
 ```ts
 export const execute: () => void
@@ -37,7 +37,7 @@ export const execute: () => void
 
 点击执行按钮时执行。
 
-## 模块 #{modules}
+## 模块
 
 编辑器共提供了以下 6 个模块：
 
@@ -79,10 +79,10 @@ import {
 
 :::
 
-## 模板 #{template}
+## 模板
 
 参见 [BST/Templates/editorTemplate.js](https://github.com/Withered-Flower-0422/BST/blob/main/Templates/editorTemplate.js)。
 
-## 示例 #{example}
+## 示例
 
 参见 [BST/Samples/editorSamples](https://github.com/Withered-Flower-0422/BST/tree/main/Samples/editorSamples)。

@@ -3,7 +3,7 @@ outline:
   level: [2, 3]
 ---
 
-# 素材 #{assets}
+# 素材
 
 首先介绍素材面板底部一排按钮的功能。
 
@@ -35,9 +35,9 @@ outline:
 
 :::
 
-## 场景 #{scene}
+## 场景
 
-### 附加场景 #{append-scene}
+### 附加场景
 
 - 选中需要附加的场景
 - 点击 `检视器 → 附加场景` 按钮
@@ -45,9 +45,9 @@ outline:
 
 附加场景可以将其他场景中的所有元件导入当前场景，保持原有的位置、缩放、旋转。
 
-## 元件 #{item}
+## 元件
 
-### 保存元件为模板 #{save-item-as-template}
+### 保存元件为模板
 
 - 选中需要保存的元件
 - 选中 `素材 → 元件` 类别，点击底部右侧的第一个按钮 `保存素材`
@@ -65,7 +65,7 @@ outline:
 
 :::
 
-## 网格 #{mesh}
+## 网格
 
 如果内置的元件无法满足你的制图需求，你可以考虑自行建模。
 
@@ -75,7 +75,7 @@ outline:
 
 :::
 
-### 导入网格 #{import-mesh}
+### 导入网格
 
 - 在三维软件建模后，将网格导出为 `.fbx` 格式
 - 选中 `素材 → 网格` 类别，点击底部右侧的第一个按钮 `导入网格`
@@ -93,15 +93,15 @@ outline:
 
 :::
 
-## 纹理 #{texture}
+## 纹理
 
-### 导入纹理 #{import-texture}
+### 导入纹理
 
 - 准备好纹理贴图文件（`.png` `.jpg` `.exr` 格式）
 - 选中 `素材 → 纹理` 类别，点击底部右侧的第一个按钮 `导入纹理`
 - 在弹出的对话框中选择纹理贴图文件，点击 `打开` 按钮
 
-### 纹理属性 #{texture-properties}
+### 纹理属性
 
 选中纹理后，可在 `检视器` 中设置其纹理属性：
 
@@ -110,18 +110,18 @@ outline:
 
 设置完毕后，点击 `应用` 按钮以应用设置。
 
-## 材质 #{material}
+## 材质
 
 BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 2048×2048 `.png` 纹理贴图。
 
-### 漫射贴图 #{albedo-map}
+### 漫射贴图
 
 `RGB` 通道：漫射颜色。（必需）
 `A` 通道：深度或不透明度。（可选，不使用留白色）
 
 ![](../../public/images/texture/texture-albedo.jpg)
 
-### 法线贴图 #{normal-map}
+### 法线贴图
 
 `RGB` 通道：法线方向。（可选，不使用则不导入）
 `A` 通道：暂无用途
@@ -134,7 +134,7 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-### 遮罩贴图 #{mask-map}
+### 遮罩贴图
 
 `R` 通道：自发光。（可选，不使用留黑色）
 
@@ -152,12 +152,12 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 ![](../../public/images/texture/texture-mask-a.jpg)
 
-### 新建材质 #{new-material}
+### 新建材质
 
 - 选中 `素材 → 材质` 类别，点击底部右侧的第一个按钮 `新建材质`
 - 在弹出的对话框中输入材质名称，点击 `创建` 按钮
 
-### 材质属性 #{material-properties}
+### 材质属性
 
 选中材质后，可在 `检视器` 中设置其材质属性。
 
@@ -174,32 +174,32 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `漫射`<badge text="全部" /> #{albedo}
+#### `漫射`<badge text="全部" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `法线`<badge text="物理" /><badge text="贴花" /> #{normal}
+#### `法线`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `遮罩`<badge text="物理" /><badge text="贴花" /> #{mask}
+#### `遮罩`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `发光`<badge text="无光照" /> #{emission}
+#### `发光`<badge text="无光照" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `漫射颜色`<badge text="全部" /> #{albedo-color}
+#### `漫射颜色`<badge text="全部" />
 
 - 类型：`ColorRGBA`
 - 默认值：`(1, 1, 1, 1)`
 
-#### `发光颜色`<badge text="全部" /> #{emission-color}
+#### `发光颜色`<badge text="全部" />
 
 - 类型：`ColorRGBA`
 - 默认值：`(0, 0, 0, 1)`
@@ -210,19 +210,19 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `发光强度`<badge text="全部" /> #{emission-intensity}
+#### `发光强度`<badge text="全部" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `30.0`
 
-#### `最低发光强度`<badge text="无光照" /> #{emission-intensity-min}
+#### `最低发光强度`<badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `30.0`
 
-#### `闪烁速度`<badge text="无光照" /> #{twinkle-speed}
+#### `闪烁速度`<badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`0.0`
@@ -233,31 +233,31 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `金属度`<badge text="物理" /><badge text="贴花" /> #{metallic}
+#### `金属度`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`float`
 - 默认值：`0.0`
 - 范围：`0.0` ~ `1.0`
 
-#### `光滑度`<badge text="物理" /><badge text="贴花" /> #{smoothness}
+#### `光滑度`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`float`
 - 默认值：`0.1`
 - 范围：`0.0` ~ `1.0`
 
-#### `环境光遮罩`<badge text="物理" /><badge text="贴花" /> #{ambient-occlusion}
+#### `环境光遮罩`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`float`
 - 默认值：`0.0`
 - 范围：`0.0` ~ `5.0`
 
-#### `法线强度`<badge text="物理" /><badge text="贴花" /> #{normal-scale}
+#### `法线强度`<badge text="物理" /><badge text="贴花" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `5.0`
 
-#### `启用轨迹`<badge text="物理" /> #{overlay-track}
+#### `启用轨迹`<badge text="物理" />
 
 - 类型：`bool`
 - 默认值：`true`
@@ -268,55 +268,55 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `噪波缩放`<badge text="物理" /> #{overlay-noise-scale}
+#### `噪波缩放`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.5`
 - 范围：`0.0` ~ `5.0`
 
-#### `噪波混合`<badge text="物理" /> #{overlay-noise-blend}
+#### `噪波混合`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.5`
 - 范围：`0.0` ~ `1.0`
 
-#### `叠加范围限制`<badge text="物理" /> #{overlay-clamp}
+#### `叠加范围限制`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.5`
 - 范围：`0.0` ~ `1.0`
 
-#### `顶部投射`<badge text="物理" /> #{overlay-projection}
+#### `顶部投射`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.5`
 - 范围：`0.0` ~ `1.0`
 
-#### `叠加强度偏移`<badge text="物理" /> #{overlay-offset}
+#### `叠加强度偏移`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.0`
 - 范围：`-1.0` ~ `1.0`
 
-#### `湿度范围限制`<badge text="物理" /> #{wetness-clamp}
+#### `湿度范围限制`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.5`
 - 范围：`0.0` ~ `1.0`
 
-#### `湿度强度偏移`<badge text="物理" /> #{wetness-offset}
+#### `湿度强度偏移`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`0.0`
 - 范围：`-1.0` ~ `1.0`
 
-#### `湿度光滑度乘数`<badge text="物理" /> #{smoothness-multiplier}
+#### `湿度光滑度乘数`<badge text="物理" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `5.0`
 
-#### `平铺`<badge text="全部" /> #{tiling}
+#### `平铺`<badge text="全部" />
 
 - 类型：`Float2`
 - 默认值：`(1, 1)`
@@ -327,12 +327,12 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `偏移`<badge text="全部" /> #{offset}
+#### `偏移`<badge text="全部" />
 
 - 类型：`Float2`
 - 默认值：`(0, 0)`
 
-#### `速度`<badge text="全部" /> #{speed}
+#### `速度`<badge text="全部" />
 
 - 类型：`Float2`
 - 默认值：`(0, 0)`
@@ -343,7 +343,7 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `启用全局坐标`<badge text="物理" /><badge text="无光照" /> #{global-uv}
+#### `启用全局坐标`<badge text="物理" /><badge text="无光照" />
 
 - 类型：`bool`
 - 默认值：`false`
@@ -356,44 +356,44 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `全局坐标平铺`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" /> #{global-uv-tile}
+#### `全局坐标平铺`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `20.0`
 
-#### `全局坐标混合`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" /> #{global-uv-blend}
+#### `全局坐标混合`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`1.0`
 - 范围：`0.0` ~ `20.0`
 
-#### `顶部漫射`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /> #{top-albedo}
+#### `顶部漫射`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `顶部法线`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /> #{top-normal}
+#### `顶部法线`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `顶部遮罩`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" /> #{top-mask}
+#### `顶部遮罩`<badge text="启用全局坐标 = true" type="warning" /><badge text="物理" />
 
 - 类型：`Texture`
 - 默认值：空
 
-#### `透明类型`<badge text="物理" /><badge text="无光照" /> #{transparency-type}
+#### `透明类型`<badge text="物理" /><badge text="无光照" />
 
 - 类型：`不透明 | 透明度裁切 | 透明度混合`
 - 默认值：`不透明`
 
-#### `透明度抖动`<badge text="透明类型 = 透明度裁切" type="warning" /><badge text="物理" /><badge text="无光照" /> #{alpha-dither}
+#### `透明度抖动`<badge text="透明类型 = 透明度裁切" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`bool`
 - 默认值：`false`
 
-#### `透明度裁切阈值`<badge text="透明类型 = 透明度裁切" type="warning" /><badge text="物理" /><badge text="无光照" /> #{alpha-clip-threshold}
+#### `透明度裁切阈值`<badge text="透明类型 = 透明度裁切" type="warning" /><badge text="物理" /><badge text="无光照" />
 
 - 类型：`float`
 - 默认值：`0.5`
@@ -408,74 +408,74 @@ BME Pro 的材质系统为特制的 PBR 材质系统，每个材质包含三张 
 
 :::
 
-#### `影响漫射`<badge text="贴花" /> #{affect-albedo}
+#### `影响漫射`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `影响法线`<badge text="贴花" /> #{affect-normal}
+#### `影响法线`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `影响金属度`<badge text="贴花" /> #{affect-metallic}
+#### `影响金属度`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `影响环境光遮蔽`<badge text="贴花" /> #{affect-ambient-occlusion}
+#### `影响环境光遮蔽`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `影响光滑度`<badge text="贴花" /> #{affect-smoothness}
+#### `影响光滑度`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `影响发光`<badge text="贴花" /> #{affect-emission}
+#### `影响发光`<badge text="贴花" />
 
 - 类型：`bool`
 - 默认值：`true`
 
-#### `绘制顺序`<badge text="贴花" /> #{draw-order}
+#### `绘制顺序`<badge text="贴花" />
 
 - 类型：`int`
 - 默认值：`0`
 - 范围：`-50` ~ `50`
 
-## 音频 #{audio}
+## 音频
 
-### 导入音频 #{import-audio}
+### 导入音频
 
 - 准备好 `.ogg` 格式的音频文件
 - 选中 `素材 → 音频` 类别，点击底部右侧的第一个按钮 `导入音频`
 - 在弹出的对话框中选择音频文件，点击 `打开` 按钮
 
-### 音频预览 #{audio-preview}
+### 音频预览
 
 音频预览有两种方式：
 
 - 直接双击音频文件播放音乐
 - 选中音频文件后，在 `检视器` 中控制其播放、暂停、停止以及播放位置
 
-## 脚本 #{scripts}
+## 脚本
 
-### 导入脚本 #{import-script}
+### 导入脚本
 
 - 准备好 `.js` 格式的脚本文件
 - 选中 `素材 → 脚本` 类别，点击底部右侧的第一个按钮 `新建 / 导入脚本`
 - 在弹出的对话框中点击 `导入脚本` 按钮
 - 在弹出的对话框中选择脚本文件，点击 `打开` 按钮
 
-### 创建脚本 #{create-script}
+### 创建脚本
 
 - 选中 `素材 → 脚本` 类别，点击底部右侧的第一个按钮 `新建 / 导入脚本`
 - 在弹出的对话框中点击 `创建脚本` 按钮
 - 在弹出的对话框中输入脚本名称，点击 `创建` 按钮
 - 新建脚本会被创建在当前文件夹内
 
-### 编辑脚本 #{edit-script}
+### 编辑脚本
 
 - 双击需要编辑的脚本 / 选中脚本后在 `检视器` 中点击 `打开文件` 按钮
 - 编辑器会自动打开，可在编辑器中编写脚本代码
