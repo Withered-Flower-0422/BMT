@@ -19,14 +19,11 @@
   border-radius: 50%;
 }
 
-.action {
-  display: flex;
-}
-
 .VPButton.main {
   border-color: #ff8800;
   background-color: #ff8800;
   color: #fff;
+  width: 100%;
 }
 
 .VPButton.main:hover {
