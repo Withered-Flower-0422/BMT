@@ -26,7 +26,7 @@ The lighting here provides a global parallel light.
   - 0 represents shooting from the North (z+).
   - 90 represents shooting from the East (x+).
   - 180 represents shooting from the South (z-).
-  - 270 represents shooting from the West (x-).
+  - 270 represents shooting from the West (x\-).
   - Adjusting the `y` value can change the direction of shadows.
 
 - The `z` value currently has no obvious effect.
