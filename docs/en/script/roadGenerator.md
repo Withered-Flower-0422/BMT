@@ -15,10 +15,7 @@ See [BST/\_Typings/roadGeneratorApi/exportFuncs.d.ts](https://github.com/Withere
 ### `generate`
 
 ```ts
-export const generate: (vars: {
-  [key: string]: any
-  [key: symbol]: never
-}) => Mesh
+export const generate: (vars: { [key: string]: any; [key: symbol]: never }) => Mesh
 ```
 
 - `vars`: The variables set on the road generator, passed in as key-value pairs.
