@@ -21,13 +21,16 @@ The lighting here provides a global parallel light.
   - 180 represents 6:00 PM (sunset).
   - To achieve a nighttime effect, please adjust properties below like [`Light Intensity`](#Light-Intensity-Lux), [`Light Temperature`](#Light-Temperature-K), and [`Light Filter`](#Light-Filter).
 
-- The `y` value represents the azimuth of the sun.
+- The `y` value represents the angle of the sun around the y-axis, i.e., the sun's azimuth.
 
-  - 0 represents shooting from the North (z+).
-  - 90 represents shooting from the East (x+).
-  - 180 represents shooting from the South (z-).
-  - 270 represents shooting from the West (x\-).
-  - Adjusting the `y` value can change the direction of shadows.
+  - At 6:00 AM (sunrise):
+
+    - 0 represents shooting from the South (z-).
+    - 90 represents shooting from the West (x\-).
+    - 180 represents shooting from the North (z+).
+    - 270 represents shooting from the East (x+).
+
+- Adjusting the `y` value can change the direction of shadows.
 
 - The `z` value currently has no obvious effect.
 
