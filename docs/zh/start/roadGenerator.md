@@ -26,7 +26,7 @@ Ballex² 中的路面、钢轨、木板和管道均由路面生成器制作而�
 
 ::: tip 提示
 
-- [`自定义顶点`](../advanced/item/roadGenerator#自定义顶点) 路面生成器将在 `进阶` 板块中详细介绍
+- [`自定义顶点`](../advanced/item/roadGenerator#custom-vertices) 路面生成器将在 `进阶` 板块中详细介绍
 - [`自定义脚本`](../script/roadGenerator) 路面生成器将在 `脚本` 板块中详细介绍
 
 :::

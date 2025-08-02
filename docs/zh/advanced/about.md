@@ -8,7 +8,7 @@
 
 - 编辑器 [`工具`](tools) 选项卡里各工具的功能及用法
 
-- 编辑器中关于 [`素材`](assets) 面板及其子项 [`场景`](assets#场景) [`元件`](assets#元件) [`网格`](assets#网格) [`纹理`](assets#纹理) [`材质`](assets#材质) [`音频`](assets#音频) 面板的一些进阶操作技巧
+- 编辑器中关于 [`素材`](assets) 面板及其子项 [`场景`](assets#scene) [`元件`](assets#item) [`网格`](assets#mesh) [`纹理`](assets#texture) [`材质`](assets#material) [`音频`](assets#audio) 面板的一些进阶操作技巧
 
 - [`场景设置`](sceneSettings/sceneSettings) 中各组件的功能及用法
 

@@ -33,7 +33,7 @@ import { withBase } from 'vitepress'
 
 ::: details maxider
 
-- 如果你在 [`maxider`](#内测版本) 组，请下载此 <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
+- 如果你在 [`maxider`](#beta-version) 组，请下载此 <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> 文件
 
 :::
 

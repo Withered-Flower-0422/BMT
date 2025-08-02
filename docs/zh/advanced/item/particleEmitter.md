@@ -1,6 +1,6 @@
 # 粒子发射器 {#particle-emitter}
 
-## [变换偏移](item#变换偏移) {#transform-offset}
+## [变换偏移](item#transform-offset) {#transform-offset}
 
 ## `自动运行` {#auto-play}
 

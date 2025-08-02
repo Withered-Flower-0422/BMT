@@ -2,7 +2,7 @@
 
 用于播放音频，需通过脚本 [audioPlayer.play()](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/gameApi/types/itemComponents/audioPlayer.d.ts) 播放。
 
-## [变换偏移](item#变换偏移) {#transform-offset}
+## [变换偏移](item#transform-offset) {#transform-offset}
 
 ## `音频文件` {#audio-file}
 

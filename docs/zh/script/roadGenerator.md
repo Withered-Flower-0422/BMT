@@ -2,9 +2,9 @@
 
 ## 使用方法 {#usage}
 
-1. 参考 [模板](#模板) 和 [示例](#示例) 的书写方式编写好脚本
-2. 将脚本 [导入](../advanced/assets#脚本) 编辑器
-3. 在 [`路面生成器`](../advanced/item/roadGenerator#自定义脚本) 组件中设置 `生成器算法` 为 `自定义脚本`，添加脚本，并设置好需要的变量
+1. 参考 [模板](#template) 和 [示例](#example) 的书写方式编写好脚本
+2. 将脚本 [导入](../advanced/assets#scripts) 编辑器
+3. 在 [`路面生成器`](../advanced/item/roadGenerator#custom-script) 组件中设置 `生成器算法` 为 `自定义脚本`，添加脚本，并设置好需要的变量
 4. 变量改变时，脚本会自动重新执行，生成新的路面
 5. 如果没有变量，在修改脚本后可以点击 `生成` 按钮刷新生成路面
 
@@ -15,15 +15,12 @@
 ### `generate` {#generate}
 
 ```ts
-export const generate: (vars: {
-  [key: string]: any
-  [key: symbol]: never
-}) => Mesh
+export const generate: (vars: { [key: string]: any; [key: symbol]: never }) => Mesh
 ```
 
 - `vars`：路面生成器上设置的变量，以键值对的形式传入
 
-该函数需要返回一个 `subMesh[]` 数组，每个 `subMesh` 需包含 `顶点` `UV` `法线` `三角` 信息。具体参见 [示例](#示例) 。
+该函数需要返回一个 `subMesh[]` 数组，每个 `subMesh` 需包含 `顶点` `UV` `法线` `三角` 信息。具体参见 [示例](#example) 。
 
 ## 模板 {#template}
 

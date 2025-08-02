@@ -2,7 +2,7 @@
 
 `路点` 需配合 [`路径`](wayPath) 组件使用。
 
-## ~~[变换偏移](item#变换偏移)~~ {#transform-offset}
+## ~~[变换偏移](item#transform-offset)~~ {#transform-offset}
 
 目前路点的变换偏移暂时没有作用。
 

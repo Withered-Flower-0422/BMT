@@ -83,7 +83,7 @@ outline:
 
 ::: tip 提示
 
-参见：[`起步 → 制图前准备 → 坐标系统`](../start/preparation#坐标系统)
+参见：[`起步 → 制图前准备 → 坐标系统`](../start/preparation#coordinate-system)
 
 对于不支持导出 `.fbx` 的建模软件，可导出其它格式的模型，导入 Blender 后再导出 `.fbx`。
 

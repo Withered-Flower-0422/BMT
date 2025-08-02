@@ -2,7 +2,7 @@
 
 此光源为局部光源。若要设置全局平行光，参考 [`场景设置 → 光照`](../sceneSettings/lighting)。
 
-## [变换偏移](item#变换偏移) {#transform-offset}
+## [变换偏移](item#transform-offset) {#transform-offset}
 
 ## `光源类型` {#light-type}
 
@@ -11,11 +11,11 @@
 
 ::: tip 注意
 
-圆形区域光仅提供 [体积光](#体积光) 使用，无照明效果。
+圆形区域光仅提供 [体积光](#volumetric-light) 使用，无照明效果。
 
 :::
 
-## `色温 (K)` {#temperature}
+## `色温 (K)` {#temperature-k}
 
 - 类型：`float`
 - 默认值：`6570.0`
@@ -25,7 +25,7 @@
 - 类型：`ColorRGBA`
 - 默认值：`(1, 1, 1, 1)`
 
-## `强度 (Lux)` {#intensity}
+## `强度 (Lux)` {#intensity-lux}
 
 - 类型：`float`
 - 默认值：`10000.0`

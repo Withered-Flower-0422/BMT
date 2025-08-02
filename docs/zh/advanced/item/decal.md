@@ -2,14 +2,14 @@
 
 在一定范围内将贴花投射到物体上。
 
-## [变换偏移](item#变换偏移) {#transform-offset}
+## [变换偏移](item#transform-offset) {#transform-offset}
 
 ## `材质` {#material}
 
 - 类型：`Material`
 - 默认值：空
 
-贴花的材质。参考 [素材 → 材质 → 材质属性 → 贴花材质](../assets#材质属性) 。
+贴花的材质。参考 [素材 → 材质 → 材质属性 → 贴花材质](../assets#material-properties) 。
 
 ## `绘制距离` {#draw-distance}
 

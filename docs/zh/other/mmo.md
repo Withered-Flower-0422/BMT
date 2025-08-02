@@ -12,7 +12,7 @@ import { withBase } from 'vitepress'
 
 ::: details maxider
 
-- 如果你在 [`maxider`](tricks#内测版本) 组，请下载此 <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> 文件
+- 如果你在 [`maxider`](tricks#beta-version) 组，请下载此 <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> 文件
 
 :::
 

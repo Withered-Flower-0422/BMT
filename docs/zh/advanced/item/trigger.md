@@ -2,7 +2,7 @@
 
 ## 触发层 {#trigger-layer}
 
-用来设置何种 [碰撞层](physicsObject#碰撞层) 的元件可以触发此触发器。
+用来设置何种 [碰撞层](physicsObject#collision-layer) 的元件可以触发此触发器。
 
 ### `玩家` {#player}
 
@@ -69,4 +69,4 @@
 
 ## 触发器形状 {#trigger-shape}
 
-参考 [`物理物体 → 碰撞箱类型`](physicsObject#碰撞箱类型) 。
+参考 [`物理物体 → 碰撞箱类型`](physicsObject#collider-type) 。

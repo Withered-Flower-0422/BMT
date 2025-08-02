@@ -2,9 +2,9 @@
 
 ## 使用方法 {#usage}
 
-1. 参考 [模板](#模板) 和 [示例](#示例) 的书写方式编写好脚本
-2. 将脚本 [导入](../advanced/assets#脚本) 编辑器
-3. 如果脚本内使用了 [触碰事件](../advanced/item/physicsObject#碰撞进入) 或 [触发器事件](../advanced/item/trigger#触发事件)，请确保元件启用并设置好了相应的组件和功能
+1. 参考 [模板](#template) 和 [示例](#example) 的书写方式编写好脚本
+2. 将脚本 [导入](../advanced/assets#scripts) 编辑器
+3. 如果脚本内使用了 [触碰事件](../advanced/item/physicsObject#collision-enter) 或 [触发器事件](../advanced/item/trigger#trigger-event)，请确保元件启用并设置好了相应的组件和功能
 4. 在 [`执行器`](../advanced/item/executor) 组件中添加脚本，并设置好需要的变量
 5. 进入游戏，脚本将自动执行
 
