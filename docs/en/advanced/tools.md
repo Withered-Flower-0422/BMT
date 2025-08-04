@@ -66,6 +66,16 @@ This window has 3 `Create` buttons. The top two buttons can each create 1 light 
 
 :::
 
+## Mesh to Obj
+
+This tool can convert mesh files imported into the editor back to obj format.
+
+Usage:
+
+1. In `Assets → Meshes`, select the mesh file you want to convert and click the `Mesh to Obj` button.
+2. Choose a save path and click the `Save` button.
+3. After the conversion is complete, you can find the converted obj file at the specified path.
+
 ## Reset Layout
 
 This tool resets the editor's layout to its default state.

@@ -112,6 +112,10 @@ Items in the map beyond this distance from the camera will not be rendered.
 
 - Default: `(0, -18, 0)`
 
+### `Configurations`
+
+This property is described in [`Advance → Scene Settings → Map Information`](../advanced/sceneSettings/mapInfo#Configurations).
+
 ## Export Map
 
 `File → Export BMS`

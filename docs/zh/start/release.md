@@ -112,6 +112,10 @@
 
 - 默认值：`(0, -18, 0)`
 
+### `配置项` {#configurations}
+
+该属性将在 [`进阶 → 场景设置 → 地图信息`](../advanced/sceneSettings/mapInfo#configurations) 中介绍。
+
 ## 导出地图 {#export-map}
 
 `文件 → 导出地图`
