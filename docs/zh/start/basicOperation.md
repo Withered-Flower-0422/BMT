@@ -14,7 +14,7 @@
 
 ## 视图调整 {#view-adjustment}
 
-### 平移视图 & 漫游 {#pan-view--free-move}
+### 平移视图 & 漫游 {#pan-view-free-move}
 
 - 首先在 `设置 → 自由移动工具快捷键` 中设置漫游快捷键，推荐设置为 `鼠标中键`
 - 按住 _设置的键位_ 进入漫游模式。拖动鼠标改变摄像机朝向，按住 `W` 前进，`S` 后退，`A` 左移，`D` 右移，`Q` 下降，`E` 上升
@@ -44,7 +44,7 @@
 
 点击右上角坐标轴箭头。
 
-### 切换透视 / 正交视角 {#toggle-perspective--orthographic-view}
+### 切换透视 / 正交视角 {#toggle-perspective-orthographic-view}
 
 右上角坐标轴下方显示了当前视角（透视 `Persp` / 正交 `Ortho`），点击即可切换。正交视角在精调布局时很有用。
 
@@ -94,14 +94,14 @@
 
 :::
 
-### 切换全局 / 本地模式 {#toggle-global--local-mode}
+### 切换全局 / 本地模式 {#toggle-global-local-mode}
 
 `X`，对应右上角工具栏第 8 个按钮。
 
 - 本地模式：元件的位置、旋转操作采用选中元件的局部坐标系
 - 全局模式：元件的位置、旋转操作采用全局坐标系
 
-### 切换中心 / 轴心模式 {#toggle-center--pivot-mode}
+### 切换中心 / 轴心模式 {#toggle-center-pivot-mode}
 
 `Z`，对应右上角工具栏第 9 个按钮。
 
@@ -189,7 +189,7 @@
 
 :::
 
-### 快速变球 & 恢复玩家球属性 {#quick-ball-switch--recover-player-ball-properties}
+### 快速变球 & 恢复玩家球属性 {#quick-ball-switch-recover-player-ball-properties}
 
 - 快速变球：`1` ~ `9`
 - 恢复属性：`0`

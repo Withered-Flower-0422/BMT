@@ -135,7 +135,7 @@
 - 类型：`float`
 - 默认值：`0.2`
 
-## `横向动画格数` `纵向动画格数` {#animation-tiles-x--animation-tiles-y}
+## `横向动画格数` `纵向动画格数` {#animation-tiles-x-animation-tiles-y}
 
 - 类型：`int`
 - 默认值：`1`
