@@ -50,7 +50,7 @@ Appending a scene imports all items from another scene into the current one, pre
 ### Save Item as Template
 
 - Select the item you want to save.
-- Select the `Assets → Items` category and click the first button on the bottom right, `Save Asset`.
+- Select the `Assets → Items` category and click the first button on the bottom right, `Save Asset`, or directly drag the item into the `Items` panel.
 - Enter a name for the template and click the `Save` button.
 - After saving successfully, the item will be added to the current folder of the Items category.
 
