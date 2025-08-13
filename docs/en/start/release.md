@@ -44,8 +44,8 @@ Please only fill in the **source language** here. For example, if English is the
 
 ::: tip
 
-- The level description is a **required** field. If you really don't want to display anything, please enter a blank character (not a space; you can search for a blank character online and copy-paste it here).
-- If the level description is empty, it will cause the subsequent map export to fail.
+- The map description is a **required** field. If you really don't want to display anything, please enter a blank character (not a space; you can search for a blank character online and copy-paste it here).
+- If the map description is empty, the subsequent map upload will fail.
 
 :::
 
@@ -72,7 +72,7 @@ Click the `+` sign in the top right of the box and select the imported cover. (Y
 ::: tip
 
 - The cover image is a **required** field.
-- If the cover is empty, it will cause the subsequent map export to fail.
+- If the cover is empty, the subsequent map upload will fail.
 
 :::
 
