@@ -126,7 +126,7 @@ Executed when a registered event is triggered.
 ```ts
 export const onTrigger: (
   self: Item,
-  triggeredItem: Item | Player,
+  triggeredItem: Item,
   type: "Enter" | "Stay" | "Exit"
 ) => void
 ```
@@ -169,6 +169,9 @@ To import modules, use the following syntax:
 
 ```js
 import {
+  // player
+  player,
+
   // modules
   console,
   scene,

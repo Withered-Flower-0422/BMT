@@ -126,7 +126,7 @@ export const onEvents: (self: Item, events: Events) => void
 ```ts
 export const onTrigger: (
   self: Item,
-  triggeredItem: Item | Player,
+  triggeredItem: Item,
   type: "Enter" | "Stay" | "Exit"
 ) => void
 ```
@@ -169,6 +169,9 @@ export const onCollide: (self: Item, collisionEvent: CollisionEvent) => void
 
 ```js
 import {
+  // player
+  player,
+
   // modules
   console,
   scene,
