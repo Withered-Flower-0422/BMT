@@ -10,6 +10,7 @@ import { withBase } from 'vitepress'
 
 - After entering any map, you can enter `/t` or `/testmap` in the console to enter test map mode.
 - In test map mode, you can control the ball to fly or sink. The corresponding keys can be set in the game settings.
+- In test map mode, you can enter `/s` or `/spawn` in the console to set the respawn point at the current position.
 - In test map mode, the destination **cannot** be activated.
 - **_Dying_** will not exit test map mode; you need to **_Restart_** to exit it.
 - <span class="text-red">To ensure the game experience, it is strongly recommended to clear the map at least once before deciding whether to enable test map mode to explore the map.</span>
