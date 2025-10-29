@@ -10,12 +10,6 @@ import { withBase } from 'vitepress'
 
 - Download the <a :href="withBase('/patches/release/MMOServer.patch')" download>`MMOServer.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
 
-::: details maxider
-
-- If you are in the [`maxider`](tricks#Beta-Version) group, please download this <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> file instead.
-
-:::
-
 - Create a `Patch` folder in the `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` directory.
 - Place the `MMOServer.patch` file into the `Patch` folder.
 - Launch the game, click the avatar in the top-right corner, and click the `MMO Server` button to connect to the server.

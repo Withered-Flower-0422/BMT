@@ -10,12 +10,6 @@ import { withBase } from 'vitepress'
 
 - 在这里或在 [QQ 群](https://qm.qq.com/q/2mIPnK8JIk) 中下载 <a :href="withBase('/patches/release/MMOServer.patch')" download>`MMOServer.patch`</a> 文件
 
-::: details maxider
-
-- 如果你在 [`maxider`](tricks#beta-version) 组，请下载此 <a :href="withBase('/patches/maxider/MMOServer.patch')" download>`MMOServer.patch`</a> 文件
-
-:::
-
 - 在 `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` 目录下创建 `Patch` 文件夹
 - 将 `MMOServer.patch` 文件放入 `Patch` 文件夹
 - 启动游戏，点击右上角的头像，点击 `MMO 服务器` 按钮以连接至服务器
