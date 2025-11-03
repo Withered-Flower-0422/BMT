@@ -130,6 +130,7 @@ The `Road Generator` component provides 3 quick functions:
 
 - `Clone`: Creates an identical road at the end of the current road and automatically sets its rotation and other properties.
 - `Generate`: Forcibly refreshes the current road generator. For a [`Custom Script`](../../script/roadGenerator) road generator, you can click this button to refresh the generated result after modifying the script.
+- `Save Mesh`: Saves the road as a mesh. The mesh will be saved in `Assets → Meshes → Default`.
 - `Create Way Point`: Creates [`Way Point`](wayPoint) at the corresponding positions based on the current road generator's segments.
 
 ## Road
