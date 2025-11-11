@@ -26,7 +26,7 @@
     </transition>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue"
 import { useData } from "vitepress"
 
@@ -40,7 +40,7 @@ const scrollToTop = () => {
     const duration = 300
     const startPos = window.scrollY
     const startTime = performance.now()
-    const scrollStep = timestamp => {
+    const scrollStep = (timestamp: number) => {
         const elapsed = (timestamp || performance.now()) - startTime
         window.scrollTo(0, startPos * (1 - (t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t)(Math.min(elapsed / duration, 1))))
         if (elapsed < duration) requestAnimationFrame(scrollStep)
