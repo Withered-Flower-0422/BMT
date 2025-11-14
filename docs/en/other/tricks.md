@@ -32,12 +32,6 @@ The hotkey to open the console can be set in the game settings.
 
 - Download the <a :href="withBase('/patches/release/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> file here or from the [QQ Group](https://qm.qq.com/q/2mIPnK8JIk).
 
-::: details maxider
-
-- If you are in the [`maxider`](#Beta-Version) group, please download this <a :href="withBase('/patches/maxider/ExclusiveFullscreen.patch')" download>`ExclusiveFullscreen.patch`</a> file instead.
-
-:::
-
 - Create a `Patch` folder in the `%USERPROFILE%\AppData\LocalLow\Mushreb\B2HDRP` directory.
 - Place the `ExclusiveFullscreen.patch` file into the `Patch` folder.
 - Then the in-game `Full Screen` setting will become `Exclusive Fullscreen` (without the patch, `Full Screen` is `Borderless Fullscreen`).
