@@ -549,3 +549,10 @@ Usage:
 4. In the `Road Generator` component, adjust the `Segments` property.
 5. At this point, only the `Thickness`, `Concave`, and `End Concave` properties in the `Road Generator` component will have an effect; the rest are controlled by the `Way Points`.
 6. Adjust the `Position`, `Rotation`, and `Scale` properties of each `Way Point` to shape the road.
+
+::: warning
+
+When an item has both the `Road Generator` and `Way Path` components, it will be treated as a `Way Point Road Generator`.
+To create a moving road, create a new item with the `Way Path` component to control the movement of the road.
+
+:::

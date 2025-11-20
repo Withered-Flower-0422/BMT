@@ -4,6 +4,13 @@
 
 A [Target Item](#Targets) can automatically move and change its pose based on the poses of the way points in the path.
 
+::: warning
+
+When an item has both the [`Road Generator`](roadGenerator) and `Way Path` components, it will be treated as a [`Way Point Road Generator`](roadGenerator#way-point-road-generator).
+To create a moving road, create a new item with the `Way Path` component to control the movement of the road.
+
+:::
+
 ## `Way Points`
 
 - Type: `Item[]`
