@@ -82,7 +82,7 @@ In the `Hierarchy`, you can quickly find an item based on its [`guid`](item#Guid
   - Ensure the four letters `guid` and all letters in the entered `guid` value are lowercase.
   - Ensure there are no spaces after the `:`.
   - Ensure the `guid` value is complete.
-- ~~Searching by `Tag`~~ (Currently, the feature to find items by `Tag` in the editor has a bug and is temporarily unavailable):
+- Searching by `Tag`:
   - In the Hierarchy, enter `tag:`, then enter the `Tag` value.
   - Ensure the three letters `tag` are lowercase.
   - Ensure there are no spaces after the `:`.
