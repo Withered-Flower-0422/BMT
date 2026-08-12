@@ -10,7 +10,32 @@
     #c17ee0 50%,
     #8599f1 50%
   );
-  --vp-home-hero-image-filter: blur(75px);
+}
+
+.VPHero .name.clip {
+  animation: name 6s linear infinite;
+}
+
+.VPHero .image-bg {
+  animation: image-bg 6s linear infinite;
+}
+
+@keyframes name {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes image-bg {
+  from {
+    filter: hue-rotate(0deg) blur(75px);
+  }
+  to {
+    filter: hue-rotate(360deg) blur(75px);
+  }
 }
 
 .VPNavBarTitle .logo {
