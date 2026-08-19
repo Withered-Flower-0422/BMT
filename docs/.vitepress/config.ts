@@ -5,7 +5,6 @@ const base = "/BMT/"
 export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
-  metaChunk: true,
 
   base,
 
