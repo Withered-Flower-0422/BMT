@@ -127,7 +127,7 @@ Executed when a registered event is triggered.
 export const onTrigger: (
   self: Item,
   triggeredItem: Item,
-  type: "Enter" | "Stay" | "Exit"
+  type: "Enter" | "Stay" | "Exit",
 ) => void
 ```
 
@@ -205,7 +205,7 @@ import { dotProduct } from "Scripts/Utility/MathExtension.js"
 
 ::: warning
 
-The `.js` suffix **cannot** be omitted here.
+The `.js` suffix <span class="text-red">cannot</span> be omitted here.
 
 :::
 

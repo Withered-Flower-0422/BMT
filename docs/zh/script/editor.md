@@ -181,11 +181,22 @@ import {
 } from "editorApi"
 ```
 
+:::: tip 提示
+
+如需导入工程内的自制模块，请使用 BME 的资源路径，如：
+
+```js
+import { dotProduct } from "Scripts/_Editor/MathExtension.js"
+```
+
 ::: warning 注意
 
-编辑器脚本 **无法** 导入自制模块。
+- 只能导入 `_Editor` 文件夹中的模块（<span class="text-red">不包括</span> 其中的子目录）。
+- 此处的 `.js` 后缀 <span class="text-green">可以</span> 被省略。
 
 :::
+
+::::
 
 ## 模板 {#template}
 

@@ -127,7 +127,7 @@ export const onEvents: (self: Item, events: Events) => void
 export const onTrigger: (
   self: Item,
   triggeredItem: Item,
-  type: "Enter" | "Stay" | "Exit"
+  type: "Enter" | "Stay" | "Exit",
 ) => void
 ```
 
@@ -205,7 +205,7 @@ import { dotProduct } from "Scripts/Utility/MathExtension.js"
 
 ::: warning 注意
 
-此处的 `.js` 后缀 **不能** 被省略。
+此处的 `.js` 后缀 <span class="text-red">不能</span> 被省略。
 
 :::
 

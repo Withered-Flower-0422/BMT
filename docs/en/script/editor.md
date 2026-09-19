@@ -181,11 +181,22 @@ import {
 } from "editorApi"
 ```
 
+:::: tip
+
+To import custom modules from within the project, please use BME's resource path, for example:
+
+```js
+import { dotProduct } from "Scripts/_Editor/MathExtension.js"
+```
+
 ::: warning
 
-Editor scripts **cannot** import custom modules.
+- Only modules in the `_Editor` folder can be imported (<span class="text-red">excluding</span> subdirectories).
+- The `.js` suffix <span class="text-green">can</span> be omitted.
 
 :::
+
+::::
 
 ## Template
 
