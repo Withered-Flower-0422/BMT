@@ -19,7 +19,9 @@
 
 ## 钩子 {#hooks}
 
-编辑器共提供了 2 个钩子，参见 [BST/\_Typings/editorApi/exportFuncs.d.ts](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/exportFuncs.d.ts)。
+编辑器共提供了 13 个钩子，参见 [BST/\_Typings/editorApi/exportFuncs.d.ts](https://github.com/Withered-Flower-0422/BST/blob/main/_Typings/editorApi/exportFuncs.d.ts)。
+
+使用 [素材面板底部的 `清除缓存`](../advanced/assets.md#assets) 重新注册事件。
 
 ### `menuPath` {#menupath}
 
@@ -36,6 +38,112 @@ export const execute: () => void
 ```
 
 点击执行按钮时执行。
+
+### `onTick` {#on-tick}
+
+```ts
+export const onTick: () => void
+```
+
+每隔 1s 执行一次。
+
+### `onBeforeTestMap` {#on-before-test-map}
+
+```ts
+export const onBeforeTestMap: () => void
+```
+
+在测试地图前执行。
+
+### `onAfterTestMap` {#on-after-test-map}
+
+```ts
+export const onAfterTestMap: () => void
+```
+
+在测试地图后执行。
+
+### `onBeforeExportMap` {#on-before-export-map}
+
+```ts
+export const onBeforeExportMap: (filePath: string) => void
+```
+
+在导出地图前执行。
+
+- `filePath`：导出地图的系统路径
+
+### `onAfterExportMap` {#on-after-export-map}
+
+```ts
+export const onAfterExportMap: (filePath: string) => void
+```
+
+在导出地图后执行。
+
+- `filePath`：导出地图的系统路径
+
+### `onBeforeOpenScene` {#on-before-open-scene}
+
+```ts
+export const onBeforeOpenScene: (scenePath: string) => void
+```
+
+在打开场景前执行。
+
+- `scenePath`：场景的 BME 路径
+
+### `onAfterOpenScene` {#on-after-open-scene}
+
+```ts
+export const onAfterOpenScene: (scenePath: string) => void
+```
+
+在打开场景后执行。
+
+- `scenePath`：场景的 BME 路径
+
+### `onBeforeSaveScene` {#on-before-save-scene}
+
+```ts
+export const onBeforeSaveScene: (scenePath: string) => void
+```
+
+在保存场景前执行。
+
+- `scenePath`：场景的 BME 路径
+
+### `onAfterSaveScene` {#on-after-save-scene}
+
+```ts
+export const onAfterSaveScene: (scenePath: string) => void
+```
+
+在保存场景后执行。
+
+- `scenePath`：场景的 BME 路径
+
+### `onBeforeImportAsset` {#on-before-import-asset}
+
+```ts
+export const onBeforeImportAsset: (filePath: string, assetPath: string) => void
+```
+
+在导入资源前执行。
+
+- `filePath`：资源的系统路径
+- `assetPath`：资源的 BME 路径
+
+### `onAfterImportAsset` {#on-after-import-asset}
+
+```ts
+export const onAfterImportAsset: (filePath: string, assetPath: string) => void
+```
+
+在导入资源后执行。
+
+- `filePath`：资源的系统路径
+- `assetPath`：资源的 BME 路径
 
 ## 模块 {#modules}
 

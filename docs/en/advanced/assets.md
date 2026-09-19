@@ -10,7 +10,7 @@ First, let's introduce the functions of the row of buttons at the bottom of the 
 The buttons on the bottom left, from left to right, are:
 
 - `Create Folder`: Creates a new folder under the currently selected category.
-- `Clear Cache`: Clears all thumbnail caches.
+- `Clear Cache`: Clears all editor caches, and re-[registers events](../script/editor.md#hooks).
 - `Delete Folder`: Deletes the currently selected folder (the folder must be empty).
 - `Mark / Unmark as Favorite`: `Marks` or `Unmarks` the currently selected file as a favorite.
   - Favorited custom folders will be <span class="text-yellow">marked yellow</span>.
